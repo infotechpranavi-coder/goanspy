@@ -23,6 +23,7 @@ export default function ContentCard({
       style={{
         textDecoration: "none",
         display: "block",
+        height: "100%",
         borderRadius: 12,
         overflow: "hidden",
         border: "1px solid var(--border)",
@@ -32,68 +33,83 @@ export default function ContentCard({
       }}
       className="content-card"
     >
-      <div style={{ position: "relative" }}>
+      <div
+        style={{
+          height: "100%",
+          display: "flex",
+          flexDirection: "column",
+        }}
+      >
+        <div style={{ position: "relative" }}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={imageSrc}
           alt={imageAlt}
-          loading="lazy"
-          onError={(e) => {
-            const img = e.currentTarget;
-            if (img.src !== DEFAULT_IMAGE) img.src = DEFAULT_IMAGE;
-          }}
+            loading="lazy"
+            onError={(e) => {
+              const img = e.currentTarget;
+              if (img.src !== DEFAULT_IMAGE) img.src = DEFAULT_IMAGE;
+            }}
           style={{
             width: "100%",
-            height: 200,
+            height: 150,
             objectFit: "cover",
             display: "block",
             background: "var(--bg-section)",
           }}
-        />
-        {index !== undefined && (
-          <span
-            style={{
-              position: "absolute",
-              top: 12,
-              left: 12,
-              background: "var(--wine-berry)",
-              color: "#fff",
-              width: 32,
-              height: 32,
-              borderRadius: "50%",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
+          />
+          {index !== undefined && (
+            <span
+              style={{
+                position: "absolute",
+                top: 12,
+                left: 12,
+                background: "var(--wine-berry)",
+                color: "#fff",
+                width: 32,
+                height: 32,
+                borderRadius: "50%",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                fontSize: 13,
+                fontWeight: 700,
+              }}
+            >
+              {index}
+            </span>
+          )}
+        </div>
+        <div
+          style={{
+            padding: "12px 14px 13px",
+            display: "flex",
+            flexDirection: "column",
+            flex: 1,
+          }}
+        >
+          <h3
+          style={{
               fontSize: 13,
-              fontWeight: 700,
+              fontWeight: 600,
+              color: "var(--navy)",
+              lineHeight: 1.35,
             }}
           >
-            {index}
+            {title}
+          </h3>
+          <span
+            style={{
+              fontSize: 11,
+              color: "var(--wine-berry)",
+              fontWeight: 600,
+              marginTop: 6,
+              display: "inline-block",
+            }}
+          >
+            Learn more -
           </span>
-        )}
-      </div>
-      <div style={{ padding: "16px 18px" }}>
-        <h3
-          style={{
-            fontSize: 15,
-            fontWeight: 600,
-            color: "var(--navy)",
-            lineHeight: 1.4,
-          }}
-        >
-          {title}
-        </h3>
-        <span
-          style={{
-            fontSize: 13,
-            color: "var(--wine-berry)",
-            fontWeight: 600,
-            marginTop: 8,
-            display: "inline-block",
-          }}
-        >
-          Learn more →
-        </span>
+        </div>
       </div>
       <style>{`
         a.content-card:hover {

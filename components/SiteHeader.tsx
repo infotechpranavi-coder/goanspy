@@ -1,22 +1,30 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import {
-  Search,
   ChevronDown,
-  Headphones,
+  Search,
   User,
   ShoppingCart,
   Menu,
   X,
 } from "lucide-react";
-import { HEADER_BG, WINE_BERRY, searchCategories } from "@/lib/nav";
+import {
+  HEADER_BG,
+  WINE_BERRY,
+  searchCategories,
+  mainNavLinks,
+  dropdownItems,
+} from "@/lib/nav";
 import { BRAND_NAME, LOGO_SRC } from "@/lib/brand";
 
 export default function SiteHeader() {
+  const pathname = usePathname();
   const [category, setCategory] = useState(searchCategories[0]);
   const [query, setQuery] = useState("");
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
 
   return (
     <header style={{ background: HEADER_BG, position: "relative", zIndex: 10 }}>
@@ -94,9 +102,9 @@ export default function SiteHeader() {
                   height: "100%",
                 }}
               >
-                {searchCategories.map((c) => (
-                  <option key={c} value={c}>
-                    {c}
+                {searchCategories.map((item) => (
+                  <option key={item} value={item}>
+                    {item}
                   </option>
                 ))}
               </select>
@@ -112,6 +120,7 @@ export default function SiteHeader() {
                 }}
               />
             </div>
+
             <input
               type="search"
               value={query}
@@ -126,6 +135,7 @@ export default function SiteHeader() {
                 minWidth: 0,
               }}
             />
+
             <button
               type="submit"
               style={{
@@ -153,32 +163,6 @@ export default function SiteHeader() {
             gap: 20,
           }}
         >
-          <Link
-            href="/contact-us"
-            className="hidden lg:flex items-center gap-3"
-            style={{ textDecoration: "none", flexShrink: 0 }}
-          >
-            <div
-              style={{
-                width: 44,
-                height: 44,
-                borderRadius: "50%",
-                background: WINE_BERRY,
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                color: "#fff",
-              }}
-            >
-              <Headphones size={20} />
-            </div>
-            <div>
-              <div style={{ fontSize: 12, color: "#aaa" }}>Contact Us</div>
-              <div style={{ fontSize: 14, fontWeight: 700, color: "#fff" }}>
-                (+91) 9867111459
-              </div>
-            </div>
-          </Link>
           <Link
             href="/elements#account"
             className="hidden sm:flex"
@@ -238,7 +222,7 @@ export default function SiteHeader() {
           <button
             type="button"
             className="md:hidden"
-            onClick={() => setMobileOpen(!mobileOpen)}
+            onClick={() => setMobileOpen((open) => !open)}
             style={{
               background: "none",
               border: "none",
@@ -285,6 +269,7 @@ export default function SiteHeader() {
               border: "none",
               color: "#fff",
             }}
+            aria-label="Search"
           >
             <Search size={18} />
           </button>
@@ -295,29 +280,119 @@ export default function SiteHeader() {
 
       {mobileOpen && (
         <div
-          className="lg:hidden"
+          className="md:hidden"
           style={{
             background: HEADER_BG,
             borderTop: "1px solid rgba(255,255,255,0.08)",
-            padding: "12px 20px 16px",
+            padding: "12px 20px 18px",
           }}
         >
-          <Link
-            href="/contact-us"
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: 10,
-              color: "#fff",
-              textDecoration: "none",
-              marginBottom: 12,
-              fontSize: 14,
-            }}
-            onClick={() => setMobileOpen(false)}
-          >
-            <Headphones size={18} />
-            (+91) 9867111459
-          </Link>
+          <nav aria-label="Mobile navigation">
+            <div
+              style={{
+                display: "grid",
+                gap: 6,
+              }}
+            >
+              {mainNavLinks.map((link) => {
+                const active =
+                  pathname === link.href ||
+                  ("matchPrefix" in link &&
+                    link.matchPrefix &&
+                    pathname.startsWith(link.matchPrefix));
+                const hasDropdown = "hasDropdown" in link && link.hasDropdown;
+
+                if (hasDropdown) {
+                  return (
+                    <div key={link.label}>
+                      <button
+                        type="button"
+                        onClick={() =>
+                          setMobileServicesOpen((open) => !open)
+                        }
+                        style={{
+                          width: "100%",
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "space-between",
+                          padding: "12px 0",
+                          background: "none",
+                          border: "none",
+                          color: "#fff",
+                          fontSize: 14,
+                          fontWeight: 600,
+                          textAlign: "left",
+                          borderBottom: "1px solid rgba(255,255,255,0.08)",
+                          cursor: "pointer",
+                        }}
+                      >
+                        <span>{link.label}</span>
+                        <ChevronDown
+                          size={16}
+                          style={{
+                            transform: mobileServicesOpen
+                              ? "rotate(180deg)"
+                              : "none",
+                            transition: "transform 0.2s ease",
+                          }}
+                        />
+                      </button>
+
+                      {mobileServicesOpen && (
+                        <div
+                          style={{
+                            display: "grid",
+                            gap: 2,
+                            padding: "8px 0 10px 12px",
+                          }}
+                        >
+                          {dropdownItems[link.label]?.map((item) => (
+                            <Link
+                              key={item.href}
+                              href={item.href}
+                              onClick={() => {
+                                setMobileOpen(false);
+                                setMobileServicesOpen(false);
+                              }}
+                              style={{
+                                color:
+                                  pathname === item.href
+                                    ? "var(--gold)"
+                                    : "rgba(255,255,255,0.82)",
+                                textDecoration: "none",
+                                fontSize: 13,
+                                padding: "8px 0",
+                              }}
+                            >
+                              {item.label}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  );
+                }
+
+                return (
+                  <Link
+                    key={link.label}
+                    href={link.href}
+                    onClick={() => setMobileOpen(false)}
+                    style={{
+                      color: active ? "var(--gold)" : "#fff",
+                      textDecoration: "none",
+                      fontSize: 14,
+                      fontWeight: active ? 700 : 600,
+                      padding: "12px 0",
+                      borderBottom: "1px solid rgba(255,255,255,0.08)",
+                    }}
+                  >
+                    {link.label}
+                  </Link>
+                );
+              })}
+            </div>
+          </nav>
         </div>
       )}
     </header>

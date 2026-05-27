@@ -1,12 +1,11 @@
 import HeroSlider from "@/components/HeroSlider";
 import Features from "@/components/Features";
 import Categories from "@/components/Categories";
-import FeaturedProducts from "@/components/FeaturedProducts";
 import PromoBanner from "@/components/PromoBanner";
 import NewArrivals from "@/components/NewArrivals";
 import BannerGrid from "@/components/BannerGrid";
 import Testimonials from "@/components/Testimonials";
-import Blog from "@/components/Blog";
+import WhyChooseGoanSpy from "@/components/WhyChooseGoanSpy";
 import ScrollReveal from "@/components/motion/ScrollReveal";
 
 export default function Home() {
@@ -20,7 +19,7 @@ export default function Home() {
         <Categories />
       </ScrollReveal>
       <ScrollReveal variant="fade-right" duration={0.7}>
-        <FeaturedProducts />
+        <WhyChooseGoanSpy />
       </ScrollReveal>
       <ScrollReveal variant="zoom-in" duration={0.75}>
         <PromoBanner />
@@ -33,9 +32,6 @@ export default function Home() {
       </ScrollReveal>
       <ScrollReveal variant="blur-in" duration={0.8}>
         <Testimonials />
-      </ScrollReveal>
-      <ScrollReveal variant="rotate-in" duration={0.7}>
-        <Blog />
       </ScrollReveal>
     </main>
   );
