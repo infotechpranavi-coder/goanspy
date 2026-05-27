@@ -1,5 +1,5 @@
-/** Elemen India brand constants */
-export const BRAND_NAME = "ELEMEN INDIA";
+/** Goan Spy brand constants */
+export const BRAND_NAME = "GOAN SPY";
 export const BRAND_TAGLINE = "Engineering & Information Technology Solutions";
 export const LOGO_SRC = "/elemen-logo.jpeg";
 export const SUPPORT_EMAIL = "support@elemenindia.com";

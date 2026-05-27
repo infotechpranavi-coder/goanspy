@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { Phone, Mail, MapPin, ArrowRight } from "lucide-react";
 import SocialIcons from "@/components/SocialIcons";
+import { mainNavLinks, dropdownItems } from "@/lib/nav";
 import {
   BRAND_NAME,
   BRAND_TAGLINE,
@@ -12,23 +13,25 @@ import {
   OFFICE_ADDRESS,
 } from "@/lib/brand";
 
-const footerLinks = {
-  Services: [
-    { label: "Our Services", href: "/our-services" },
-    { label: "CCTV System", href: "/our-services/cctv-system" },
-    { label: "Access Control", href: "/our-services/access-control-system" },
-    { label: "Visitor Management", href: "/our-services/visitor-management" },
-  ],
-  Company: [
-    { label: "About Us", href: "/about-us" },
-    { label: "Blog", href: "/blog" },
-    { label: "Case Studies", href: "/case-studies" },
-    { label: "Industry", href: "/industry" },
-    { label: "Products", href: "/products" },
-    { label: "Brands", href: "/brands" },
-    { label: "Contact Us", href: "/contact-us" },
-  ],
-};
+const quickLinks = mainNavLinks.map((link) => ({
+  label: link.label,
+  href: link.href,
+}));
+
+const morePages = [
+  { label: "Contact Us", href: "/contact-us" },
+  { label: "Industry", href: "/industry" },
+  { label: "Brands", href: "/brands" },
+  { label: "Products", href: "/products" },
+  { label: "Categories", href: "/categories" },
+  { label: "Clients", href: "/clients" },
+];
+
+const footerSections = [
+  { title: "Quick Links", links: quickLinks },
+  { title: "All Services", links: dropdownItems.Services ?? [] },
+  { title: "More Pages", links: morePages },
+];
 
 const columnTitleStyle: React.CSSProperties = {
   color: "#fff",
@@ -42,7 +45,7 @@ export default function Footer() {
     <footer style={{ background: "#1a1a1a", color: "#aaa" }}>
       <div style={{ maxWidth: "1300px", margin: "0 auto", padding: "70px 20px 40px" }}>
         <div
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5"
           style={{ gap: 40, marginBottom: 50 }}
         >
           {/* Brand */}
@@ -86,12 +89,12 @@ export default function Footer() {
             <SocialIcons size={40} gap={14} />
           </div>
 
-          {/* Services & Company link columns */}
-          {Object.entries(footerLinks).map(([title, links]) => (
-            <div key={title}>
-              <h4 style={columnTitleStyle}>{title}</h4>
+          {/* Expanded page link columns */}
+          {footerSections.map((section) => (
+            <div key={section.title}>
+              <h4 style={columnTitleStyle}>{section.title}</h4>
               <ul style={{ listStyle: "none" }}>
-                {links.map((link) => (
+                {section.links.map((link) => (
                   <li key={link.href} style={{ marginBottom: 10 }}>
                     <Link
                       href={link.href}
