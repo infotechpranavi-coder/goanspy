@@ -12,25 +12,25 @@ export default function Home() {
   return (
     <main>
       <HeroSlider />
-      <ScrollReveal variant="fade-up">
+      <ScrollReveal variant="fade-up" duration={0.72} amount={0.2}>
         <Features />
       </ScrollReveal>
-      <ScrollReveal variant="fade-left" duration={0.7}>
+      <ScrollReveal variant="depth-left" duration={0.82} delay={0.05} amount={0.18}>
         <Categories />
       </ScrollReveal>
-      <ScrollReveal variant="fade-right" duration={0.7}>
+      <ScrollReveal variant="depth-right" duration={0.82} delay={0.05} amount={0.18}>
         <WhyChooseGoanSpy />
       </ScrollReveal>
-      <ScrollReveal variant="zoom-in" duration={0.75}>
+      <ScrollReveal variant="lift-soft" duration={0.84} amount={0.16}>
         <PromoBanner />
       </ScrollReveal>
-      <ScrollReveal variant="flip-up" duration={0.7}>
+      <ScrollReveal variant="flip-up" duration={0.8} amount={0.16}>
         <NewArrivals />
       </ScrollReveal>
-      <ScrollReveal variant="fade-down">
+      <ScrollReveal variant="fade-down" duration={0.72} amount={0.18}>
         <BannerGrid />
       </ScrollReveal>
-      <ScrollReveal variant="blur-in" duration={0.8}>
+      <ScrollReveal variant="blur-in" duration={0.85} amount={0.2}>
         <Testimonials />
       </ScrollReveal>
     </main>

@@ -10,7 +10,10 @@ export type RevealVariant =
   | "flip-up"
   | "rotate-in"
   | "blur-in"
-  | "skew-up";
+  | "skew-up"
+  | "lift-soft"
+  | "depth-left"
+  | "depth-right";
 
 export type MotionState = {
   opacity?: number;
@@ -29,44 +32,68 @@ export const revealVariants: Record<
   { hidden: MotionState; visible: MotionState }
 > = {
   "fade-up": {
-    hidden: { opacity: 0, y: 40 },
-    visible: { opacity: 1, y: 0 },
+    hidden: { opacity: 0, y: 28, scale: 0.985, filter: "blur(10px)" },
+    visible: { opacity: 1, y: 0, scale: 1, filter: "blur(0px)" },
   },
   "fade-down": {
-    hidden: { opacity: 0, y: -32 },
-    visible: { opacity: 1, y: 0 },
+    hidden: { opacity: 0, y: -24, scale: 0.985, filter: "blur(10px)" },
+    visible: { opacity: 1, y: 0, scale: 1, filter: "blur(0px)" },
   },
   "fade-left": {
-    hidden: { opacity: 0, x: 48 },
-    visible: { opacity: 1, x: 0 },
+    hidden: { opacity: 0, x: 36, scale: 0.985, filter: "blur(8px)" },
+    visible: { opacity: 1, x: 0, scale: 1, filter: "blur(0px)" },
   },
   "fade-right": {
-    hidden: { opacity: 0, x: -48 },
-    visible: { opacity: 1, x: 0 },
+    hidden: { opacity: 0, x: -36, scale: 0.985, filter: "blur(8px)" },
+    visible: { opacity: 1, x: 0, scale: 1, filter: "blur(0px)" },
   },
   "zoom-in": {
-    hidden: { opacity: 0, scale: 0.88, y: 20 },
-    visible: { opacity: 1, scale: 1, y: 0 },
+    hidden: { opacity: 0, scale: 0.92, y: 18, filter: "blur(12px)" },
+    visible: { opacity: 1, scale: 1, y: 0, filter: "blur(0px)" },
   },
   "zoom-out": {
-    hidden: { opacity: 0, scale: 1.08 },
-    visible: { opacity: 1, scale: 1 },
+    hidden: { opacity: 0, scale: 1.06, filter: "blur(8px)" },
+    visible: { opacity: 1, scale: 1, filter: "blur(0px)" },
   },
   "flip-up": {
-    hidden: { opacity: 0, rotateX: 14, y: 36 },
-    visible: { opacity: 1, rotateX: 0, y: 0 },
+    hidden: { opacity: 0, rotateX: 10, y: 28, scale: 0.98, filter: "blur(10px)" },
+    visible: { opacity: 1, rotateX: 0, y: 0, scale: 1, filter: "blur(0px)" },
   },
   "rotate-in": {
-    hidden: { opacity: 0, rotate: -4, scale: 0.92, y: 24 },
-    visible: { opacity: 1, rotate: 0, scale: 1, y: 0 },
+    hidden: { opacity: 0, rotate: -3, scale: 0.96, y: 18, filter: "blur(10px)" },
+    visible: { opacity: 1, rotate: 0, scale: 1, y: 0, filter: "blur(0px)" },
   },
   "blur-in": {
-    hidden: { opacity: 0, filter: "blur(12px)", y: 16 },
-    visible: { opacity: 1, filter: "blur(0px)", y: 0 },
+    hidden: { opacity: 0, filter: "blur(14px)", y: 16, scale: 0.99 },
+    visible: { opacity: 1, filter: "blur(0px)", y: 0, scale: 1 },
   },
   "skew-up": {
-    hidden: { opacity: 0, skewY: 4, y: 48 },
-    visible: { opacity: 1, skewY: 0, y: 0 },
+    hidden: { opacity: 0, skewY: 3.5, y: 32, scale: 0.985, filter: "blur(8px)" },
+    visible: { opacity: 1, skewY: 0, y: 0, scale: 1, filter: "blur(0px)" },
+  },
+  "lift-soft": {
+    hidden: { opacity: 0, y: 22, scale: 0.975, filter: "blur(10px)" },
+    visible: { opacity: 1, y: 0, scale: 1, filter: "blur(0px)" },
+  },
+  "depth-left": {
+    hidden: {
+      opacity: 0,
+      x: 40,
+      rotateY: -8,
+      scale: 0.96,
+      filter: "blur(10px)",
+    },
+    visible: { opacity: 1, x: 0, rotateY: 0, scale: 1, filter: "blur(0px)" },
+  },
+  "depth-right": {
+    hidden: {
+      opacity: 0,
+      x: -40,
+      rotateY: 8,
+      scale: 0.96,
+      filter: "blur(10px)",
+    },
+    visible: { opacity: 1, x: 0, rotateY: 0, scale: 1, filter: "blur(0px)" },
   },
 };
 
@@ -79,6 +106,7 @@ export function staggerVariantAt(index: number): RevealVariant {
     "zoom-in",
     "rotate-in",
     "blur-in",
+    "lift-soft",
   ];
   return pool[index % pool.length];
 }
@@ -92,6 +120,9 @@ const detailPagePool: RevealVariant[] = [
   "blur-in",
   "skew-up",
   "fade-down",
+  "lift-soft",
+  "depth-left",
+  "depth-right",
 ];
 
 /** Unique image + content animation per detail page slug */

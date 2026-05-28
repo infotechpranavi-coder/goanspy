@@ -22,10 +22,10 @@ export default function TopDealsPage() {
         imageSrc={pageImages.topDeals}
         imageAlt="CCTV and security special offers"
       />
-      <ScrollReveal variant="zoom-in">
+      <ScrollReveal variant="lift-soft" duration={0.82} amount={0.18}>
         <PromoBanner />
       </ScrollReveal>
-      <ScrollReveal variant="fade-up">
+      <ScrollReveal variant="depth-right" duration={0.8} amount={0.18}>
         <FeaturedProducts />
       </ScrollReveal>
     </main>

@@ -1,6 +1,7 @@
 import ClientsGrid from "@/components/ClientsGrid";
 import PageHero from "@/components/PageHero";
 import ScrollReveal from "@/components/motion/ScrollReveal";
+import { clientLogos } from "@/lib/content/clients";
 import { pageImages } from "@/lib/content/images";
 
 export const metadata = {
@@ -22,58 +23,147 @@ export default function ClientsPage() {
 
       <section
         style={{
-          maxWidth: 1200,
+          maxWidth: 1240,
           margin: "0 auto",
-          padding: "56px 20px 88px",
+          padding: "46px 20px 88px",
         }}
       >
-        <ScrollReveal variant="fade-up">
+        <ScrollReveal variant="fade-up" duration={0.72} amount={0.18}>
           <div
             style={{
-              maxWidth: 760,
-              marginBottom: 34,
+              maxWidth: 1180,
+              margin: "0 auto 26px",
+              background:
+                "linear-gradient(180deg, rgba(255,255,255,0.98) 0%, rgba(244,249,255,0.96) 100%)",
+              border: "1px solid rgba(37,99,235,0.10)",
+              borderRadius: 28,
+              padding: "22px 22px 20px",
+              boxShadow: "0 18px 36px rgba(15,23,42,0.06)",
             }}
           >
-            <span
+            <div
               style={{
-                fontSize: 12,
-                letterSpacing: 3,
-                color: "var(--wine-berry)",
-                textTransform: "uppercase",
-                fontWeight: 700,
+                display: "flex",
+                flexWrap: "wrap",
+                gap: 12,
+                alignItems: "center",
+                justifyContent: "space-between",
               }}
             >
-              Trusted Network
-            </span>
-            <h2
-              style={{
-                fontSize: "clamp(28px, 4vw, 42px)",
-                color: "var(--navy)",
-                margin: "12px 0 14px",
-                fontWeight: 700,
-              }}
-            >
-              Client and partner brands we showcase with confidence
-            </h2>
-            <p
-              style={{
-                fontSize: 15,
-                lineHeight: 1.85,
-                color: "var(--text-mid)",
-              }}
-            >
-              This page brings together the logos and categories featured in our
-              homepage client slider. It gives visitors a clear view of the
-              brands associated with surveillance, access control, networking,
-              and supporting infrastructure in our ecosystem.
-            </p>
+              <div style={{ maxWidth: 760 }}>
+                <span
+                  style={{
+                    fontSize: 12,
+                    letterSpacing: 3,
+                    color: "#1e5db0",
+                    textTransform: "uppercase",
+                    fontWeight: 800,
+                  }}
+                >
+                  Featured logo wall
+                </span>
+                <h2
+                  style={{
+                    fontSize: "clamp(28px, 4vw, 40px)",
+                    color: "var(--navy)",
+                    margin: "12px 0 12px",
+                    fontWeight: 800,
+                  }}
+                >
+                  A clean card wall of the logos you shared
+                </h2>
+                <p
+                  style={{
+                    fontSize: 15,
+                    lineHeight: 1.85,
+                    color: "var(--text-mid)",
+                    marginBottom: 0,
+                  }}
+                >
+                  We&apos;ve turned the client set into proper image cards so every
+                  brand stays visible, aligned, and easy to scan across the
+                  page.
+                </p>
+              </div>
+
+              <div
+                style={{
+                  display: "grid",
+                  gridTemplateColumns: "repeat(2, minmax(120px, 1fr))",
+                  gap: 10,
+                  minWidth: 260,
+                }}
+              >
+                <div
+                  style={{
+                    borderRadius: 18,
+                    border: "1px solid rgba(37,99,235,0.12)",
+                    background: "#ffffff",
+                    padding: "12px 14px",
+                  }}
+                >
+                  <div
+                    style={{
+                      fontSize: 12,
+                      letterSpacing: 2,
+                      textTransform: "uppercase",
+                      color: "#1e5db0",
+                      fontWeight: 800,
+                    }}
+                  >
+                    Logos
+                  </div>
+                  <div
+                    style={{
+                      fontSize: 22,
+                      fontWeight: 800,
+                      color: "var(--navy)",
+                      marginTop: 6,
+                    }}
+                  >
+                    {clientLogos.length}
+                  </div>
+                </div>
+                <div
+                  style={{
+                    borderRadius: 18,
+                    border: "1px solid rgba(37,99,235,0.12)",
+                    background: "#ffffff",
+                    padding: "12px 14px",
+                  }}
+                >
+                  <div
+                    style={{
+                      fontSize: 12,
+                      letterSpacing: 2,
+                      textTransform: "uppercase",
+                      color: "#1e5db0",
+                      fontWeight: 800,
+                    }}
+                  >
+                    Layout
+                  </div>
+                  <div
+                    style={{
+                      fontSize: 22,
+                      fontWeight: 800,
+                      color: "var(--navy)",
+                      marginTop: 6,
+                    }}
+                  >
+                    Cards
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </ScrollReveal>
 
-        <ScrollReveal variant="blur-in" duration={0.8}>
+        <ScrollReveal variant="lift-soft" duration={0.84} amount={0.16}>
           <ClientsGrid />
         </ScrollReveal>
       </section>
     </main>
   );
 }
+

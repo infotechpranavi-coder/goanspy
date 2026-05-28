@@ -1,7 +1,13 @@
 "use client";
 
 import Link from "next/link";
-import { motion, useReducedMotion } from "framer-motion";
+import { useRef } from "react";
+import {
+  motion,
+  useReducedMotion,
+  useScroll,
+  useTransform,
+} from "framer-motion";
 
 export type Breadcrumb = { label: string; href?: string };
 
@@ -23,9 +29,18 @@ export default function PageHero({
   actions,
 }: PageHeroProps) {
   const reduce = useReducedMotion();
+  const heroRef = useRef<HTMLElement | null>(null);
+  const { scrollYProgress } = useScroll({
+    target: heroRef,
+    offset: ["start start", "end start"],
+  });
+  const imageY = useTransform(scrollYProgress, [0, 1], [0, reduce ? 0 : 28]);
+  const imageScale = useTransform(scrollYProgress, [0, 1], [1.08, 1.15]);
+  const overlayOpacity = useTransform(scrollYProgress, [0, 1], [0.86, 0.74]);
 
   return (
     <section
+      ref={heroRef}
       style={{
         position: "relative",
         minHeight: "clamp(260px, 38vw, 380px)",
@@ -33,10 +48,9 @@ export default function PageHero({
         alignItems: "flex-end",
         overflow: "hidden",
       }}
-      aria-label={`${title} — ${imageAlt}`}
+      aria-label={`${title} - ${imageAlt}`}
     >
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
+      <motion.img
         src={imageSrc}
         alt=""
         aria-hidden
@@ -47,15 +61,19 @@ export default function PageHero({
           height: "100%",
           objectFit: "cover",
           objectPosition: "center",
+          y: reduce ? 0 : imageY,
+          scale: reduce ? 1.08 : imageScale,
+          willChange: "transform",
         }}
       />
-      <div
+      <motion.div
         aria-hidden
         style={{
           position: "absolute",
           inset: 0,
           background:
             "linear-gradient(105deg, rgba(26,39,68,0.88) 0%, rgba(91,29,54,0.72) 45%, rgba(26,39,68,0.55) 100%)",
+          opacity: reduce ? 1 : overlayOpacity,
         }}
       />
       <div
@@ -159,7 +177,6 @@ export default function PageHero({
           </motion.div>
         )}
       </div>
-
     </section>
   );
 }

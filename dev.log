@@ -1,0 +1,371 @@
+
+> furniture-store@0.1.0 dev
+> next dev --turbopack
+
+▲ Next.js 16.2.6 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.29.164:3000
+✓ Ready in 1850ms
+⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of C:\Users\vicky\OneDrive\pnpm-lock.yaml as the root directory.
+ To silence this warning, set `turbopack.root` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory for more information.
+ Detected additional lockfiles: 
+   * C:\Users\vicky\OneDrive\Desktop\Goanspy\goanspy\pnpm-lock.yaml
+
+Creating turbopack project {
+  dir: 'C:\\Users\\vicky\\OneDrive\\Desktop\\Goanspy\\goanspy',
+  testMode: true
+}
+
+ GET / 200 in 3.6s (next.js: 1059ms, application-code: 2.5s)
+ GET /contact-us 200 in 352ms (next.js: 106ms, application-code: 247ms)
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+ GET / 200 in 142ms (next.js: 25ms, application-code: 117ms)
+ GET / 200 in 746ms (next.js: 23ms, application-code: 723ms)
+ GET / 200 in 1102ms (next.js: 68ms, application-code: 1034ms)
+✓ Finished filesystem cache database compaction in 27.3s
+ GET / 200 in 871ms (next.js: 52ms, application-code: 820ms)
+ GET / 200 in 1027ms (next.js: 69ms, application-code: 958ms)
+ GET / 200 in 1166ms (next.js: 30ms, application-code: 1135ms)
+ GET / 200 in 932ms (next.js: 98ms, application-code: 834ms)
+ GET / 200 in 1242ms (next.js: 221ms, application-code: 1021ms)
+ GET / 200 in 823ms (next.js: 35ms, application-code: 789ms)
+ GET / 200 in 1613ms (next.js: 49ms, application-code: 1563ms)
+ GET / 200 in 1758ms (next.js: 1087ms, application-code: 671ms)
+[browser] Uncaught Error: Internal Next.js error: Router action dispatched before initialization.
+[browser] ⨯ unhandledRejection: ChunkLoadError: Failed to load chunk /_next/static/chunks/Desktop_Goanspy_goanspy_app_layout_tsx_05dhr7f._.js from module [project]/Desktop/Goanspy/goanspy/node_modules/next/dist/compiled/react-server-dom-turbopack/cjs/react-server-dom-turbopack-client.browser.development.js [app-client] (ecmascript)
+ GET / 200 in 1003ms (next.js: 467ms, application-code: 536ms)
+ GET / 200 in 834ms (next.js: 415ms, application-code: 419ms)
+ GET / 200 in 900ms (next.js: 368ms, application-code: 531ms)
+ GET / 200 in 1678ms (next.js: 881ms, application-code: 797ms)
+ GET / 200 in 596ms (next.js: 247ms, application-code: 349ms)
+ GET / 200 in 633ms (next.js: 313ms, application-code: 321ms)
+ GET / 200 in 599ms (next.js: 331ms, application-code: 267ms)
+ GET / 200 in 289ms (next.js: 46ms, application-code: 243ms)
+[browser] Uncaught Error: Internal Next.js error: Router action dispatched before initialization.
+[browser] Uncaught Error: Internal Next.js error: Router action dispatched before initialization.
+[browser] Uncaught Error: Internal Next.js error: Router action dispatched before initialization.
+[browser] Uncaught Error: Internal Next.js error: Router action dispatched before initialization.
+[browser] Uncaught Error: Internal Next.js error: Router action dispatched before initialization.
+[browser] Uncaught Error: Internal Next.js error: Router action dispatched before initialization.
+[browser] Uncaught Error: Internal Next.js error: Router action dispatched before initialization.
+[browser] Uncaught Error: Internal Next.js error: Router action dispatched before initialization.
+ GET / 200 in 1676ms (next.js: 13ms, application-code: 1663ms)
+ GET /about-us 200 in 1295ms (next.js: 413ms, application-code: 882ms)
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+✓ Finished filesystem cache database compaction in 29.4s
+✓ Finished filesystem cache database compaction in 42s
+ GET /about-us 200 in 2.0s (next.js: 182ms, application-code: 1848ms)
+ GET /about-us 200 in 666ms (next.js: 13ms, application-code: 653ms)
+ GET / 200 in 1262ms (next.js: 649ms, application-code: 613ms)
+ GET / 200 in 539ms (next.js: 93ms, application-code: 446ms)
+ GET /about-us 200 in 1325ms (next.js: 362ms, application-code: 964ms)
+ GET /about-us 200 in 5.9s (next.js: 103ms, application-code: 5.8s)
+ GET / 200 in 1979ms (next.js: 560ms, application-code: 1419ms)
+ GET / 200 in 472ms (next.js: 176ms, application-code: 295ms)
+ GET /about-us 200 in 2.6s (next.js: 1160ms, application-code: 1422ms)
+ GET /about-us 200 in 476ms (next.js: 64ms, application-code: 413ms)
+ GET /blog 200 in 5.2s (next.js: 614ms, application-code: 4.6s)
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+ GET /about-us 200 in 288ms (next.js: 12ms, application-code: 277ms)
+ GET / 200 in 126ms (next.js: 34ms, application-code: 92ms)
+ GET /clients 200 in 1089ms (next.js: 477ms, application-code: 612ms)
+ GET /blog 200 in 970ms (next.js: 17ms, application-code: 953ms)
+ GET / 200 in 11.5s (next.js: 138ms, application-code: 11.3s)
+ GET / 200 in 5.4s (next.js: 1197ms, application-code: 4.2s)
+ GET / 200 in 1886ms (next.js: 438ms, application-code: 1448ms)
+ GET / 200 in 2.0s (next.js: 29ms, application-code: 1983ms)
+ GET / 200 in 1304ms (next.js: 122ms, application-code: 1182ms)
+ GET /blog 200 in 16.1s (next.js: 2.2s, application-code: 13.9s)
+ GET /blog 200 in 10.0s (next.js: 1881ms, application-code: 8.1s)
+ GET /blog 200 in 6.5s (next.js: 995ms, application-code: 5.5s)
+ GET / 200 in 1331ms (next.js: 285ms, application-code: 1046ms)
+ GET /blog 200 in 5.9s (next.js: 166ms, application-code: 5.7s)
+ GET /blog 200 in 4.5s (next.js: 550ms, application-code: 4.0s)
+ GET / 200 in 809ms (next.js: 135ms, application-code: 674ms)
+ GET /blog 200 in 2.2s (next.js: 619ms, application-code: 1531ms)
+ GET /blog 200 in 836ms (next.js: 339ms, application-code: 497ms)
+ GET /government-regulation-legal-compliance 200 in 3.3s (next.js: 2.2s, application-code: 1029ms)
+ GET / 200 in 164ms (next.js: 43ms, application-code: 121ms)
+ GET /contact-us 200 in 2.1s (next.js: 1079ms, application-code: 1034ms)
+ GET /contact-us 200 in 5.6s (next.js: 906ms, application-code: 4.7s)
+ GET /case-studies 200 in 1015ms (next.js: 334ms, application-code: 681ms)
+ GET /locations 200 in 1325ms (next.js: 305ms, application-code: 1021ms)
+[browser] Uncaught TypeError: Cannot set property length of #<CSSStyleDeclaration> which has only a getter
+    at a (<anonymous>)
+    at HotspotTrace (components\GoaCoverageMap.tsx:66:5)
+    at <anonymous> (components\GoaCoverageMap.tsx:354:19)
+    at Array.map (<anonymous>:1:18)
+    at GoaCoverageMap (components\GoaCoverageMap.tsx:348:31)
+    at LocationsHubPage (app\locations\page.tsx:255:13)
+  64 | }) {
+  65 |   return (
+> 66 |     <Link
+     |     ^
+  67 |       href={href}
+  68 |       style={{
+  69 |         position: "absolute",
+ GET /locations 200 in 4.3s (next.js: 50ms, application-code: 4.2s)
+ GET /locations 200 in 15.8s (next.js: 181ms, application-code: 15.6s)
+ GET /our-services 200 in 8.4s (next.js: 2.7s, application-code: 5.7s)
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+ GET / 200 in 4.9s (next.js: 1337ms, application-code: 3.6s)
+ GET / 200 in 600ms (next.js: 321ms, application-code: 279ms)
+ GET /our-services 200 in 4.9s (next.js: 2.9s, application-code: 2.0s)
+ GET /our-services 200 in 649ms (next.js: 106ms, application-code: 543ms)
+✓ Compiled in 820.7s
+ GET / 200 in 90s (next.js: 8.5s, application-code: 82s)
+⚠ Server is approaching the used memory threshold, restarting...
+▲ Next.js 16.2.6 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.29.164:3000
+✓ Ready in 2.0s
+⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of C:\Users\vicky\OneDrive\pnpm-lock.yaml as the root directory.
+ To silence this warning, set `turbopack.root` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory for more information.
+ Detected additional lockfiles: 
+   * C:\Users\vicky\OneDrive\Desktop\Goanspy\goanspy\pnpm-lock.yaml
+
+Creating turbopack project {
+  dir: 'C:\\Users\\vicky\\OneDrive\\Desktop\\Goanspy\\goanspy',
+  testMode: true
+}
+
+○ Compiling / ...
+ GET / 200 in 8.8s (next.js: 5.0s, application-code: 3.8s)
+[browser] Uncaught TypeError: network error
+TypeError: network error
+ GET /our-services 200 in 2.9s (next.js: 367ms, application-code: 2.5s)
+ GET / 200 in 5.9s (next.js: 2.5s, application-code: 3.4s)
+ GET / 200 in 243ms (next.js: 52ms, application-code: 192ms)
+ GET / 200 in 748ms (next.js: 309ms, application-code: 439ms)
+ GET / 200 in 1070ms (next.js: 471ms, application-code: 599ms)
+ GET /our-services 200 in 1397ms (next.js: 279ms, application-code: 1117ms)
+ GET /our-services 200 in 509ms (next.js: 35ms, application-code: 474ms)
+ GET /our-services 200 in 1196ms (next.js: 108ms, application-code: 1088ms)
+ GET /our-services 200 in 1193ms (next.js: 470ms, application-code: 722ms)
+ GET /clients 200 in 383ms (next.js: 151ms, application-code: 232ms)
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+ GET /clients 200 in 2.3s (next.js: 117ms, application-code: 2.2s)
+ GET / 200 in 1285ms (next.js: 176ms, application-code: 1109ms)
+ GET / 200 in 1438ms (next.js: 599ms, application-code: 840ms)
+ GET / 200 in 419ms (next.js: 113ms, application-code: 307ms)
+ GET / 200 in 654ms (next.js: 274ms, application-code: 380ms)
+ GET / 200 in 434ms (next.js: 48ms, application-code: 386ms)
+ GET / 200 in 279ms (next.js: 48ms, application-code: 231ms)
+ GET / 200 in 960ms (next.js: 384ms, application-code: 576ms)
+ GET / 200 in 240ms (next.js: 15ms, application-code: 225ms)
+ GET / 200 in 292ms (next.js: 20ms, application-code: 272ms)
+ GET / 200 in 308ms (next.js: 54ms, application-code: 254ms)
+ GET / 200 in 195ms (next.js: 15ms, application-code: 180ms)
+ GET / 200 in 159ms (next.js: 18ms, application-code: 142ms)
+ GET / 200 in 333ms (next.js: 107ms, application-code: 226ms)
+ GET /clients 200 in 2.1s (next.js: 1168ms, application-code: 977ms)
+ GET /clients 200 in 2.9s (next.js: 114ms, application-code: 2.8s)
+ GET / 200 in 1691ms (next.js: 381ms, application-code: 1310ms)
+ GET /clients 200 in 1696ms (next.js: 1077ms, application-code: 619ms)
+ GET / 200 in 240ms (next.js: 34ms, application-code: 206ms)
+ GET /clients 200 in 189ms (next.js: 10ms, application-code: 179ms)
+⨯ ./Desktop/Goanspy/goanspy/app/clients/page.tsx:4:1
+Module not found: Can't resolve '@/lib/content/clients'
+  [90m2 |[0m [36mimport[0m [33mPageHero[0m [36mfrom[0m [32m"@/components/PageHero"[0m;
+  [90m3 |[0m [36mimport[0m [33mScrollReveal[0m [36mfrom[0m [32m"@/components/motion/ScrollReveal"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { clientLogos } [36mfrom[0m [32m"@/lib/content/clients"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m { pageImages } [36mfrom[0m [32m"@/lib/content/images"[0m;
+  [90m6 |[0m
+  [90m7 |[0m [36mexport[0m [36mconst[0m metadata = {
+
+Import map: aliased to relative './lib/content/clients' inside of [project]/Desktop/Goanspy/goanspy
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./Desktop/Goanspy/goanspy/app/clients/page.tsx:4:1
+Module not found: Can't resolve '@/lib/content/clients'
+  [90m2 |[0m [36mimport[0m [33mPageHero[0m [36mfrom[0m [32m"@/components/PageHero"[0m;
+  [90m3 |[0m [36mimport[0m [33mScrollReveal[0m [36mfrom[0m [32m"@/components/motion/ScrollReveal"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { clientLogos } [36mfrom[0m [32m"@/lib/content/clients"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m { pageImages } [36mfrom[0m [32m"@/lib/content/images"[0m;
+  [90m6 |[0m
+  [90m7 |[0m [36mexport[0m [36mconst[0m metadata = {
+
+Import map: aliased to relative './lib/content/clients' inside of [project]/Desktop/Goanspy/goanspy
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./Desktop/Goanspy/goanspy/components/ClientsGrid.tsx:3:1
+Module not found: Can't resolve '@/lib/content/clients'
+  [90m1 |[0m [32m"use client"[0m;
+  [90m2 |[0m
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { clientLogos } [36mfrom[0m [32m"@/lib/content/clients"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m
+  [90m5 |[0m [36mexport[0m [36mdefault[0m [36mfunction[0m [33mClientsGrid[0m() {
+  [90m6 |[0m   [36mreturn[0m (
+
+Import map: aliased to relative './lib/content/clients' inside of [project]/Desktop/Goanspy/goanspy
+
+
+Import trace:
+  Server Component:
+    ./Desktop/Goanspy/goanspy/components/ClientsGrid.tsx
+    ./Desktop/Goanspy/goanspy/app/clients/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./Desktop/Goanspy/goanspy/components/ClientsGrid.tsx:3:1
+Module not found: Can't resolve '@/lib/content/clients'
+  [90m1 |[0m [32m"use client"[0m;
+  [90m2 |[0m
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { clientLogos } [36mfrom[0m [32m"@/lib/content/clients"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m
+  [90m5 |[0m [36mexport[0m [36mdefault[0m [36mfunction[0m [33mClientsGrid[0m() {
+  [90m6 |[0m   [36mreturn[0m (
+
+Import map: aliased to relative './lib/content/clients' inside of [project]/Desktop/Goanspy/goanspy
+
+
+Import trace:
+  Server Component:
+    ./Desktop/Goanspy/goanspy/components/ClientsGrid.tsx
+    ./Desktop/Goanspy/goanspy/app/clients/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./Desktop/Goanspy/goanspy/components/ClientsGrid.tsx:3:1
+Module not found: Can't resolve '@/lib/content/clients'
+  [90m1 |[0m [32m"use client"[0m;
+  [90m2 |[0m
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { clientLogos } [36mfrom[0m [32m"@/lib/content/clients"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m
+  [90m5 |[0m [36mexport[0m [36mdefault[0m [36mfunction[0m [33mClientsGrid[0m() {
+  [90m6 |[0m   [36mreturn[0m (
+
+Import map: aliased to relative './lib/content/clients' inside of [project]/Desktop/Goanspy/goanspy
+
+
+Import trace:
+  Server Component:
+    ./Desktop/Goanspy/goanspy/components/ClientsGrid.tsx
+    ./Desktop/Goanspy/goanspy/app/clients/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./Desktop/Goanspy/goanspy/components/ClientsGrid.tsx:3:1
+Module not found: Can't resolve '@/lib/content/clients'
+  [90m1 |[0m [32m"use client"[0m;
+  [90m2 |[0m
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { clientLogos } [36mfrom[0m [32m"@/lib/content/clients"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m
+  [90m5 |[0m [36mexport[0m [36mdefault[0m [36mfunction[0m [33mClientsGrid[0m() {
+  [90m6 |[0m   [36mreturn[0m (
+
+Import map: aliased to relative './lib/content/clients' inside of [project]/Desktop/Goanspy/goanspy
+
+
+Import trace:
+  Server Component:
+    ./Desktop/Goanspy/goanspy/components/ClientsGrid.tsx
+    ./Desktop/Goanspy/goanspy/app/clients/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./Desktop/Goanspy/goanspy/components/PromoBanner.tsx:6:1
+Module not found: Can't resolve '@/lib/content/clients'
+  [90m4 |[0m [36mimport[0m { useEffect, useMemo, useState } [36mfrom[0m [32m"react"[0m;
+  [90m5 |[0m [36mimport[0m { motion } [36mfrom[0m [32m"framer-motion"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { clientLogos } [36mfrom[0m [32m"@/lib/content/clients"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m [33mCARD_WIDTH[0m = [35m168[0m;
+  [90m9 |[0m [36mconst[0m [33mCARD_GAP[0m = [35m18[0m;
+
+Import map: aliased to relative './lib/content/clients' inside of [project]/Desktop/Goanspy/goanspy
+
+
+Import trace:
+  Server Component:
+    ./Desktop/Goanspy/goanspy/components/PromoBanner.tsx
+    ./Desktop/Goanspy/goanspy/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./Desktop/Goanspy/goanspy/components/PromoBanner.tsx:6:1
+Module not found: Can't resolve '@/lib/content/clients'
+  [90m4 |[0m [36mimport[0m { useEffect, useMemo, useState } [36mfrom[0m [32m"react"[0m;
+  [90m5 |[0m [36mimport[0m { motion } [36mfrom[0m [32m"framer-motion"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { clientLogos } [36mfrom[0m [32m"@/lib/content/clients"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m [33mCARD_WIDTH[0m = [35m168[0m;
+  [90m9 |[0m [36mconst[0m [33mCARD_GAP[0m = [35m18[0m;
+
+Import map: aliased to relative './lib/content/clients' inside of [project]/Desktop/Goanspy/goanspy
+
+
+Import trace:
+  Server Component:
+    ./Desktop/Goanspy/goanspy/components/PromoBanner.tsx
+    ./Desktop/Goanspy/goanspy/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./Desktop/Goanspy/goanspy/components/PromoBanner.tsx:6:1
+Module not found: Can't resolve '@/lib/content/clients'
+  [90m4 |[0m [36mimport[0m { useEffect, useMemo, useState } [36mfrom[0m [32m"react"[0m;
+  [90m5 |[0m [36mimport[0m { motion } [36mfrom[0m [32m"framer-motion"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { clientLogos } [36mfrom[0m [32m"@/lib/content/clients"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m [33mCARD_WIDTH[0m = [35m168[0m;
+  [90m9 |[0m [36mconst[0m [33mCARD_GAP[0m = [35m18[0m;
+
+Import map: aliased to relative './lib/content/clients' inside of [project]/Desktop/Goanspy/goanspy
+
+
+Import trace:
+  Server Component:
+    ./Desktop/Goanspy/goanspy/components/PromoBanner.tsx
+    ./Desktop/Goanspy/goanspy/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./Desktop/Goanspy/goanspy/components/PromoBanner.tsx:6:1
+Module not found: Can't resolve '@/lib/content/clients'
+  [90m4 |[0m [36mimport[0m { useEffect, useMemo, useState } [36mfrom[0m [32m"react"[0m;
+  [90m5 |[0m [36mimport[0m { motion } [36mfrom[0m [32m"framer-motion"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { clientLogos } [36mfrom[0m [32m"@/lib/content/clients"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m [33mCARD_WIDTH[0m = [35m168[0m;
+  [90m9 |[0m [36mconst[0m [33mCARD_GAP[0m = [35m18[0m;
+
+Import map: aliased to relative './lib/content/clients' inside of [project]/Desktop/Goanspy/goanspy
+
+
+Import trace:
+  Server Component:
+    ./Desktop/Goanspy/goanspy/components/PromoBanner.tsx
+    ./Desktop/Goanspy/goanspy/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[?25h

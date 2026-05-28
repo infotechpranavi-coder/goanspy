@@ -43,10 +43,10 @@ export default function ScrollReveal({
   variant,
   direction,
   delay = 0,
-  duration = 0.65,
+  duration = 0.72,
   className,
   style,
-  amount = 0.12,
+  amount = 0.18,
 }: ScrollRevealProps) {
   const reduce = useReducedMotion();
   const resolved = variant ?? (direction ? directionToVariant[direction] : "fade-up");
@@ -67,6 +67,8 @@ export default function ScrollReveal({
       className={className}
       style={{
         ...style,
+        willChange: "transform, opacity, filter",
+        transformStyle: needsPerspective ? "preserve-3d" : undefined,
         ...(needsPerspective ? { perspective: 1200 } : {}),
       }}
       initial={preset.hidden}

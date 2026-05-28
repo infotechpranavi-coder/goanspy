@@ -52,14 +52,14 @@ const stats = [
 
 export default function WhyChooseGoanSpy() {
   return (
-    <section
-      className="elemen-section-white"
-      style={{
-        padding: "80px 0",
-        background:
-          "linear-gradient(180deg, #ffffff 0%, #f8f5f1 52%, #ffffff 100%)",
-      }}
-    >
+      <section
+        className="elemen-section-white"
+        style={{
+          padding: "80px 0",
+          background:
+            "linear-gradient(180deg, var(--white) 0%, var(--bg-cream) 52%, var(--white) 100%)",
+        }}
+      >
       <div style={{ maxWidth: "1300px", margin: "0 auto", padding: "0 20px" }}>
         <div
           style={{
@@ -191,11 +191,12 @@ export default function WhyChooseGoanSpy() {
             <article
               key={reason.title}
               style={{
-                background: "linear-gradient(180deg, #fff, #f9f7f3)",
-                border: "1px solid rgba(26,39,68,0.08)",
+                background:
+                  "linear-gradient(180deg, var(--white), var(--bg-cream))",
+                border: "1px solid rgba(44,58,66,0.08)",
                 borderRadius: 22,
                 padding: 22,
-                boxShadow: "0 12px 32px rgba(26,39,68,0.06)",
+                boxShadow: "0 12px 32px rgba(44,58,66,0.06)",
                 minHeight: 100,
               }}
             >
@@ -204,7 +205,8 @@ export default function WhyChooseGoanSpy() {
                   width: 48,
                   height: 48,
                   borderRadius: 16,
-                  background: "var(--wine-berry)",
+                  background:
+                    "linear-gradient(135deg, var(--wine-berry) 0%, var(--wine-berry-dark) 100%)",
                   color: "#fff",
                   display: "flex",
                   alignItems: "center",
@@ -251,7 +253,8 @@ export default function WhyChooseGoanSpy() {
               style={{
                 borderRadius: 20,
                 padding: "20px 22px",
-                background: "var(--navy)",
+                background:
+                  "linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%)",
                 color: "#fff",
               }}
             >

@@ -41,7 +41,7 @@ export default function HeroSlider() {
             position: "absolute",
             inset: 0,
             background:
-              "linear-gradient(90deg, rgba(7, 11, 22, 0.88) 0%, rgba(7, 11, 22, 0.76) 45%, rgba(7, 11, 22, 0.42) 100%)",
+              "linear-gradient(90deg, rgba(28, 37, 43, 0.88) 0%, rgba(44, 58, 66, 0.72) 45%, rgba(125, 156, 183, 0.34) 100%)",
             zIndex: 1,
           }}
         />

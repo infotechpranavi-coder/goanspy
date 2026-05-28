@@ -98,7 +98,7 @@ export default function ElementsPage() {
                   <div
                     style={{
                       fontSize: 12,
-                      color: "#5B1D36",
+                      color: "var(--wine-berry)",
                       fontWeight: 600,
                       textTransform: "uppercase",
                       letterSpacing: 1,

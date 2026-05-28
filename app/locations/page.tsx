@@ -82,13 +82,13 @@ function LocationBlock({
   return (
     <section
       style={{
-        padding: "clamp(22px, 4vw, 36px) 0",
+        padding: "clamp(18px, 3vw, 28px) 0",
         borderBottom: "1px solid var(--border)",
       }}
     >
       <span style={labelStyle}>{eyebrow}</span>
       <h2 style={sectionTitleStyle}>{title}</h2>
-      <p style={{ ...paragraphStyle, maxWidth: 920, marginBottom: 22 }}>
+      <p style={{ ...paragraphStyle, maxWidth: 920, marginBottom: 18 }}>
         {description}
       </p>
 
@@ -103,11 +103,11 @@ function LocationBlock({
           const content = (
             <div
               style={{
-                padding: "18px 16px",
+                padding: "16px 15px",
                 height: "100%",
                 borderRadius: 20,
                 background:
-                  "linear-gradient(180deg, rgba(245,244,241,0.9), rgba(255,255,255,1))",
+                  "linear-gradient(180deg, rgba(255,255,255,0.95), rgba(240,246,255,1))",
                 border: "1px solid var(--border)",
               }}
             >
@@ -141,10 +141,10 @@ function LocationBlock({
                     marginTop: 12,
                     fontSize: 13,
                     fontWeight: 700,
-                    color: "var(--wine-berry)",
+                    color: "#1e5db0",
                   }}
                 >
-                  View location page -
+                  Open location page →
                 </span>
               )}
             </div>
@@ -189,30 +189,36 @@ export default function LocationsHubPage() {
         }
       />
 
-      <section style={{ maxWidth: 1120, margin: "0 auto", padding: "48px 20px 90px" }}>
-        <article style={{ display: "grid", gap: 28 }}>
+      <section style={{ maxWidth: 1160, margin: "0 auto", padding: "40px 20px 78px" }}>
+        <article style={{ display: "grid", gap: 20 }}>
           <ScrollReveal variant="fade-up" duration={0.58}>
             <section
               style={{
                 display: "grid",
-                gap: 18,
+                gap: 16,
+                background: "rgba(255,255,255,0.82)",
+                border: "1px solid var(--border)",
+                borderRadius: 26,
+                padding: "20px 20px 18px",
+                boxShadow: "0 12px 30px rgba(26,39,68,0.06)",
               }}
             >
               <span style={labelStyle}>Quick Location Access</span>
               <h2 style={sectionTitleStyle}>
                 All locations are visible at once with direct one-click access.
               </h2>
-              <p style={{ ...paragraphStyle, maxWidth: 920 }}>
+              <p style={{ ...paragraphStyle, maxWidth: 920, marginBottom: 2 }}>
                 No dropdown. Every live location is available here on the main page as a
                 small button that opens its respective city page immediately.
               </p>
 
               <div
                 style={{
-                  display: "flex",
-                  flexWrap: "wrap",
+                  display: "grid",
+                  gridTemplateColumns: "repeat(auto-fit, minmax(150px, 1fr))",
                   gap: 10,
                 }}
+                className="location-button-grid"
               >
                 {allLocations.map((location) => (
                   <Link
@@ -223,15 +229,16 @@ export default function LocationsHubPage() {
                       alignItems: "center",
                       justifyContent: "center",
                       gap: 8,
-                      padding: "10px 14px",
+                      padding: "10px 12px",
                       borderRadius: 999,
                       textDecoration: "none",
                       background: "#fff",
                       color: "var(--navy)",
                       border: "1px solid rgba(26,39,68,0.12)",
-                      boxShadow: "0 10px 24px rgba(20,30,51,0.06)",
+                      boxShadow: "0 8px 18px rgba(20,30,51,0.05)",
                       fontSize: 13,
                       fontWeight: 700,
+                      minWidth: 0,
                     }}
                   >
                     <span
@@ -240,7 +247,7 @@ export default function LocationsHubPage() {
                         height: 8,
                         borderRadius: "50%",
                         background:
-                          location.region === "North Goa" ? "var(--wine-berry)" : "#0f766e",
+                          location.region === "North Goa" ? "var(--wine-berry)" : "#1e5db0",
                         flexShrink: 0,
                       }}
                     />
@@ -261,9 +268,9 @@ export default function LocationsHubPage() {
                 position: "relative",
                 overflow: "hidden",
                 borderRadius: 28,
-                padding: "clamp(28px, 4vw, 44px)",
+                padding: "clamp(24px, 4vw, 40px)",
                 background:
-                  "linear-gradient(135deg, rgba(26,39,68,0.98) 0%, rgba(20,30,51,0.96) 58%, rgba(91,29,54,0.95) 100%)",
+                  "linear-gradient(135deg, rgba(26,39,68,0.98) 0%, rgba(20,30,51,0.96) 58%, rgba(47,128,237,0.95) 100%)",
                 color: "var(--white)",
               }}
             >
@@ -364,11 +371,11 @@ export default function LocationsHubPage() {
           <ScrollReveal variant="zoom-in" duration={0.74}>
             <section
               style={{
-                padding: "clamp(24px, 4vw, 38px)",
+                padding: "clamp(22px, 4vw, 34px)",
                 borderRadius: 28,
                 background:
-                  "linear-gradient(135deg, rgba(196,165,116,0.14) 0%, rgba(255,255,255,1) 40%, rgba(245,244,241,0.96) 100%)",
-                border: "1px solid rgba(196,165,116,0.34)",
+                  "linear-gradient(135deg, rgba(47,128,237,0.10) 0%, rgba(255,255,255,1) 40%, rgba(240,246,255,0.96) 100%)",
+                border: "1px solid rgba(47,128,237,0.20)",
               }}
             >
               <span style={labelStyle}>Build Sequence</span>

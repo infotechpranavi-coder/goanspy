@@ -16,7 +16,8 @@ export default function Newsletter() {
 
   return (
     <section style={{
-      background: "linear-gradient(135deg, var(--navy) 0%, var(--wine-berry) 100%)",
+      background:
+        "linear-gradient(135deg, var(--navy) 0%, var(--wine-berry) 52%, var(--theme-purple) 100%)",
       padding: "70px 0"
     }}>
       <div style={{ maxWidth: "700px", margin: "0 auto", padding: "0 20px", textAlign: "center" }}>
@@ -48,7 +49,7 @@ export default function Newsletter() {
               placeholder="Your email address"
               style={{
                 flex: 1, padding: "16px 22px", border: "none", outline: "none",
-                fontSize: 14, background: "#fff", color: "#333"
+                fontSize: 14, background: "var(--bg-cream)", color: "var(--navy)"
               }}
             />
             <button onClick={handleSubmit} style={{
@@ -56,8 +57,8 @@ export default function Newsletter() {
               border: "none", cursor: "pointer", fontWeight: 700, fontSize: 14,
               transition: "background 0.2s", whiteSpace: "nowrap"
             }}
-              onMouseEnter={e => (e.currentTarget.style.background = "#1a1a1a")}
-              onMouseLeave={e => (e.currentTarget.style.background = "#2d2d2d")}>
+              onMouseEnter={e => (e.currentTarget.style.background = "var(--wine-berry-dark)")}
+              onMouseLeave={e => (e.currentTarget.style.background = "var(--wine-berry)")}>
               Subscribe
             </button>
           </div>

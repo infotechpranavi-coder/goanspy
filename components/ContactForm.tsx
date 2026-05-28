@@ -6,14 +6,15 @@ import { CONTACT_EMAIL } from "@/lib/brand";
 
 const inputStyle: React.CSSProperties = {
   width: "100%",
-  padding: "12px 16px",
-  border: "1px solid var(--border)",
-  borderRadius: 8,
+  padding: "13px 16px",
+  border: "1px solid rgba(26,39,68,0.10)",
+  borderRadius: 14,
   fontSize: 14,
   fontFamily: "inherit",
   color: "var(--navy)",
   background: "#fff",
   outline: "none",
+  boxShadow: "inset 0 1px 2px rgba(26,39,68,0.03)",
 };
 
 const labelStyle: React.CSSProperties = {
@@ -59,12 +60,12 @@ export default function ContactForm() {
     return (
       <div
         style={{
-          background: "#fff",
-          borderRadius: 12,
-          border: "1px solid var(--border)",
-          padding: "48px 32px",
+          background: "#ffffff",
+          borderRadius: 24,
+          border: "1px solid rgba(26,39,68,0.08)",
+          padding: "38px 30px",
           textAlign: "center",
-          boxShadow: "0 8px 32px rgba(26, 39, 68, 0.08)",
+          boxShadow: "0 18px 42px rgba(26,39,68,0.10)",
         }}
       >
         <CheckCircle
@@ -101,16 +102,42 @@ export default function ContactForm() {
     <form
       onSubmit={handleSubmit}
       style={{
-        background: "#fff",
-        borderRadius: 12,
-        border: "1px solid var(--border)",
-        padding: "32px 28px",
-        boxShadow: "0 8px 32px rgba(26, 39, 68, 0.08)",
+        background: "#ffffff",
+        borderRadius: 24,
+        border: "1px solid rgba(26,39,68,0.08)",
+        padding: "34px 30px",
+        boxShadow: "0 18px 42px rgba(26,39,68,0.10)",
       }}
     >
+      <div
+        style={{
+          width: 72,
+          height: 4,
+          borderRadius: 999,
+          background: "linear-gradient(90deg, var(--wine-berry) 0%, #8cc0ff 100%)",
+          marginBottom: 18,
+        }}
+      />
+      <span
+        style={{
+          display: "inline-flex",
+          alignItems: "center",
+          padding: "6px 10px",
+          borderRadius: 999,
+          background: "rgba(47,128,237,0.12)",
+          color: "#1e5db0",
+          fontSize: 12,
+          fontWeight: 700,
+          letterSpacing: "0.12em",
+          textTransform: "uppercase",
+          marginBottom: 12,
+        }}
+      >
+        Quick enquiry
+      </span>
       <h2
         style={{
-          fontSize: 22,
+          fontSize: "clamp(24px, 2.4vw, 30px)",
           fontWeight: 700,
           color: "var(--navy)",
           marginBottom: 8,
@@ -122,12 +149,42 @@ export default function ContactForm() {
         style={{
           fontSize: 14,
           color: "var(--text-mid)",
-          marginBottom: 28,
+          marginBottom: 22,
           lineHeight: 1.6,
         }}
       >
         Fill in the form and our team will respond within one business day.
       </p>
+
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
+          gap: 10,
+          marginBottom: 22,
+        }}
+        className="contact-mini-grid"
+      >
+        {["Fast response", "Professional support", "Clear next steps"].map(
+          (item) => (
+              <div
+                key={item}
+                style={{
+                  background: "rgba(238,245,255,0.9)",
+                  border: "1px solid rgba(26,39,68,0.08)",
+                borderRadius: 16,
+                padding: "10px 12px",
+                fontSize: 12,
+                fontWeight: 600,
+                color: "var(--navy)",
+                textAlign: "center",
+              }}
+            >
+              {item}
+            </div>
+          )
+        )}
+      </div>
 
       <div
         style={{
@@ -215,15 +272,31 @@ export default function ContactForm() {
           alignItems: "center",
           gap: 8,
           opacity: loading ? 0.8 : 1,
+          boxShadow: "0 14px 28px rgba(196, 157, 0, 0.18)",
         }}
       >
         <Send size={16} />
         {loading ? "Sending…" : "Submit enquiry"}
       </button>
 
+      <p
+        style={{
+          marginTop: 14,
+          fontSize: 12,
+          color: "var(--text-light)",
+          lineHeight: 1.6,
+        }}
+      >
+        Prefer a quick call? Use the phone number above and we’ll guide you
+        directly.
+      </p>
+
       <style>{`
         @media (max-width: 540px) {
           .contact-form-grid { grid-template-columns: 1fr !important; }
+        }
+        @media (max-width: 900px) {
+          .contact-mini-grid { grid-template-columns: 1fr !important; }
         }
       `}</style>
     </form>

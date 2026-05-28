@@ -5,11 +5,9 @@ import {
   FileCheck2,
   Lock,
   Mail,
-  Map,
   MapPinned,
   Phone,
   Radar,
-  ShieldCheck,
   Users,
 } from "lucide-react";
 import PageHero from "@/components/PageHero";
@@ -60,12 +58,121 @@ export default function AboutUsPage() {
 
       <section
         style={{
-          maxWidth: 1200,
+          maxWidth: 1280,
           margin: "0 auto",
-          padding: "46px 20px 90px",
+          padding: "34px 20px 74px",
         }}
       >
-        <div style={{ display: "grid", gap: 30 }}>
+        <div
+          style={{
+            background: "rgba(255,255,255,0.72)",
+            border: "1px solid rgba(26,39,68,0.10)",
+            borderRadius: 28,
+            padding: "22px 22px 18px",
+            marginBottom: 24,
+            boxShadow: "0 16px 34px rgba(26,39,68,0.06)",
+          }}
+        >
+          <div
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              alignItems: "end",
+              justifyContent: "space-between",
+              gap: 16,
+            }}
+          >
+            <div style={{ maxWidth: 760 }}>
+              <span
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  padding: "6px 10px",
+                  borderRadius: 999,
+                  background: "rgba(47,128,237,0.12)",
+                  color: "#1e5db0",
+                  fontSize: 12,
+                  fontWeight: 700,
+                  letterSpacing: "0.12em",
+                  textTransform: "uppercase",
+                  marginBottom: 10,
+                }}
+              >
+                About Goan Spy
+              </span>
+              <h2
+                style={{
+                  fontSize: "clamp(24px, 3vw, 34px)",
+                  lineHeight: 1.12,
+                  color: "var(--navy)",
+                  marginBottom: 10,
+                }}
+              >
+                Structured, discreet, and built for real investigative clarity.
+              </h2>
+              <p
+                style={{
+                  fontSize: 15,
+                  lineHeight: 1.75,
+                  color: "var(--text-mid)",
+                  margin: 0,
+                  maxWidth: 740,
+                }}
+              >
+                The page content is strong already; we’re just giving it a calmer
+                rhythm, tighter spacing, and better visual hierarchy so every
+                section reads with confidence.
+              </p>
+            </div>
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
+                gap: 10,
+                minWidth: 360,
+              }}
+              className="about-stat-grid"
+            >
+              {aboutHighlights.slice(0, 3).map((item) => (
+                <div
+                  key={item.label}
+                  style={{
+                    background: "#ffffff",
+                    border: "1px solid rgba(26,39,68,0.08)",
+                    borderRadius: 18,
+                    padding: "14px 14px 13px",
+                  }}
+                >
+                  <div
+                    style={{
+                      fontSize: 22,
+                      fontWeight: 800,
+                      color: "var(--wine-berry)",
+                      lineHeight: 1.1,
+                      marginBottom: 6,
+                    }}
+                  >
+                    {item.value}
+                  </div>
+                  <div
+                    style={{
+                      fontSize: 11,
+                      letterSpacing: "0.1em",
+                      textTransform: "uppercase",
+                      color: "var(--text-light)",
+                      fontWeight: 700,
+                      lineHeight: 1.35,
+                    }}
+                  >
+                    {item.label}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div style={{ display: "grid", gap: 22 }}>
           <ScrollReveal variant="fade-up" duration={0.62}>
             <SplitFeatureSection
               eyebrow="About Goan Spy"
@@ -200,10 +307,11 @@ export default function AboutUsPage() {
           <ScrollReveal variant="fade-up" duration={0.72}>
             <div
               style={{
-                background: "rgba(255, 255, 255, 0.6)",
-                border: "1px solid rgba(26, 39, 68, 0.12)",
+                background: "rgba(255, 255, 255, 0.72)",
+                border: "1px solid rgba(26, 39, 68, 0.10)",
                 borderRadius: 26,
                 padding: 22,
+                boxShadow: "0 14px 30px rgba(26,39,68,0.06)",
               }}
             >
               <div style={{ marginBottom: 16 }}>
@@ -287,7 +395,7 @@ export default function AboutUsPage() {
               background:
                 "linear-gradient(135deg, rgba(26,39,68,1) 0%, rgba(26,39,68,0.94) 50%, rgba(91,29,54,0.98) 100%)",
               borderRadius: 22,
-              padding: 26,
+              padding: 24,
               color: "#fff",
               border: "1px solid rgba(255,255,255,0.18)",
               boxShadow: "0 16px 34px rgba(26, 39, 68, 0.18)",
@@ -295,7 +403,7 @@ export default function AboutUsPage() {
           >
             <div
               className="grid grid-cols-1 lg:grid-cols-[1.05fr_0.95fr]"
-              style={{ gap: 22, alignItems: "start" }}
+              style={{ gap: 18, alignItems: "start" }}
             >
               <div>
                 <p
@@ -348,7 +456,7 @@ export default function AboutUsPage() {
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2" style={{ gap: 12 }}>
+                <div className="grid grid-cols-1 sm:grid-cols-2" style={{ gap: 12 }}>
                 {aboutContact.details.map((detail, idx) => {
                   const Icon = detailIcons[idx] ?? Building2;
                   const href =
@@ -427,6 +535,14 @@ export default function AboutUsPage() {
           </div>
         </ScrollReveal>
       </div>
+      <style>{`
+        @media (max-width: 900px) {
+          .about-stat-grid {
+            grid-template-columns: 1fr !important;
+            min-width: 0 !important;
+          }
+        }
+      `}</style>
       </section>
     </main>
   );

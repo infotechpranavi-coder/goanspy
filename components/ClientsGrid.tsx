@@ -8,19 +8,20 @@ export default function ClientsGrid() {
       style={{
         display: "grid",
         gridTemplateColumns: "repeat(auto-fit, minmax(210px, 1fr))",
-        gap: 20,
+        gap: 18,
       }}
     >
       {clientLogos.map((client) => (
         <article
           key={client.name}
           style={{
-            background: "#fff",
-            border: "1px solid rgba(26,39,68,0.08)",
-            borderRadius: 24,
-            padding: 22,
-            boxShadow: "0 14px 34px rgba(26,39,68,0.07)",
-            minHeight: 176,
+            background:
+              "linear-gradient(180deg, rgba(255,255,255,0.98) 0%, rgba(245,249,255,0.96) 100%)",
+            border: "1px solid rgba(37,99,235,0.10)",
+            borderRadius: 28,
+            padding: 18,
+            boxShadow: "0 14px 32px rgba(15,23,42,0.06)",
+            minHeight: 214,
             display: "flex",
             flexDirection: "column",
             justifyContent: "space-between",
@@ -28,13 +29,14 @@ export default function ClientsGrid() {
         >
           <div
             style={{
-              minHeight: 74,
+              minHeight: 118,
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              borderRadius: 18,
-              background: "linear-gradient(180deg, #ffffff, #f7f4ef)",
-              border: "1px solid rgba(196,165,116,0.22)",
+              borderRadius: 22,
+              background:
+                "linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(235,244,255,0.86) 100%)",
+              border: "1px solid rgba(37,99,235,0.10)",
               padding: "18px 16px",
             }}
           >
@@ -44,30 +46,32 @@ export default function ClientsGrid() {
               alt={`${client.name} logo`}
               style={{
                 width: "100%",
-                maxWidth: 140,
-                height: 36,
+                maxWidth: 170,
+                height: 64,
                 objectFit: "contain",
                 display: "block",
+                filter: "saturate(1.02)",
               }}
             />
           </div>
 
-          <div style={{ marginTop: 18 }}>
+          <div style={{ marginTop: 16 }}>
             <div
               style={{
-                fontSize: 18,
+                fontSize: 17,
                 color: "var(--navy)",
-                fontWeight: 700,
+                fontWeight: 800,
                 marginBottom: 6,
+                lineHeight: 1.2,
               }}
             >
               {client.name}
             </div>
             <div
               style={{
-                fontSize: 13,
-                color: "var(--text-mid)",
-                lineHeight: 1.65,
+                fontSize: 12,
+                color: "#4b5563",
+                lineHeight: 1.5,
               }}
             >
               {client.category}

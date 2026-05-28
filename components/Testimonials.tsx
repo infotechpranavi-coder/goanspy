@@ -23,7 +23,7 @@ const reviews: Review[] = [
     location: "Panaji, Goa",
     rating: 5,
     avatar: "AN",
-    accent: "#5B1D36",
+    accent: "#5f7b94",
     text: "The CCTV coverage is clean and the mobile view works without any fuss. They explained everything in simple terms.",
   },
   {
@@ -33,7 +33,7 @@ const reviews: Review[] = [
     location: "Candolim, Goa",
     rating: 5,
     avatar: "RF",
-    accent: "#8A6A4A",
+    accent: "#8ca4ac",
     text: "We needed a tidy setup before guest season. Installation was on time and the cameras blend nicely with the property.",
   },
   {
@@ -43,7 +43,7 @@ const reviews: Review[] = [
     location: "Verna, Goa",
     rating: 4,
     avatar: "SP",
-    accent: "#1A2744",
+    accent: "#2c3a42",
     text: "Night visibility improved a lot compared to our old system. Their team also helped us organize recording storage properly.",
   },
   {
@@ -53,7 +53,7 @@ const reviews: Review[] = [
     location: "Margao, Goa",
     rating: 5,
     avatar: "MD",
-    accent: "#708C7B",
+    accent: "#7d9cb7",
     text: "Attendance and door access are much smoother now. Staff picked it up quickly because the handover was done patiently.",
   },
   {
@@ -63,7 +63,7 @@ const reviews: Review[] = [
     location: "Mapusa, Goa",
     rating: 5,
     avatar: "VJ",
-    accent: "#A26045",
+    accent: "#486071",
     text: "Good balance between budget and quality. We installed cameras in both the shop and stock room and the picture is sharp.",
   },
   {
@@ -73,7 +73,7 @@ const reviews: Review[] = [
     location: "Ponda, Goa",
     rating: 5,
     avatar: "PK",
-    accent: "#5B1D36",
+    accent: "#5f7b94",
     text: "The visitor tracking setup has reduced confusion during school hours. Support calls are answered faster than I expected.",
   },
   {
@@ -83,7 +83,7 @@ const reviews: Review[] = [
     location: "Vasco, Goa",
     rating: 4,
     avatar: "NS",
-    accent: "#3E5C76",
+    accent: "#5f7b94",
     text: "Cable routing was neat and didn’t leave the place looking messy. That mattered a lot on an active commercial site.",
   },
   {
@@ -93,7 +93,7 @@ const reviews: Review[] = [
     location: "Porvorim, Goa",
     rating: 5,
     avatar: "SK",
-    accent: "#8A6A4A",
+    accent: "#8ca4ac",
     text: "We wanted reception monitoring without making patients uncomfortable. The final placement feels discreet and practical.",
   },
   {
@@ -103,7 +103,7 @@ const reviews: Review[] = [
     location: "Dona Paula, Goa",
     rating: 5,
     avatar: "GC",
-    accent: "#1A2744",
+    accent: "#2c3a42",
     text: "Entry gate cameras and intercom integration have made resident complaints much easier to resolve with actual footage.",
   },
   {
@@ -113,7 +113,7 @@ const reviews: Review[] = [
     location: "Bicholim, Goa",
     rating: 4,
     avatar: "AN",
-    accent: "#708C7B",
+    accent: "#7d9cb7",
     text: "The proposal was clear and they did not oversell features we didn’t need. That gave us confidence to move ahead.",
   },
   {
@@ -123,7 +123,7 @@ const reviews: Review[] = [
     location: "Calangute, Goa",
     rating: 5,
     avatar: "RM",
-    accent: "#A26045",
+    accent: "#486071",
     text: "Kitchen, billing counter, and entrance are all visible in one place now. Playback is fast when we need to check incidents.",
   },
   {
@@ -133,7 +133,7 @@ const reviews: Review[] = [
     location: "Mapusa, Goa",
     rating: 5,
     avatar: "FS",
-    accent: "#5B1D36",
+    accent: "#5f7b94",
     text: "Their team coordinated well with our interior work and avoided delays. The final finish looks professional, not temporary.",
   },
   {
@@ -143,7 +143,7 @@ const reviews: Review[] = [
     location: "Curchorem, Goa",
     rating: 4,
     avatar: "DP",
-    accent: "#3E5C76",
+    accent: "#5f7b94",
     text: "We had blind spots near loading areas earlier. The updated layout fixed that and improved supervisor visibility during shifts.",
   },
   {
@@ -153,7 +153,7 @@ const reviews: Review[] = [
     location: "Panjim, Goa",
     rating: 5,
     avatar: "NB",
-    accent: "#8A6A4A",
+    accent: "#8ca4ac",
     text: "I liked that they recommended compact cameras for a smaller store. It feels secure without looking too industrial.",
   },
   {
@@ -163,7 +163,7 @@ const reviews: Review[] = [
     location: "Siolim, Goa",
     rating: 5,
     avatar: "CD",
-    accent: "#1A2744",
+    accent: "#2c3a42",
     text: "Remote viewing has been stable even when I’m moving between sites. That has saved me a lot of follow-up calls.",
   },
   {
@@ -173,7 +173,7 @@ const reviews: Review[] = [
     location: "Old Goa, Goa",
     rating: 4,
     avatar: "KV",
-    accent: "#708C7B",
+    accent: "#7d9cb7",
     text: "Installation was completed in the promised window and they cleaned up well after the work. Small thing, but appreciated.",
   },
   {
@@ -183,7 +183,7 @@ const reviews: Review[] = [
     location: "Margao, Goa",
     rating: 5,
     avatar: "PS",
-    accent: "#A26045",
+    accent: "#486071",
     text: "The entrance and training floor are covered properly now. Members barely notice the system, which is exactly what we wanted.",
   },
   {
@@ -193,7 +193,7 @@ const reviews: Review[] = [
     location: "Verem, Goa",
     rating: 5,
     avatar: "HK",
-    accent: "#5B1D36",
+    accent: "#5f7b94",
     text: "We had a smooth billing process and no surprise add-ons later. The team was direct, polite, and easy to work with.",
   },
   {
@@ -203,7 +203,7 @@ const reviews: Review[] = [
     location: "Anjuna, Goa",
     rating: 4,
     avatar: "OR",
-    accent: "#3E5C76",
+    accent: "#5f7b94",
     text: "The camera quality near the parking and poolside is noticeably better than our previous vendor’s setup. Good improvement overall.",
   },
   {
@@ -213,7 +213,7 @@ const reviews: Review[] = [
     location: "Colva, Goa",
     rating: 5,
     avatar: "LP",
-    accent: "#8A6A4A",
+    accent: "#8ca4ac",
     text: "Support after installation has been dependable. Even small questions were handled properly instead of being brushed off.",
   },
 ];

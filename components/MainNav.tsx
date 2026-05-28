@@ -44,48 +44,62 @@ export default function MainNav() {
     }
   }, []);
 
+  const servicesItems = dropdownItems.Services ?? [];
+
   return (
     <nav
       style={{
-        background: WINE_BERRY,
-        color: "#fff",
+        background: "linear-gradient(180deg, #ffffff 0%, #f8f9fc 100%)",
+        color: "#2f2f2f",
         position: "sticky",
         top: 0,
         zIndex: 1000,
         overflow: "visible",
+        borderBottom: "1px solid rgba(26,39,68,0.08)",
+        boxShadow: "0 10px 24px rgba(26,39,68,0.08)",
+        backdropFilter: "blur(14px)",
       }}
+      className="hidden lg:block"
     >
       <div
         style={{
-          maxWidth: 1400,
+          position: "relative",
+          maxWidth: 1480,
           margin: "0 auto",
           width: "100%",
           display: "flex",
           alignItems: "stretch",
           justifyContent: "center",
-          minHeight: 48,
-          padding: "0 20px",
+          minHeight: 58,
+          padding: "10px 14px 12px",
           overflow: "visible",
         }}
       >
         <ul
-          className="main-nav-links"
           style={{
             display: "flex",
             alignItems: "stretch",
             listStyle: "none",
             margin: 0,
-            padding: 0,
-            flexWrap: "wrap",
-            justifyContent: "center",
+            flexWrap: "nowrap",
+            justifyContent: "space-between",
             overflow: "visible",
+            gap: 6,
+            width: "100%",
+            padding: "8px 10px",
+            borderRadius: 999,
+            background: "#ffffff",
+            border: "1px solid rgba(26,39,68,0.08)",
+            boxShadow: "inset 0 1px 0 rgba(255,255,255,0.75)",
+            overflowX: "auto",
+            scrollbarWidth: "none",
+            minWidth: "100%",
           }}
         >
-          {mainNavLinks.map((link, i) => {
+          {mainNavLinks.map((link) => {
             const active = linkIsActive(link);
             const hasDropdown = "hasDropdown" in link && link.hasDropdown;
             const isOpen = activeDropdown === link.label;
-            const items = hasDropdown ? dropdownItems[link.label] : null;
 
             return (
               <li
@@ -95,8 +109,6 @@ export default function MainNav() {
                   display: "flex",
                   alignItems: "stretch",
                   flexShrink: 0,
-                  borderLeft:
-                    i > 0 ? "1px solid rgba(255,255,255,0.25)" : "none",
                 }}
                 onMouseEnter={() => hasDropdown && openDropdown(link.label)}
                 onMouseLeave={hasDropdown ? scheduleClose : undefined}
@@ -113,19 +125,29 @@ export default function MainNav() {
                   style={{
                     display: "flex",
                     alignItems: "center",
-                    gap: 5,
-                    padding: "0 clamp(10px, 1.5vw, 22px)",
-                    height: 48,
-                    fontSize: "clamp(11px, 1.2vw, 13px)",
-                    fontWeight: active ? 700 : 500,
-                    letterSpacing: 0.5,
-                    color: "#fff",
+                    gap: 6,
+                    padding: "10px 13px",
+                    minHeight: 40,
+                    fontSize: 12,
+                    fontWeight: active ? 800 : 600,
+                    letterSpacing: 0.2,
+                    color: "#2f2f2f",
                     textDecoration: "none",
                     whiteSpace: "nowrap",
-                    borderBottom: active
-                      ? "3px solid #fff"
-                      : "3px solid transparent",
-                    opacity: active || isOpen ? 1 : 0.95,
+                    borderRadius: 999,
+                    background:
+                      active || isOpen
+                        ? "linear-gradient(135deg, rgba(47,128,237,0.18) 0%, rgba(220,235,255,0.95) 100%)"
+                        : "#ffffff",
+                    border: active || isOpen
+                      ? "1px solid rgba(47,128,237,0.35)"
+                      : "1px solid rgba(26,39,68,0.08)",
+                    boxShadow: active || isOpen
+                      ? "0 12px 22px rgba(26,39,68,0.08)"
+                      : "0 6px 16px rgba(26,39,68,0.05)",
+                    transition:
+                      "transform 0.2s ease, background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease",
+                    transform: active || isOpen ? "translateY(-1px)" : "none",
                   }}
                   aria-expanded={hasDropdown ? isOpen : undefined}
                   aria-haspopup={hasDropdown ? "true" : undefined}
@@ -135,79 +157,140 @@ export default function MainNav() {
                     <ChevronDown
                       size={12}
                       style={{
-                        opacity: 0.9,
+                        opacity: 0.8,
                         transform: isOpen ? "rotate(180deg)" : "none",
                         transition: "transform 0.2s",
                       }}
                     />
                   )}
                 </Link>
-
-                {hasDropdown && isOpen && items && (
-                  <div
-                    role="menu"
-                    onMouseEnter={cancelClose}
-                    onMouseLeave={scheduleClose}
-                    style={{
-                      position: "absolute",
-                      top: "100%",
-                      left: "50%",
-                      transform: "translateX(-50%)",
-                      paddingTop: 4,
-                      zIndex: 1100,
-                    }}
-                  >
-                    <div
-                      style={{
-                        background: "#fff",
-                        boxShadow: "0 10px 32px rgba(0,0,0,0.15)",
-                        minWidth: 300,
-                        maxHeight: "min(70vh, 420px)",
-                        overflowY: "auto",
-                        borderBottom: `3px solid ${WINE_BERRY}`,
-                      }}
-                    >
-                      {items.map((item, idx, arr) => (
-                        <Link
-                          key={item.href}
-                          href={item.href}
-                          role="menuitem"
-                          onClick={() => setActiveDropdown(null)}
-                          style={{
-                            display: "block",
-                            padding: "12px 18px",
-                            fontSize: 13,
-                            color:
-                              pathname === item.href ? WINE_BERRY : "#444",
-                            fontWeight:
-                              pathname === item.href ? 600 : 400,
-                            textDecoration: "none",
-                            borderBottom:
-                              idx < arr.length - 1
-                                ? "1px solid #eee"
-                                : "none",
-                            transition: "color 0.15s",
-                          }}
-                          onMouseEnter={(e) => {
-                            e.currentTarget.style.color = WINE_BERRY;
-                            e.currentTarget.style.background = "#faf9f7";
-                          }}
-                          onMouseLeave={(e) => {
-                            e.currentTarget.style.color =
-                              pathname === item.href ? WINE_BERRY : "#444";
-                            e.currentTarget.style.background = "transparent";
-                          }}
-                        >
-                          {item.label}
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                )}
               </li>
             );
           })}
         </ul>
+
+        {activeDropdown === "Services" && servicesItems.length > 0 && (
+          <div
+            role="menu"
+            onMouseEnter={cancelClose}
+            onMouseLeave={scheduleClose}
+            style={{
+              position: "absolute",
+              left: "50%",
+              top: "calc(100% + 12px)",
+              transform: "translateX(-50%)",
+              width: "min(94vw, 1220px)",
+              zIndex: 1100,
+            }}
+          >
+            <div
+              style={{
+                background: "#ffffff",
+                boxShadow: "0 22px 50px rgba(26,39,68,0.14)",
+                border: "1px solid rgba(26,39,68,0.08)",
+                borderRadius: 24,
+                padding: 16,
+                backdropFilter: "blur(16px)",
+              }}
+            >
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                  gap: 12,
+                  padding: "2px 6px 14px",
+                  color: "#4a4a4a",
+                  fontSize: 12,
+                  fontWeight: 700,
+                  letterSpacing: "0.12em",
+                  textTransform: "uppercase",
+                }}
+              >
+                <span>Services Pages</span>
+                <span
+                  style={{
+                    padding: "5px 9px",
+                    borderRadius: 999,
+                    background: "rgba(47,128,237,0.12)",
+                    color: "#1e5db0",
+                    fontSize: 11,
+                    letterSpacing: "0.08em",
+                  }}
+                >
+                  {servicesItems.length} links
+                </span>
+              </div>
+
+              <div
+                style={{
+                  display: "grid",
+                  gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
+                  gap: 10,
+                }}
+              >
+                {servicesItems.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    role="menuitem"
+                    onClick={() => setActiveDropdown(null)}
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: 10,
+                      minHeight: 54,
+                      padding: "12px 14px",
+                      fontSize: 13,
+                      color: pathname === item.href ? WINE_BERRY : "#454545",
+                      fontWeight: pathname === item.href ? 700 : 500,
+                      textDecoration: "none",
+                      border: "1px solid rgba(26,39,68,0.08)",
+                      borderRadius: 16,
+                      background:
+                        pathname === item.href
+                          ? "rgba(47,128,237,0.12)"
+                          : "#ffffff",
+                      transition:
+                        "background 0.15s, color 0.15s, transform 0.15s, border-color 0.15s",
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.color = WINE_BERRY;
+                      e.currentTarget.style.background =
+                        "rgba(47,128,237,0.12)";
+                      e.currentTarget.style.transform = "translateY(-1px)";
+                      e.currentTarget.style.borderColor =
+                        "rgba(47,128,237,0.28)";
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.color =
+                        pathname === item.href ? WINE_BERRY : "#444";
+                      e.currentTarget.style.background =
+                        pathname === item.href
+                          ? "rgba(47,128,237,0.12)"
+                          : "#ffffff";
+                      e.currentTarget.style.transform = "translateY(0)";
+                      e.currentTarget.style.borderColor =
+                        "rgba(26,39,68,0.08)";
+                    }}
+                  >
+                    <span
+                      style={{
+                        width: 7,
+                        height: 7,
+                        borderRadius: "50%",
+                        background: "var(--wine-berry)",
+                        opacity: pathname === item.href ? 1 : 0.45,
+                        flexShrink: 0,
+                      }}
+                    />
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </nav>
   );

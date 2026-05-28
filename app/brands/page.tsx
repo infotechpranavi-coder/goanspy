@@ -27,7 +27,7 @@ export default function BrandsPage() {
           padding: "48px 20px 80px",
         }}
       >
-        <ScrollReveal variant="fade-up">
+        <ScrollReveal variant="fade-up" duration={0.72} amount={0.18}>
           <p
             style={{
               fontSize: 16,
@@ -44,7 +44,9 @@ export default function BrandsPage() {
           </p>
         </ScrollReveal>
 
-        <BrandsShowcase />
+        <ScrollReveal variant="depth-left" duration={0.82} delay={0.04} amount={0.18}>
+          <BrandsShowcase />
+        </ScrollReveal>
       </section>
     </main>
   );

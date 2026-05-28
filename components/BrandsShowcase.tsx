@@ -9,9 +9,10 @@ function BrandTile({ name, tagline }: { name: string; tagline?: string }) {
   return (
     <div
       style={{
-        background: "#fff",
-        border: "1px solid #e0e0e0",
-        borderRadius: 6,
+        background:
+          "linear-gradient(180deg, var(--white) 0%, var(--bg-cream) 100%)",
+        border: "1px solid var(--border)",
+        borderRadius: 12,
         minHeight: 88,
         display: "flex",
         flexDirection: "column",
@@ -22,13 +23,13 @@ function BrandTile({ name, tagline }: { name: string; tagline?: string }) {
         transition: "box-shadow 0.2s, border-color 0.2s, transform 0.2s",
       }}
       onMouseEnter={(e) => {
-        e.currentTarget.style.boxShadow = "0 6px 20px rgba(26, 39, 68, 0.1)";
-        e.currentTarget.style.borderColor = "var(--gold)";
+        e.currentTarget.style.boxShadow = "0 6px 20px rgba(44, 58, 66, 0.1)";
+        e.currentTarget.style.borderColor = "var(--theme-purple)";
         e.currentTarget.style.transform = "translateY(-2px)";
       }}
       onMouseLeave={(e) => {
         e.currentTarget.style.boxShadow = "none";
-        e.currentTarget.style.borderColor = "#e0e0e0";
+        e.currentTarget.style.borderColor = "var(--border)";
         e.currentTarget.style.transform = "translateY(0)";
       }}
     >
@@ -36,7 +37,7 @@ function BrandTile({ name, tagline }: { name: string; tagline?: string }) {
         style={{
           fontSize: name.length > 12 ? 13 : 15,
           fontWeight: 700,
-          color: "#1a1a1a",
+          color: "var(--navy)",
           letterSpacing: name === name.toUpperCase() ? 0.5 : 0,
           lineHeight: 1.25,
           textTransform: name === "dahua" || name === "apollo" ? "none" : undefined,
@@ -48,7 +49,7 @@ function BrandTile({ name, tagline }: { name: string; tagline?: string }) {
         <span
           style={{
             fontSize: 10,
-            color: "#666",
+            color: "var(--text-mid)",
             marginTop: 6,
             fontWeight: 500,
             lineHeight: 1.3,
@@ -85,7 +86,8 @@ export default function BrandsShowcase() {
             <div
               style={{
                 height: 4,
-                background: "#1a1a1a",
+                background:
+                  "linear-gradient(90deg, var(--wine-berry) 0%, var(--theme-purple) 100%)",
                 marginBottom: 24,
                 borderRadius: 1,
               }}

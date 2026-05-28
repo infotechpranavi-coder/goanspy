@@ -52,7 +52,7 @@ export default function ProductCard({ product }: { product: Product }) {
           {product.badge && (
             <span style={{
               padding: "4px 10px", borderRadius: 3, fontSize: 11, fontWeight: 700,
-              background: product.badgeColor || "#5B1D36", color: "#fff", letterSpacing: 0.5
+              background: product.badgeColor || "var(--wine-berry)", color: "#fff", letterSpacing: 0.5
             }}>{product.badge}</span>
           )}
           {discount && (

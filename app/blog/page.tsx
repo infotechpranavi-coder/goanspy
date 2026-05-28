@@ -412,22 +412,22 @@ function BlogSection({
   return (
     <section
       style={{
-        padding: "clamp(24px, 4vw, 38px) 0",
+        padding: "clamp(18px, 3vw, 28px) 0",
         borderBottom: "1px solid var(--border)",
       }}
     >
       <span style={labelStyle}>{eyebrow}</span>
       <h2 style={sectionTitleStyle}>{title}</h2>
-      <p style={{ ...paragraphStyle, maxWidth: 940, marginBottom: 24 }}>
+      <p style={{ ...paragraphStyle, maxWidth: 940, marginBottom: 18 }}>
         {description}
       </p>
 
-      <div style={{ display: "grid", gap: 22 }}>
+      <div style={{ display: "grid", gap: 18 }}>
         {posts.map((post, index) => (
           <article
             key={post.id}
             style={{
-              padding: "clamp(20px, 3vw, 28px)",
+              padding: "clamp(18px, 2.6vw, 24px)",
               borderRadius: 24,
               background:
                 accent === "dark" && index % 2 === 0
@@ -447,7 +447,7 @@ function BlogSection({
               style={{
                 display: "grid",
                 gridTemplateColumns: "minmax(0, 1fr)",
-                gap: 18,
+                gap: 14,
               }}
             >
               <div>
@@ -457,7 +457,7 @@ function BlogSection({
                     flexWrap: "wrap",
                     gap: 12,
                     alignItems: "baseline",
-                    marginBottom: 10,
+                    marginBottom: 8,
                   }}
                 >
                   <span
@@ -491,7 +491,7 @@ function BlogSection({
                     display: "flex",
                     flexWrap: "wrap",
                     gap: 8,
-                    marginBottom: 12,
+                    marginBottom: 10,
                   }}
                 >
                   {post.keywords.split("|").map((keyword) => (
@@ -524,7 +524,7 @@ function BlogSection({
                       accent === "dark" && index % 2 === 0
                         ? "rgba(255,255,255,0.8)"
                         : "var(--text-mid)",
-                    marginBottom: 14,
+                    marginBottom: 12,
                   }}
                 >
                   <strong>Target Audience:</strong> {post.audience}
@@ -543,12 +543,12 @@ function BlogSection({
                 </p>
               </div>
 
-              <div style={{ display: "grid", gap: 16 }}>
+              <div style={{ display: "grid", gap: 12 }}>
                 {post.sections.map((section) => (
                   <div
                     key={section.heading}
                     style={{
-                      paddingLeft: 16,
+                      paddingLeft: 14,
                       borderLeft:
                         accent === "dark" && index % 2 === 0
                           ? "3px solid rgba(196,165,116,0.9)"
@@ -558,7 +558,7 @@ function BlogSection({
                     <h4
                       style={{
                         fontSize: 18,
-                        marginBottom: 8,
+                        marginBottom: 6,
                         color:
                           accent === "dark" && index % 2 === 0
                             ? "var(--white)"
@@ -626,7 +626,7 @@ export default function BlogPage() {
       wrapContent={false}
       contentMaxWidth={1160}
     >
-      <article style={{ display: "grid", gap: 24 }}>
+      <article style={{ display: "grid", gap: 18 }}>
         <ScrollReveal variant="fade-up" duration={0.65}>
           <section
             style={{
@@ -742,10 +742,69 @@ export default function BlogPage() {
           </section>
         </ScrollReveal>
 
+        <ScrollReveal variant="fade-up" duration={0.58}>
+          <section
+            style={{
+              background: "rgba(255,255,255,0.82)",
+              border: "1px solid var(--border)",
+              borderRadius: 24,
+              padding: "20px 20px 18px",
+              boxShadow: "0 12px 30px rgba(26,39,68,0.06)",
+            }}
+          >
+            <div
+              style={{
+                display: "flex",
+                flexWrap: "wrap",
+                alignItems: "center",
+                justifyContent: "space-between",
+                gap: 14,
+              }}
+            >
+              <div style={{ maxWidth: 720 }}>
+                <span
+                  style={{
+                    ...labelStyle,
+                    marginBottom: 8,
+                    color: "#1e5db0",
+                  }}
+                >
+                  What you’ll find here
+                </span>
+                <p style={{ ...paragraphStyle, marginBottom: 0 }}>
+                  Practical, search-focused articles built around the real
+                  concerns people type into Google when they need answers fast.
+                </p>
+              </div>
+              <div style={{ display: "flex", flexWrap: "wrap", gap: 10 }}>
+                {["Personal risk", "Corporate risk", "Privacy & evidence"].map(
+                  (tag) => (
+                    <span
+                      key={tag}
+                      style={{
+                        padding: "9px 12px",
+                        borderRadius: 999,
+                        background: "rgba(47,128,237,0.10)",
+                        border: "1px solid rgba(47,128,237,0.16)",
+                        color: "#1e5db0",
+                        fontSize: 12,
+                        fontWeight: 700,
+                        letterSpacing: "0.04em",
+                      }}
+                    >
+                      {tag}
+                    </span>
+                  )
+                )}
+              </div>
+            </div>
+          </section>
+        </ScrollReveal>
+
         <ScrollReveal variant="fade-up" duration={0.65}>
           <section
             style={{
-              padding: "clamp(22px, 4vw, 36px) 0",
+              padding: "clamp(18px, 3vw, 28px) 0",
               borderBottom: "1px solid var(--border)",
             }}
           >
@@ -753,7 +812,7 @@ export default function BlogPage() {
             <h2 style={sectionTitleStyle}>
               A blog structure designed for search intent and conversion pressure
             </h2>
-            <p style={{ ...paragraphStyle, maxWidth: 940, marginBottom: 22 }}>
+            <p style={{ ...paragraphStyle, maxWidth: 940, marginBottom: 18 }}>
               To drive organic search traffic, content must match the language
               real people use when they are suspicious, stressed, or facing
               financial exposure. These blog topics are framed around intent
@@ -789,7 +848,7 @@ export default function BlogPage() {
                 <div
                   key={item.title}
                   style={{
-                    padding: "20px",
+                    padding: "18px",
                     borderRadius: 22,
                     background: "linear-gradient(180deg, rgba(245,244,241,0.9), rgba(255,255,255,1))",
                     border: "1px solid var(--border)",
@@ -833,12 +892,12 @@ export default function BlogPage() {
         </ScrollReveal>
 
         <ScrollReveal variant="zoom-in" duration={0.68}>
-          <section style={{ padding: "clamp(24px, 4vw, 40px) 0 0" }}>
+          <section style={{ padding: "clamp(20px, 3vw, 32px) 0 0" }}>
             <span style={labelStyle}>Publishing Goal</span>
             <h2 style={sectionTitleStyle}>
               Turn search traffic into trust, and trust into consultations
             </h2>
-            <p style={{ ...paragraphStyle, maxWidth: 940 }}>
+            <p style={{ ...paragraphStyle, maxWidth: 940, marginBottom: 18 }}>
               The strongest blog strategy does more than rank. It gives worried
               readers a sense that someone understands the exact situation they
               are in. These topics are designed to meet search demand while
@@ -848,8 +907,8 @@ export default function BlogPage() {
 
             <div
               style={{
-                marginTop: 24,
-                paddingTop: 24,
+                marginTop: 20,
+                paddingTop: 20,
                 borderTop: "1px solid var(--border)",
                 display: "grid",
                 gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",

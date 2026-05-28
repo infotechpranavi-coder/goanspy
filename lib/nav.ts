@@ -1,11 +1,12 @@
 import { ourServices } from "@/lib/site-pages";
 
-export const NAVY = "#1a2744";
-export const NAVY_DARK = "#141e33";
-export const WINE_BERRY = "#5B1D36";
-export const WINE_BERRY_DARK = "#451628";
-export const GOLD = "#C4A574";
-export const HEADER_BG = NAVY;
+export const NAVY = "#334155";
+export const NAVY_DARK = "#1e293b";
+export const WINE_BERRY = "#2f80ed";
+export const WINE_BERRY_DARK = "#1e5db0";
+export const GOLD = "#ffd700";
+export const GOLD_LIGHT = "#ffe780";
+export const HEADER_BG = NAVY_DARK;
 
 export const searchCategories = [
   "All Categories",
@@ -53,8 +54,14 @@ export const mainNavLinks = [
 ] as const;
 
 export const dropdownItems: Record<string, { label: string; href: string }[]> = {
-  Services: ourServices.map((service) => ({
-    label: service.label,
-    href: `/our-services/${service.slug}`,
-  })),
+  Services: [
+    {
+      label: "All Services",
+      href: "/our-services",
+    },
+    ...ourServices.map((service) => ({
+      label: service.label,
+      href: `/our-services/${service.slug}`,
+    })),
+  ],
 };

@@ -29,9 +29,9 @@ export default function LocationMapEmbed({
       style={{
         borderRadius: 28,
         overflow: "hidden",
-        border: "1px solid rgba(196,165,116,0.26)",
+        border: "1px solid rgba(47,128,237,0.22)",
         background:
-          "linear-gradient(180deg, rgba(255,255,255,1), rgba(245,244,241,0.96))",
+          "linear-gradient(180deg, rgba(255,255,255,1), rgba(240,246,255,0.96))",
         boxShadow: "0 24px 60px rgba(20,30,51,0.08)",
         position: "relative",
       }}
@@ -45,7 +45,7 @@ export default function LocationMapEmbed({
           width: 180,
           height: 180,
           borderRadius: "50%",
-          background: "radial-gradient(circle, rgba(196,165,116,0.22), transparent 68%)",
+          background: "radial-gradient(circle, rgba(47,128,237,0.18), transparent 68%)",
           pointerEvents: "none",
         }}
       />
@@ -67,7 +67,7 @@ export default function LocationMapEmbed({
               letterSpacing: "0.18em",
               textTransform: "uppercase",
               fontWeight: 700,
-              color: "var(--wine-berry)",
+              color: "#1e5db0",
               marginBottom: 6,
             }}
           >
@@ -110,13 +110,13 @@ export default function LocationMapEmbed({
                     alignItems: "center",
                     padding: "8px 12px",
                     borderRadius: 999,
-                    background: "rgba(91,29,54,0.08)",
-                    color: "var(--wine-berry)",
-                    fontSize: 12,
-                    fontWeight: 700,
-                    border: "1px solid rgba(91,29,54,0.14)",
-                  }}
-                >
+              background: "rgba(47,128,237,0.10)",
+              color: "#1e5db0",
+              fontSize: 12,
+              fontWeight: 700,
+              border: "1px solid rgba(47,128,237,0.14)",
+            }}
+          >
                   {locationLabel}
                 </span>
               ) : null}
@@ -129,12 +129,12 @@ export default function LocationMapEmbed({
                     padding: "8px 12px",
                     borderRadius: 999,
                     background: "rgba(26,39,68,0.06)",
-                    color: "var(--navy)",
-                    fontSize: 12,
-                    fontWeight: 700,
-                    border: "1px solid rgba(26,39,68,0.12)",
-                  }}
-                >
+              color: "var(--navy)",
+              fontSize: 12,
+              fontWeight: 700,
+              border: "1px solid rgba(26,39,68,0.12)",
+            }}
+          >
                   {regionLabel}
                 </span>
               ) : null}
@@ -145,13 +145,13 @@ export default function LocationMapEmbed({
                   alignItems: "center",
                   padding: "8px 12px",
                   borderRadius: 999,
-                  background: "rgba(196,165,116,0.14)",
-                  color: "var(--navy)",
-                  fontSize: 12,
-                  fontWeight: 700,
-                  border: "1px solid rgba(196,165,116,0.28)",
-                }}
-              >
+              background: "rgba(47,128,237,0.12)",
+              color: "var(--navy)",
+              fontSize: 12,
+              fontWeight: 700,
+              border: "1px solid rgba(47,128,237,0.22)",
+            }}
+          >
                 Live orientation view
               </span>
             </div>
@@ -168,12 +168,12 @@ export default function LocationMapEmbed({
               justifyContent: "center",
               padding: "10px 16px",
               borderRadius: 999,
-              border: "1px solid rgba(91,29,54,0.18)",
-              color: "var(--wine-berry)",
+              border: "1px solid rgba(47,128,237,0.18)",
+              color: "#1e5db0",
               textDecoration: "none",
               fontWeight: 700,
               fontSize: 13,
-              background: "rgba(91,29,54,0.06)",
+              background: "rgba(47,128,237,0.06)",
             }}
             >
               Open in Google Maps
@@ -186,7 +186,7 @@ export default function LocationMapEmbed({
           position: "relative",
           padding: 14,
           background:
-            "linear-gradient(180deg, rgba(26,39,68,0.04), rgba(196,165,116,0.08))",
+            "linear-gradient(180deg, rgba(26,39,68,0.04), rgba(47,128,237,0.08))",
         }}
       >
         <div
@@ -218,7 +218,7 @@ export default function LocationMapEmbed({
                   height: 150,
                   borderRadius: "50%",
                   background:
-                    "radial-gradient(circle, rgba(196,165,116,0.34) 0%, rgba(196,165,116,0.18) 36%, rgba(196,165,116,0.08) 54%, rgba(196,165,116,0) 72%)",
+                    "radial-gradient(circle, rgba(47,128,237,0.32) 0%, rgba(47,128,237,0.16) 36%, rgba(47,128,237,0.08) 54%, rgba(47,128,237,0) 72%)",
                 }}
               />
               <div
@@ -232,7 +232,7 @@ export default function LocationMapEmbed({
                   borderRadius: "50%",
                   background: "rgba(255,255,255,0.96)",
                   boxShadow:
-                    "0 0 0 10px rgba(196,165,116,0.18), 0 14px 26px rgba(20,30,51,0.22)",
+                    "0 0 0 10px rgba(47,128,237,0.18), 0 14px 26px rgba(20,30,51,0.22)",
                 }}
               >
                 <span
@@ -270,8 +270,8 @@ export default function LocationMapEmbed({
                 width: 9,
                 height: 9,
                 borderRadius: "50%",
-                background: "var(--gold)",
-                boxShadow: "0 0 0 4px rgba(196,165,116,0.22)",
+                background: "var(--wine-berry)",
+                boxShadow: "0 0 0 4px rgba(47,128,237,0.22)",
                 flexShrink: 0,
               }}
             />

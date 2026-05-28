@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { MapPin, ExternalLink } from "lucide-react";
+import { MapPin, ExternalLink, Navigation, Phone } from "lucide-react";
 import SocialIcons from "@/components/SocialIcons";
 import ScrollReveal from "@/components/motion/ScrollReveal";
 import { OFFICE_ADDRESS_FULL, PHONE_PRIMARY } from "@/lib/brand";
@@ -16,37 +16,37 @@ export default function ContactAddressSection() {
     <section
       className="elemen-dots"
       style={{
-        padding: "56px 20px 72px",
-        borderTop: "1px solid var(--border)",
+        padding: "64px 20px 80px",
+        borderTop: "1px solid rgba(26,39,68,0.08)",
+        background: "linear-gradient(180deg, #fbfcff 0%, #f6f7fb 100%)",
       }}
     >
       <div style={{ maxWidth: 1200, margin: "0 auto" }}>
         <ScrollReveal variant="fade-up">
           <article
             style={{
-              background: "#fff",
-              borderRadius: 16,
-              border: "1px solid var(--border)",
-              boxShadow: "0 12px 40px rgba(26, 39, 68, 0.1)",
+              background: "#ffffff",
+              borderRadius: 28,
+              border: "1px solid rgba(26,39,68,0.08)",
+              boxShadow: "0 20px 46px rgba(26,39,68,0.10)",
               overflow: "hidden",
             }}
           >
-            {/* Card header */}
             <div
               style={{
                 padding: "28px 32px 24px",
-                borderBottom: "1px solid var(--border)",
+                borderBottom: "1px solid rgba(26,39,68,0.08)",
                 background:
-                  "linear-gradient(135deg, var(--bg-light) 0%, #fff 100%)",
+                  "linear-gradient(135deg, rgba(47,128,237,0.08) 0%, rgba(248,249,252,1) 100%)",
               }}
             >
               <span
                 style={{
                   fontSize: 12,
                   letterSpacing: 3,
-                  color: "var(--wine-berry)",
+                  color: "#1e5db0",
                   textTransform: "uppercase",
-                  fontWeight: 600,
+                  fontWeight: 700,
                 }}
               >
                 Visit us
@@ -63,28 +63,24 @@ export default function ContactAddressSection() {
               </h2>
             </div>
 
-            {/* Address + map in one row */}
-            <div
-              className="flex flex-col lg:flex-row"
-              style={{ minHeight: 380 }}
-            >
-              {/* Address side */}
+            <div className="flex flex-col lg:flex-row" style={{ minHeight: 380 }}>
               <div
                 style={{
                   flex: "0 0 auto",
                   width: "100%",
                   maxWidth: "100%",
-                  padding: "28px 32px",
-                  borderBottom: "1px solid var(--border)",
+                  padding: "30px 32px",
+                  borderBottom: "1px solid rgba(26,39,68,0.08)",
                 }}
                 className="contact-address-side"
               >
                 <div
                   style={{
-                    width: 48,
-                    height: 48,
+                    width: 52,
+                    height: 52,
                     borderRadius: "50%",
-                    background: "var(--wine-berry)",
+                    background:
+                      "linear-gradient(135deg, var(--wine-berry) 0%, var(--wine-berry-dark) 100%)",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
@@ -93,16 +89,18 @@ export default function ContactAddressSection() {
                 >
                   <MapPin size={22} style={{ color: "#fff" }} />
                 </div>
+
                 <h3
                   style={{
-                    fontSize: 18,
+                    fontSize: 20,
                     fontWeight: 700,
                     color: "var(--navy)",
-                    marginBottom: 12,
+                    marginBottom: 10,
                   }}
                 >
                   ELEMEN INDIA Office
                 </h3>
+
                 <p
                   style={{
                     fontSize: 15,
@@ -113,26 +111,46 @@ export default function ContactAddressSection() {
                 >
                   {OFFICE_ADDRESS_FULL}
                 </p>
-                <p
+
+                <div
                   style={{
-                    fontSize: 13,
-                    color: "var(--text-light)",
-                    lineHeight: 1.7,
-                    marginBottom: 20,
+                    display: "grid",
+                    gap: 10,
+                    marginBottom: 18,
                   }}
                 >
-                  Near Thane Station (West) — accessible by road and rail.
-                  Schedule a site visit or consultation with our team.
-                </p>
-                <p style={{ fontSize: 14, color: "var(--text-mid)", marginBottom: 20 }}>
-                  <strong style={{ color: "var(--navy)" }}>Phone:</strong>{" "}
-                  <a
-                    href={`tel:+91${PHONE_PRIMARY}`}
-                    style={{ color: "var(--wine-berry)", textDecoration: "none" }}
+                  <div
+                    style={{
+                      display: "inline-flex",
+                      alignItems: "center",
+                      gap: 8,
+                      fontSize: 13,
+                      color: "var(--text-mid)",
+                    }}
                   >
-                    (+91) {PHONE_PRIMARY}
-                  </a>
-                </p>
+                    <Navigation size={14} style={{ color: "#1e5db0" }} />
+                    Near Thane Station (West) — easy road and rail access.
+                  </div>
+                  <div
+                    style={{
+                      display: "inline-flex",
+                      alignItems: "center",
+                      gap: 8,
+                      fontSize: 13,
+                      color: "var(--text-mid)",
+                    }}
+                  >
+                    <Phone size={14} style={{ color: "#1e5db0" }} />
+                    <strong style={{ color: "var(--navy)" }}>Phone:</strong>{" "}
+                    <a
+                      href={`tel:+91${PHONE_PRIMARY}`}
+                      style={{ color: "#1e5db0", textDecoration: "none" }}
+                    >
+                      (+91) {PHONE_PRIMARY}
+                    </a>
+                  </div>
+                </div>
+
                 <Link
                   href={MAP_LINK}
                   target="_blank"
@@ -142,9 +160,13 @@ export default function ContactAddressSection() {
                     alignItems: "center",
                     gap: 8,
                     fontSize: 13,
-                    fontWeight: 600,
-                    color: "var(--wine-berry)",
+                    fontWeight: 700,
+                    color: "#1e5db0",
                     textDecoration: "none",
+                    padding: "10px 14px",
+                    borderRadius: 999,
+                    background: "rgba(47,128,237,0.10)",
+                    border: "1px solid rgba(47,128,237,0.18)",
                   }}
                 >
                   Open in Google Maps
@@ -152,13 +174,12 @@ export default function ContactAddressSection() {
                 </Link>
               </div>
 
-              {/* Google Map preview */}
               <div
                 style={{
                   flex: 1,
                   minHeight: 320,
                   position: "relative",
-                  background: "var(--bg-section)",
+                  background: "#f4f6fb",
                 }}
               >
                 <iframe
@@ -180,30 +201,39 @@ export default function ContactAddressSection() {
               </div>
             </div>
 
-            {/* Card footer — social */}
             <div
               style={{
                 padding: "22px 32px",
-                borderTop: "1px solid var(--border)",
-                background: "var(--bg-light)",
+                borderTop: "1px solid rgba(26,39,68,0.08)",
+                background: "#f8f9fc",
                 display: "flex",
                 flexWrap: "wrap",
                 alignItems: "center",
                 justifyContent: "space-between",
                 gap: 14,
               }}
-
             >
-              <p
-                style={{
-                  fontSize: 14,
-                  fontWeight: 600,
-                  color: "var(--navy)",
-                  margin: 0,
-                }}
-              >
-                Follow ELEMEN INDIA
-              </p>
+              <div>
+                <p
+                  style={{
+                    fontSize: 14,
+                    fontWeight: 700,
+                    color: "var(--navy)",
+                    margin: 0,
+                  }}
+                >
+                  Follow ELEMEN INDIA
+                </p>
+                <p
+                  style={{
+                    fontSize: 12,
+                    color: "var(--text-light)",
+                    margin: "6px 0 0",
+                  }}
+                >
+                  Stay connected for updates and announcements.
+                </p>
+              </div>
               <SocialIcons size={36} gap={14} />
             </div>
           </article>
@@ -213,9 +243,9 @@ export default function ContactAddressSection() {
       <style>{`
         @media (min-width: 1024px) {
           .contact-address-side {
-            width: 340px !important;
-            max-width: 340px !important;
-            border-right: 1px solid var(--border) !important;
+            width: 360px !important;
+            max-width: 360px !important;
+            border-right: 1px solid rgba(26,39,68,0.08) !important;
             border-bottom: none !important;
           }
         }

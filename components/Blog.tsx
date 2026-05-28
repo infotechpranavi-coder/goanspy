@@ -40,7 +40,7 @@ export default function Blog() {
   const [hovered, setHovered] = useState<number | null>(null);
 
   return (
-    <section style={{ background: "#fff", padding: "80px 0" }}>
+    <section style={{ background: "linear-gradient(180deg, var(--white) 0%, var(--bg-cream) 100%)", padding: "80px 0" }}>
       <div style={{ maxWidth: "1300px", margin: "0 auto", padding: "0 20px" }}>
         <div className="flex flex-col md:flex-row items-end justify-between gap-4" style={{ marginBottom: 40 }}>
           <div>
@@ -90,7 +90,7 @@ export default function Blog() {
                     fontSize: 11,
                     fontWeight: 700,
                     color: "#fff",
-                    background: "#5B1D36",
+                    background: "var(--wine-berry)",
                     padding: "4px 10px",
                     borderRadius: 3,
                     textTransform: "uppercase",
