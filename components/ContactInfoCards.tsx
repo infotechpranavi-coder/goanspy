@@ -145,9 +145,9 @@ export default function ContactInfoCards() {
                 {card.title}
               </h3>
               <div style={{ display: "grid", gap: 4 }}>
-                {card.lines.map((line) => (
+                {card.lines.map((line, index) => (
                   <p
-                    key={line}
+                    key={`${card.title}-${index}-${line}`}
                     style={{
                       fontSize: 14,
                       color: "var(--text-mid)",

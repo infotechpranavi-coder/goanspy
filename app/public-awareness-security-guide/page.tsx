@@ -32,39 +32,6 @@ const labelStyle = {
   marginBottom: 12,
 } as const;
 
-const supportLevels = [
-  {
-    name: "Bronze Support",
-    subtitle: "Basic Verification",
-    items: [
-      "Basic background profiling",
-      "Physical address validation",
-      "Active employment verification",
-      "Basic local asset screening",
-    ],
-  },
-  {
-    name: "Silver Support",
-    subtitle: "Deep Identity Screening",
-    items: [
-      "Includes all Bronze support items",
-      "Complete character and lifestyle audit",
-      "Advanced social media footprint audits",
-      "Family financial standing vetting",
-    ],
-  },
-  {
-    name: "Gold Support",
-    subtitle: "Full Surveillance & Proof",
-    items: [
-      "Includes all Bronze and Silver items",
-      "Real-time surveillance and infidelity checks",
-      "Verification of hidden marriages or alliances",
-      "Legal divorce and court record tracing",
-    ],
-  },
-];
-
 export default function PublicAwarenessGuidePage() {
   return (
     <ContentPage
@@ -200,7 +167,7 @@ export default function PublicAwarenessGuidePage() {
               <p style={paragraphStyle}>
                 At <strong>Goan Spy</strong>, we believe that the first line of
                 defense against deception, fraud, and privacy violations is an
-                informed mind. Established in 2023 and operating from Office No.
+                informed mind. Established in 2013 and operating from Office No.
                 A-514, Edcon Centre, near the
                 <strong> Mapusa Bus Stand, Goa</strong>, our agency repeatedly
                 encounters cases where individuals and businesses suffer severe
@@ -547,126 +514,6 @@ export default function PublicAwarenessGuidePage() {
           </section>
         </ScrollReveal>
 
-        <ScrollReveal variant="fade-up" duration={0.72}>
-          <section
-            style={{
-              padding: "clamp(22px, 4vw, 36px) 0",
-              borderBottom: "1px solid var(--border)",
-            }}
-          >
-            <span style={labelStyle}>Section 5</span>
-            <h2 style={sectionTitleStyle}>Our Public Awareness Alignment Matrix</h2>
-            <p style={{ ...paragraphStyle, maxWidth: 940, marginBottom: 22 }}>
-              Awareness should help people make better choices. When vigilance
-              alone is no longer enough, these support levels indicate the kind
-              of investigative depth typically required.
-            </p>
-
-            <div style={{ display: "grid", gap: 20 }}>
-              {supportLevels.map((level, index) => (
-                <div
-                  key={level.name}
-                  style={{
-                    paddingTop: index === 0 ? 0 : 18,
-                    borderTop: index === 0 ? "none" : "1px solid var(--border)",
-                  }}
-                >
-                  <div style={labelStyle}>{level.name}</div>
-                  <h3
-                    style={{
-                      fontSize: "clamp(1.25rem, 2vw, 1.55rem)",
-                      color: "var(--navy)",
-                      marginBottom: 12,
-                    }}
-                  >
-                    {level.subtitle}
-                  </h3>
-                  <div
-                    style={{
-                      display: "flex",
-                      flexWrap: "wrap",
-                      gap: 10,
-                      color: "var(--text-mid)",
-                      fontSize: 15,
-                      lineHeight: 1.75,
-                    }}
-                  >
-                    {level.items.map((item, itemIndex) => (
-                      <span key={item}>
-                        {item}
-                        {itemIndex < level.items.length - 1 ? " |" : ""}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
-        </ScrollReveal>
-
-        <ScrollReveal variant="zoom-in" duration={0.68}>
-          <section style={{ padding: "clamp(24px, 4vw, 40px) 0 0" }}>
-            <span style={labelStyle}>Public Awareness Footer</span>
-            <h2 style={sectionTitleStyle}>
-              Knowledge is your shield. Absolute proof is your solution.
-            </h2>
-            <p style={{ ...paragraphStyle, maxWidth: 940 }}>
-              Do not make major personal, financial, or marital decisions based
-              on doubt or unverified claims. Arm yourself with clear facts, and
-              when necessary, move to a structured professional review with
-              complete confidentiality.
-            </p>
-
-            <div
-              style={{
-                marginTop: 24,
-                paddingTop: 24,
-                borderTop: "1px solid var(--border)",
-                display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
-                gap: 18,
-              }}
-            >
-              <div>
-                <div style={labelStyle}>Headquarters</div>
-                <p style={paragraphStyle}>
-                  Office No. A-514, Edcon Centre, Mapusa Bus Stand, Mapusa,
-                  Goa - 403507.
-                </p>
-              </div>
-              <div>
-                <div style={labelStyle}>Public Intelligence Desk</div>
-                <p style={paragraphStyle}>+91 73047 69291</p>
-              </div>
-              <div>
-                <div style={labelStyle}>Secure Communications</div>
-                <p style={paragraphStyle}>info@goanspy.com</p>
-              </div>
-              <div>
-                <div style={labelStyle}>Operational Footprint</div>
-                <p style={paragraphStyle}>
-                  Operating exclusively across North Goa and South Goa.
-                </p>
-              </div>
-            </div>
-
-            <div
-              style={{
-                display: "flex",
-                flexWrap: "wrap",
-                gap: 14,
-                marginTop: 24,
-              }}
-            >
-              <Link href="/contact-us" className="elemen-btn-primary">
-                Request Confidential Evaluation
-              </Link>
-              <Link href="/contact-us" className="elemen-btn-outline">
-                Speak With Goan Spy
-              </Link>
-            </div>
-          </section>
-        </ScrollReveal>
       </article>
     </ContentPage>
   );

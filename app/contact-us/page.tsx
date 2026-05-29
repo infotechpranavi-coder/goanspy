@@ -6,14 +6,15 @@ import ScrollReveal from "@/components/motion/ScrollReveal";
 import { pageImages } from "@/lib/content/images";
 
 export const metadata = {
-  title: "Contact Us | Elemen India",
-  description: "Contact Elemen India â€” Thane, Maharashtra. Phone, email, and social.",
+  title: "Contact Us | Goan Spy",
+  description:
+    "Contact Goan Spy at A 514, Edcon Centre, Mapusa Bus Stand, near Aldona, Angod, Mapusa, Goa 403507.",
 };
 
 const quickStats = [
   { label: "Response time", value: "Within 1 business day" },
   { label: "Call us", value: "+91 73047 69291" },
-  { label: "Visit", value: "Thane, Maharashtra" },
+  { label: "Visit", value: "Mapusa, Goa" },
 ];
 
 export default function ContactUsPage() {
@@ -24,7 +25,7 @@ export default function ContactUsPage() {
         subtitle="Reach our team for quotes, support, and general enquiries."
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Contact Us" }]}
         imageSrc={pageImages.contact}
-        imageAlt="Elemen India office â€” Thane, Maharashtra"
+        imageAlt="Goan Spy office in Mapusa, Goa"
       />
 
       <section
@@ -135,8 +136,9 @@ export default function ContactUsPage() {
                     lineHeight: 1.6,
                   }}
                 >
-                  Call, email, or visit our Thane office. We serve clients across
-                  India for CCTV, access control, and IT solutions.
+                  Call, email, or visit our Mapusa office. We serve clients
+                  across Goa for discreet investigative work and confidential
+                  support.
                 </p>
               </div>
 

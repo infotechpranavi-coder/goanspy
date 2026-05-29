@@ -21,7 +21,6 @@ export const searchCategories = [
 export const mainNavLinks = [
   { label: "Home", href: "/" },
   { label: "About Us", href: "/about-us" },
-  { label: "Clients", href: "/clients" },
   { label: "Blog", href: "/blog" },
   { label: "Case Studies", href: "/case-studies" },
   {

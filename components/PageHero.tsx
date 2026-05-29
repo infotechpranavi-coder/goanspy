@@ -18,6 +18,7 @@ type PageHeroProps = {
   imageSrc: string;
   imageAlt: string;
   actions?: React.ReactNode;
+  overlayBackground?: string;
 };
 
 export default function PageHero({
@@ -27,6 +28,7 @@ export default function PageHero({
   imageSrc,
   imageAlt,
   actions,
+  overlayBackground = "linear-gradient(105deg, rgba(26,39,68,0.88) 0%, rgba(91,29,54,0.72) 45%, rgba(26,39,68,0.55) 100%)",
 }: PageHeroProps) {
   const reduce = useReducedMotion();
   const heroRef = useRef<HTMLElement | null>(null);
@@ -71,8 +73,7 @@ export default function PageHero({
         style={{
           position: "absolute",
           inset: 0,
-          background:
-            "linear-gradient(105deg, rgba(26,39,68,0.88) 0%, rgba(91,29,54,0.72) 45%, rgba(26,39,68,0.55) 100%)",
+          background: overlayBackground,
           opacity: reduce ? 1 : overlayOpacity,
         }}
       />

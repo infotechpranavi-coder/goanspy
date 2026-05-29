@@ -4,6 +4,7 @@ import Newsletter from "@/components/Newsletter";
 import ScrollReveal from "@/components/motion/ScrollReveal";
 import { ScrollStagger, ScrollStaggerItem } from "@/components/motion/ScrollReveal";
 import { pageImages } from "@/lib/content/images";
+import { CONTACT_EMAIL, PHONE_PRIMARY, OFFICE_ADDRESS_FULL } from "@/lib/brand";
 
 export const metadata = {
   title: "Elements | Elemen India",
@@ -82,9 +83,9 @@ export default function ElementsPage() {
             stagger={0.12}
           >
             {[
-              { label: "Phone", value: "(+91) 9867111459", variant: "fade-up" as const },
-              { label: "Email", value: "support@elemenindia.com", variant: "fade-left" as const },
-              { label: "Address", value: "Thane Station (West), Thane - 400602", variant: "fade-right" as const },
+              { label: "Phone", value: `(+91) ${PHONE_PRIMARY}`, variant: "fade-up" as const },
+              { label: "Email", value: CONTACT_EMAIL, variant: "fade-left" as const },
+              { label: "Address", value: OFFICE_ADDRESS_FULL, variant: "fade-right" as const },
             ].map((item) => (
               <ScrollStaggerItem key={item.label} variant={item.variant}>
                 <div

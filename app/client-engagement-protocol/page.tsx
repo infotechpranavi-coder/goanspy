@@ -238,7 +238,7 @@ export default function ClientEngagementProtocolPage() {
                 At <strong>Goan Spy</strong>, we do not deploy field agents
                 based on casual conversations, unverified rumors, or vague
                 requests. In private intelligence work, outcomes depend on
-                disciplined design. Established in 2023, our agency operates
+                disciplined design. Established in 2013, our agency operates
                 from Office No. A-514, Edcon Centre, near the
                 <strong> Mapusa Bus Stand, Goa</strong>, and was built to move
                 away from unstructured field practices in favor of a clinically
@@ -551,72 +551,6 @@ export default function ClientEngagementProtocolPage() {
           </section>
         </ScrollReveal>
 
-        <ScrollReveal variant="zoom-in" duration={0.68}>
-          <section style={{ padding: "clamp(24px, 4vw, 40px) 0 0" }}>
-            <span style={labelStyle}>Strategic Engagement</span>
-            <h2 style={sectionTitleStyle}>
-              Take control with a disciplined investigative partner.
-            </h2>
-            <p style={{ ...paragraphStyle, maxWidth: 940 }}>
-              Do not trust high-stakes personal crises or sensitive corporate
-              vulnerabilities to disorganized operators. Partner with Goan Spy
-              for a structured, secure, and Goa-exclusive engagement protocol
-              built for clarity, discretion, and accountability.
-            </p>
-
-            <div
-              style={{
-                marginTop: 24,
-                paddingTop: 24,
-                borderTop: "1px solid var(--border)",
-                display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
-                gap: 18,
-              }}
-            >
-              <div>
-                <div style={labelStyle}>Corporate Command Office</div>
-                <p style={paragraphStyle}>
-                  Office No. A-514, Edcon Centre, Mapusa Bus Stand, Mapusa,
-                  Goa - 403507.
-                </p>
-              </div>
-              <div>
-                <div style={labelStyle}>Secure Intake Line</div>
-                <p style={paragraphStyle}>+91 73047 69291</p>
-              </div>
-              <div>
-                <div style={labelStyle}>Official Intake Mail</div>
-                <p style={paragraphStyle}>info@goanspy.com</p>
-              </div>
-              <div>
-                <div style={labelStyle}>Regional Jurisdiction</div>
-                <p style={paragraphStyle}>
-                  Operating exclusively across North Goa and South Goa.
-                </p>
-              </div>
-            </div>
-
-            <div
-              style={{
-                display: "flex",
-                flexWrap: "wrap",
-                gap: 14,
-                marginTop: 24,
-              }}
-            >
-              <Link href="/contact-us" className="elemen-btn-primary">
-                Contact Goan Spy Today
-              </Link>
-              <Link
-                href="/government-regulation-legal-compliance"
-                className="elemen-btn-outline"
-              >
-                Review Legal Compliance
-              </Link>
-            </div>
-          </section>
-        </ScrollReveal>
       </article>
     </ContentPage>
   );

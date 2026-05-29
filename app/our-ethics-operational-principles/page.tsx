@@ -190,7 +190,7 @@ export default function EthicsPage() {
               <p style={paragraphStyle}>
                 In an industry that inherently operates under a veil of secrecy,
                 a private investigator&apos;s truest asset is an unyielding
-                moral compass. <strong>Goan Spy</strong> was founded in 2023
+                moral compass. <strong>Goan Spy</strong> was founded in 2013
                 upon the unwavering pillar of{" "}
                 <strong>&quot;Credibility First.&quot;</strong> We recognize
                 that our clients, whether they are individuals seeking
@@ -504,96 +504,8 @@ export default function EthicsPage() {
           </section>
         </ScrollReveal>
 
-        <ScrollReveal variant="zoom-in" duration={0.65}>
-          <section
-            style={{
-              padding: "clamp(24px, 4vw, 40px) 0 0",
-            }}
-          >
-            <span style={labelStyle}>Section 5</span>
-            <h2 style={sectionTitleStyle}>Clear and Structured Commitments</h2>
-            <p style={{ ...paragraphStyle, maxWidth: 940 }}>
-              We bridge the gap between financial transparency and operational
-              deliverables. Every client case map is tied to our structured
-              <strong> Bronze, Silver, and Gold</strong> package tiers, so you
-              understand the scope, methodology, and expected costs before
-              field launch.
-            </p>
-
-            <div
-              style={{
-                display: "flex",
-                flexWrap: "wrap",
-                gap: 12,
-                marginTop: 18,
-                color: "var(--navy)",
-                fontSize: 15,
-                lineHeight: 1.7,
-              }}
-            >
-              <span>No hidden charges</span>
-              <span>•</span>
-              <span>No unvouched expenditures</span>
-              <span>•</span>
-              <span>No artificial reporting</span>
-              <span>•</span>
-              <span>Defined boundaries before surveillance begins</span>
-            </div>
-
-            <div
-              style={{
-                marginTop: 28,
-                paddingTop: 24,
-                borderTop: "1px solid var(--border)",
-                display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
-                gap: 18,
-              }}
-            >
-              <div>
-                <div style={labelStyle}>Corporate Headquarters</div>
-                <p style={paragraphStyle}>
-                  Office No. A-514, Edcon Centre, Mapusa Bus Stand, Mapusa,
-                  Goa - 403507.
-                </p>
-              </div>
-              <div>
-                <div style={labelStyle}>Secure Operational Desk</div>
-                <p style={paragraphStyle}>+91 73047 69291</p>
-              </div>
-              <div>
-                <div style={labelStyle}>Official Registry Mail</div>
-                <p style={paragraphStyle}>info@goanspy.com</p>
-              </div>
-              <div>
-                <div style={labelStyle}>Geographical Scope</div>
-                <p style={paragraphStyle}>
-                  100% exclusive operational focus within North and South Goa.
-                </p>
-              </div>
-            </div>
-
-            <div
-              style={{
-                display: "flex",
-                flexWrap: "wrap",
-                gap: 14,
-                marginTop: 24,
-              }}
-            >
-              <Link href="/contact-us" className="elemen-btn-primary">
-                Speak With Goan Spy
-              </Link>
-              <Link
-                href="/government-regulation-legal-compliance"
-                className="elemen-btn-outline"
-              >
-                Review Legal Compliance
-              </Link>
-            </div>
-          </section>
-        </ScrollReveal>
       </article>
     </ContentPage>
   );
 }
+

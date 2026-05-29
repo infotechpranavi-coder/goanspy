@@ -1,13 +1,7 @@
 import Link from "next/link";
 import {
-  Building2,
   Database,
-  FileCheck2,
   Landmark,
-  Mail,
-  MapPinned,
-  Phone,
-  Scale,
   ShieldCheck,
 } from "lucide-react";
 import PageHero from "@/components/PageHero";
@@ -21,7 +15,6 @@ import {
   governmentRegulationAccountability,
   governmentRegulationAdmissibility,
   governmentRegulationDpdp,
-  governmentRegulationFooter,
   governmentRegulationHighlights,
   governmentRegulationLegalStance,
   governmentRegulationPrivacy,
@@ -34,8 +27,6 @@ export const metadata = {
 };
 
 export default function GovernmentRegulationPage() {
-  const detailIcons = [Building2, Phone, Mail, MapPinned];
-
   return (
     <main>
       <PageHero
@@ -84,6 +75,10 @@ export default function GovernmentRegulationPage() {
               highlightPlacement="belowImage"
               highlightTitle="Registered, scoped, and contract-backed from day one"
               highlightText="We operate from our Mapusa office under a compliance-first structure that rejects gray-market tactics, unauthorized operations, and undefined client scopes."
+              accentColor="#2f80ed"
+              accentColorDark="#1851c2"
+              accentBorder="rgba(47, 128, 237, 0.35)"
+              accentShadow="rgba(47, 128, 237, 0.18)"
               footer={
                 <div
                   style={{
@@ -117,6 +112,10 @@ export default function GovernmentRegulationPage() {
               eyebrow="Why Legal Discipline Matters"
               title="A compliance architecture built for corporate and private clients"
               subtitle="Our investigative work is framed around privacy rights, data governance, admissibility standards, and operational controls that protect both the client and the case."
+              accentColor="#2f80ed"
+              accentColorDark="#1851c2"
+              accentBorder="rgba(47, 128, 237, 0.35)"
+              accentShadow="rgba(47, 128, 237, 0.18)"
               items={[
                 {
                   kind: "card",
@@ -185,7 +184,7 @@ export default function GovernmentRegulationPage() {
             >
               <p
                 style={{
-                  color: "#ff4b3e",
+                  color: "#2f80ed",
                   fontSize: 13,
                   fontWeight: 700,
                   letterSpacing: 0.3,
@@ -244,11 +243,11 @@ export default function GovernmentRegulationPage() {
 
                 <div
                   style={{
-                    background: "#ff473c",
+                    background: "linear-gradient(135deg, #2f80ed 0%, #1851c2 100%)",
                     color: "#fff",
                     borderRadius: 18,
                     padding: "18px 20px",
-                    boxShadow: "0 16px 34px rgba(255, 71, 60, 0.22)",
+                    boxShadow: "0 16px 34px rgba(47, 128, 237, 0.22)",
                   }}
                 >
                   <h3
@@ -308,7 +307,7 @@ export default function GovernmentRegulationPage() {
                         style={{
                           fontSize: 11,
                           fontWeight: 700,
-                          color: "#ff4b3e",
+                          color: "#2f80ed",
                           textTransform: "uppercase",
                           letterSpacing: 0.4,
                           marginBottom: 4,
@@ -355,7 +354,7 @@ export default function GovernmentRegulationPage() {
               <div style={{ marginBottom: 16 }}>
                 <p
                   style={{
-                    color: "#ff4b3e",
+                    color: "#2f80ed",
                     fontWeight: 700,
                     fontSize: 13,
                     letterSpacing: 0.3,
@@ -382,7 +381,7 @@ export default function GovernmentRegulationPage() {
                     key={item.title}
                     style={{
                       background: "#fff",
-                      border: "1.5px solid rgba(255, 75, 62, 0.68)",
+                      border: "1.5px solid rgba(47, 128, 237, 0.45)",
                       borderRadius: 18,
                       padding: 20,
                       boxShadow: "0 12px 30px rgba(26, 39, 68, 0.07)",
@@ -393,7 +392,7 @@ export default function GovernmentRegulationPage() {
                         width: 46,
                         height: 46,
                         borderRadius: "50%",
-                        background: "#ff4b3e",
+                        background: "linear-gradient(135deg, #2f80ed 0%, #1851c2 100%)",
                         color: "#fff",
                         display: "flex",
                         alignItems: "center",
@@ -422,151 +421,6 @@ export default function GovernmentRegulationPage() {
             </div>
           </ScrollReveal>
 
-          <ScrollReveal variant="fade-up" duration={0.75}>
-            <div
-              style={{
-                background:
-                  "linear-gradient(135deg, rgba(26,39,68,1) 0%, rgba(26,39,68,0.94) 50%, rgba(91,29,54,0.98) 100%)",
-                borderRadius: 22,
-                padding: 26,
-                color: "#fff",
-                border: "1px solid rgba(255,255,255,0.18)",
-                boxShadow: "0 16px 34px rgba(26, 39, 68, 0.18)",
-              }}
-            >
-              <div
-                className="grid grid-cols-1 lg:grid-cols-[1.05fr_0.95fr]"
-                style={{ gap: 22, alignItems: "start" }}
-              >
-                <div>
-                  <p
-                    style={{
-                      fontWeight: 700,
-                      fontSize: 12,
-                      letterSpacing: 0.5,
-                      textTransform: "uppercase",
-                      color: "rgba(255,255,255,0.74)",
-                      marginBottom: 8,
-                    }}
-                  >
-                    Compliance Assurances
-                  </p>
-                  <h2
-                    style={{
-                      fontSize: "clamp(24px, 2.7vw, 32px)",
-                      lineHeight: 1.15,
-                      marginBottom: 12,
-                    }}
-                  >
-                    {governmentRegulationFooter.title}
-                  </h2>
-                  <p
-                    style={{
-                      fontSize: 14,
-                      lineHeight: 1.75,
-                      color: "rgba(255,255,255,0.86)",
-                      marginBottom: 18,
-                      maxWidth: 620,
-                    }}
-                  >
-                    {governmentRegulationFooter.description}
-                  </p>
-                  <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
-                    <Link href="/contact-us" className="elemen-btn-primary">
-                      Request Corporate Compliance Credentials
-                    </Link>
-                    <Link
-                      href="#legal-stance"
-                      className="elemen-btn-outline"
-                      style={{
-                        color: "#fff",
-                        borderColor: "rgba(255,255,255,0.6)",
-                        background: "rgba(255,255,255,0.06)",
-                      }}
-                    >
-                      Review Our Legal Advisory
-                    </Link>
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2" style={{ gap: 12 }}>
-                  {governmentRegulationFooter.details.map((detail, idx) => {
-                    const Icon = detailIcons[idx] ?? Building2;
-                    const href =
-                      detail.label === "Direct Compliance Line"
-                        ? "tel:+917304769291"
-                        : detail.label === "Official Registry Mail"
-                          ? "mailto:info@goanspy.com"
-                          : undefined;
-
-                    const valueContent = href ? (
-                      <Link
-                        href={href}
-                        style={{
-                          color: "#fff",
-                          textDecoration: "none",
-                          lineHeight: 1.65,
-                          fontSize: 14,
-                        }}
-                      >
-                        {detail.value}
-                      </Link>
-                    ) : (
-                      <span
-                        style={{
-                          color: "#fff",
-                          lineHeight: 1.65,
-                          fontSize: 14,
-                        }}
-                      >
-                        {detail.value}
-                      </span>
-                    );
-
-                    return (
-                      <div
-                        key={detail.label}
-                        style={{
-                          background: "rgba(255,255,255,0.08)",
-                          border: "1px solid rgba(255,255,255,0.12)",
-                          borderRadius: 16,
-                          padding: 18,
-                        }}
-                      >
-                        <div
-                          style={{
-                            width: 40,
-                            height: 40,
-                            borderRadius: 12,
-                            background: "rgba(255,255,255,0.1)",
-                            display: "flex",
-                            alignItems: "center",
-                            justifyContent: "center",
-                            marginBottom: 12,
-                          }}
-                        >
-                          <Icon size={18} />
-                        </div>
-                        <div
-                          style={{
-                            color: "rgba(255,255,255,0.7)",
-                            fontSize: 11,
-                            fontWeight: 700,
-                            letterSpacing: 0.4,
-                            textTransform: "uppercase",
-                            marginBottom: 6,
-                          }}
-                        >
-                          {detail.label}
-                        </div>
-                        {valueContent}
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
-            </div>
-          </ScrollReveal>
         </div>
       </section>
     </main>

@@ -45,9 +45,21 @@ const reasons = [
 ];
 
 const stats = [
-  { value: "2023", label: "Founded in Goa" },
-  { value: "2 Districts", label: "North and South coverage" },
-  { value: "100%", label: "Confidential case handling" },
+  {
+    value: "2013",
+    label: "Founded in Goa",
+    detail: "Over a decade of local investigative experience built around Goa's field conditions.",
+  },
+  {
+    value: "2 Districts",
+    label: "Coverage across North Goa and South Goa",
+    detail: "Active operational support across both districts for quick deployment and reach.",
+  },
+  {
+    value: "100%",
+    label: "Confidential case handling",
+    detail: "Every brief is managed with strict discretion and secure communication.",
+  },
 ];
 
 export default function WhyChooseGoanSpy() {
@@ -190,47 +202,79 @@ export default function WhyChooseGoanSpy() {
           {reasons.map((reason) => (
             <article
               key={reason.title}
+              className="why-card"
               style={{
+                position: "relative",
+                overflow: "hidden",
                 background:
-                  "linear-gradient(180deg, var(--white), var(--bg-cream))",
-                border: "1px solid rgba(44,58,66,0.08)",
-                borderRadius: 22,
-                padding: 22,
-                boxShadow: "0 12px 32px rgba(44,58,66,0.06)",
-                minHeight: 100,
+                  "linear-gradient(180deg, rgba(255,255,255,0.98) 0%, rgba(248,250,252,0.98) 100%)",
+                border: "1px solid rgba(44,58,66,0.09)",
+                borderRadius: 24,
+                padding: 24,
+                boxShadow: "0 14px 38px rgba(44,58,66,0.08)",
+                minHeight: 220,
+                transition:
+                  "transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease, background 220ms ease",
               }}
             >
               <div
                 style={{
-                  width: 48,
-                  height: 48,
-                  borderRadius: 16,
+                  position: "absolute",
+                  inset: 0,
                   background:
-                    "linear-gradient(135deg, var(--wine-berry) 0%, var(--wine-berry-dark) 100%)",
+                    "radial-gradient(circle at top right, rgba(46,108,230,0.08), transparent 34%)",
+                  pointerEvents: "none",
+                }}
+              />
+              <div
+                style={{
+                  position: "absolute",
+                  left: 0,
+                  right: 0,
+                  top: 0,
+                  height: 4,
+                  background:
+                    "linear-gradient(90deg, var(--wine-berry) 0%, rgba(46,108,230,0.9) 55%, rgba(46,108,230,0.35) 100%)",
+                }}
+              />
+              <div
+                style={{
+                  width: 54,
+                  height: 54,
+                  borderRadius: 18,
+                  background:
+                    "linear-gradient(135deg, rgba(46,108,230,1) 0%, rgba(24,81,194,1) 100%)",
                   color: "#fff",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  marginBottom: 16,
+                  marginBottom: 18,
+                  boxShadow: "0 10px 22px rgba(46,108,230,0.24)",
+                  position: "relative",
+                  zIndex: 1,
                 }}
               >
-                <reason.icon size={22} />
+                <reason.icon size={24} />
               </div>
               <h3
                 style={{
-                  fontSize: 18,
+                  fontSize: 19,
                   color: "var(--navy)",
                   fontWeight: 700,
                   marginBottom: 10,
+                  position: "relative",
+                  zIndex: 1,
                 }}
               >
                 {reason.title}
               </h3>
               <p
                 style={{
-                  fontSize: 14,
-                  lineHeight: 1.75,
+                  fontSize: 14.5,
+                  lineHeight: 1.8,
                   color: "var(--text-mid)",
+                  position: "relative",
+                  zIndex: 1,
                 }}
               >
                 {reason.text}
@@ -250,25 +294,62 @@ export default function WhyChooseGoanSpy() {
           {stats.map((stat) => (
             <div
               key={stat.label}
+              className="why-stat"
               style={{
-                borderRadius: 20,
-                padding: "20px 22px",
+                position: "relative",
+                overflow: "hidden",
+                borderRadius: 22,
+                padding: "22px 24px",
                 background:
-                  "linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%)",
+                  "linear-gradient(135deg, rgba(26,39,68,1) 0%, rgba(18,28,50,1) 100%)",
                 color: "#fff",
+                boxShadow: "0 18px 38px rgba(26,39,68,0.16)",
+                border: "1px solid rgba(255,255,255,0.06)",
+                transition: "transform 220ms ease, box-shadow 220ms ease",
               }}
             >
               <div
                 style={{
-                  fontSize: "clamp(26px, 3vw, 34px)",
+                  position: "absolute",
+                  inset: 0,
+                  background:
+                    "radial-gradient(circle at top right, rgba(255,255,255,0.12), transparent 26%)",
+                  pointerEvents: "none",
+                }}
+              />
+              <div
+                style={{
+                  fontSize: "clamp(28px, 3vw, 36px)",
                   fontWeight: 800,
                   marginBottom: 6,
+                  position: "relative",
+                  zIndex: 1,
                 }}
               >
                 {stat.value}
               </div>
-              <div style={{ fontSize: 13, color: "rgba(255,255,255,0.82)" }}>
+              <div
+                style={{
+                  fontSize: 13.5,
+                  lineHeight: 1.6,
+                  color: "rgba(255,255,255,0.82)",
+                  position: "relative",
+                  zIndex: 1,
+                }}
+              >
                 {stat.label}
+              </div>
+              <div
+                style={{
+                  fontSize: 12.5,
+                  lineHeight: 1.7,
+                  color: "rgba(255,255,255,0.72)",
+                  marginTop: 8,
+                  position: "relative",
+                  zIndex: 1,
+                }}
+              >
+                {stat.detail}
               </div>
             </div>
           ))}
@@ -290,6 +371,35 @@ export default function WhyChooseGoanSpy() {
           .why-choose-stats {
             grid-template-columns: minmax(0, 1fr) !important;
           }
+        }
+
+        .why-card:hover {
+          transform: translateY(-6px);
+          border-color: rgba(46, 108, 230, 0.18) !important;
+          box-shadow: 0 22px 50px rgba(44, 58, 66, 0.12) !important;
+          background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(246,249,255,1) 100%) !important;
+        }
+
+        .why-card:hover::after {
+          opacity: 1;
+        }
+
+        .why-card::after {
+          content: "";
+          position: absolute;
+          inset: auto 18px 18px auto;
+          width: 74px;
+          height: 74px;
+          border-radius: 999px;
+          background: radial-gradient(circle, rgba(46,108,230,0.12) 0%, rgba(46,108,230,0) 70%);
+          opacity: 0.6;
+          transition: opacity 220ms ease;
+          pointer-events: none;
+        }
+
+        .why-stat:hover {
+          transform: translateY(-4px);
+          box-shadow: 0 22px 46px rgba(26,39,68,0.22) !important;
         }
       `}</style>
     </section>

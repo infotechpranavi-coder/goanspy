@@ -173,19 +173,16 @@ function CaseGrid({
   eyebrow,
   description,
   cases,
-  dark,
 }: {
   title: string;
   eyebrow: string;
   description: string;
   cases: typeof northGoaCases;
-  dark?: boolean;
 }) {
   return (
     <section
       style={{
         padding: "clamp(24px, 4vw, 38px) 0",
-        borderBottom: "1px solid var(--border)",
       }}
     >
       <span style={labelStyle}>{eyebrow}</span>
@@ -204,25 +201,17 @@ function CaseGrid({
         {cases.map((caseFile, index) => (
           <article
             key={caseFile.id}
-            className={caseLayoutClasses[index % caseLayoutClasses.length]}
+            className={`case-study-card ${caseLayoutClasses[index % caseLayoutClasses.length]}`}
             style={{
               height: "100%",
               minHeight: caseCardMinHeights[index % caseCardMinHeights.length],
               padding: "22px",
               borderRadius: 24,
-              border:
-                dark && index % 2 === 0
-                  ? "1px solid rgba(255,255,255,0.08)"
-                  : "1px solid var(--border)",
+              border: "1px solid rgba(26,39,68,0.08)",
               background:
-                dark && index % 2 === 0
-                  ? "linear-gradient(145deg, rgba(26,39,68,0.98), rgba(91,29,54,0.96))"
-                  : "linear-gradient(180deg, rgba(255,255,255,0.98), rgba(245,244,241,0.9))",
-              color: dark && index % 2 === 0 ? "var(--white)" : "inherit",
-              boxShadow:
-                dark && index % 2 === 0
-                  ? "none"
-                  : "0 16px 34px rgba(26, 39, 68, 0.06)",
+                "linear-gradient(180deg, rgba(255,255,255,0.98), rgba(248,250,255,1))",
+              boxShadow: "0 16px 34px rgba(26,39,68,0.06)",
+              transition: "transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease",
             }}
           >
             <div
@@ -245,12 +234,17 @@ function CaseGrid({
                 >
                   <span
                     style={{
-                      fontSize: 28,
+                      width: 44,
+                      height: 44,
+                      borderRadius: 14,
+                      display: "inline-flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      fontSize: 16,
                       fontWeight: 800,
-                      color:
-                        dark && index % 2 === 0
-                          ? "rgba(255,255,255,0.86)"
-                          : "var(--wine-berry)",
+                      color: "#1e5db0",
+                      background: "linear-gradient(135deg, rgba(47,128,237,0.12), rgba(196,165,116,0.16))",
+                      border: "1px solid rgba(47,128,237,0.16)",
                     }}
                   >
                     {caseFile.id}
@@ -260,14 +254,9 @@ function CaseGrid({
                       padding: "7px 10px",
                       borderRadius: 999,
                       fontSize: 12,
-                      background:
-                        dark && index % 2 === 0
-                          ? "rgba(255,255,255,0.08)"
-                          : "rgba(26,39,68,0.06)",
-                      color:
-                        dark && index % 2 === 0
-                          ? "rgba(255,255,255,0.86)"
-                          : "var(--navy)",
+                      background: "rgba(47,128,237,0.10)",
+                      color: "#1e5db0",
+                      border: "1px solid rgba(47,128,237,0.14)",
                     }}
                   >
                     {caseFile.location}
@@ -278,8 +267,7 @@ function CaseGrid({
                   style={{
                     fontSize: "clamp(1.3rem, 2.1vw, 1.75rem)",
                     lineHeight: 1.2,
-                    color:
-                      dark && index % 2 === 0 ? "var(--white)" : "var(--navy)",
+                    color: "var(--navy)",
                     marginBottom: 10,
                   }}
                 >
@@ -289,10 +277,7 @@ function CaseGrid({
                   style={{
                     fontSize: 13,
                     lineHeight: 1.7,
-                    color:
-                      dark && index % 2 === 0
-                        ? "rgba(255,255,255,0.8)"
-                        : "var(--text-mid)",
+                    color: "var(--text-mid)",
                     marginBottom: 12,
                   }}
                 >
@@ -316,10 +301,8 @@ function CaseGrid({
                     style={{
                       padding: "12px 14px",
                       borderRadius: 18,
-                      background:
-                        dark && index % 2 === 0
-                          ? "rgba(255,255,255,0.06)"
-                          : "rgba(255,255,255,0.7)",
+                      background: "rgba(255,255,255,0.82)",
+                      border: "1px solid rgba(26,39,68,0.06)",
                     }}
                   >
                     <div
@@ -329,10 +312,7 @@ function CaseGrid({
                         textTransform: "uppercase",
                         fontWeight: 700,
                         marginBottom: 8,
-                        color:
-                          dark && index % 2 === 0
-                            ? "rgba(255,255,255,0.72)"
-                            : "var(--wine-berry)",
+                        color: "#1e5db0",
                       }}
                     >
                       {item.label}
@@ -342,10 +322,7 @@ function CaseGrid({
                         ...paragraphStyle,
                         fontSize: 14,
                         lineHeight: 1.7,
-                        color:
-                          dark && index % 2 === 0
-                            ? "rgba(255,255,255,0.84)"
-                            : "var(--text-mid)",
+                        color: "var(--text-mid)",
                       }}
                     >
                       {item.text}
@@ -577,82 +554,18 @@ export default function CaseStudiesPage() {
             title="South Goa Case Files"
             description="These southern dossiers show how Goan Spy handles financial asset tracing, insider breach investigations, child welfare observation, industrial sabotage, and advanced privacy sweeps."
             cases={southGoaCases}
-            dark
           />
         </ScrollReveal>
 
-        <ScrollReveal variant="zoom-in" duration={0.68}>
-          <section style={{ padding: "clamp(24px, 4vw, 40px) 0 0" }}>
-            <span style={labelStyle}>Next Step</span>
-            <h2 style={sectionTitleStyle}>
-              When suspicion becomes costly, documented truth matters more than
-              assumptions.
-            </h2>
-            <p style={{ ...paragraphStyle, maxWidth: 940 }}>
-              These dossiers are meant to show what disciplined investigative
-              work looks like in practice. Whether the issue is personal,
-              corporate, legal, or privacy-related, the next move should be
-              structured, confidential, and evidence-led.
-            </p>
-
-            <div
-              style={{
-                marginTop: 24,
-                paddingTop: 24,
-                borderTop: "1px solid var(--border)",
-                display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
-                gap: 18,
-              }}
-            >
-              <div>
-                <div style={labelStyle}>Best Use</div>
-                <p style={paragraphStyle}>
-                  Use this page as a trust-building case portfolio and cross-link
-                  it from service, location, and blog sections.
-                </p>
-              </div>
-              <div>
-                <div style={labelStyle}>Conversion Role</div>
-                <p style={paragraphStyle}>
-                  Readers can immediately understand how Goan Spy handles
-                  high-pressure situations before reaching out for help.
-                </p>
-              </div>
-              <div>
-                <div style={labelStyle}>Confidentiality Position</div>
-                <p style={paragraphStyle}>
-                  The page demonstrates capability without exposing client
-                  identity, making it ideal for premium trust-led conversion.
-                </p>
-              </div>
-              <div>
-                <div style={labelStyle}>Architecture Use</div>
-                <p style={paragraphStyle}>
-                  These dossiers can also be split into individual case-study
-                  pages later if you want a larger SEO content cluster.
-                </p>
-              </div>
-            </div>
-
-            <div
-              style={{
-                display: "flex",
-                flexWrap: "wrap",
-                gap: 14,
-                marginTop: 24,
-              }}
-            >
-              <Link href="/contact-us" className="elemen-btn-primary">
-                Discuss a Sensitive Case
-              </Link>
-              <Link href="/blog" className="elemen-btn-outline">
-                Explore Investigation Blog
-              </Link>
-            </div>
-          </section>
-        </ScrollReveal>
       </article>
+
+      <style>{`
+        .case-study-card:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 22px 42px rgba(26,39,68,0.10);
+          border-color: rgba(47,128,237,0.22) !important;
+        }
+      `}</style>
     </ContentPage>
   );
 }

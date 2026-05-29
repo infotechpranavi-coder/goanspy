@@ -1,6 +1,6 @@
 export const aboutHighlights = [
   {
-    value: "2023",
+    value: "2013",
     label: "Founded in Goa",
     detail: "Built exclusively for local investigative work across the state.",
   },
@@ -11,7 +11,7 @@ export const aboutHighlights = [
   },
   {
     value: "2 Districts",
-    label: "Full Coverage",
+    label: "Coverage across North Goa and South Goa",
     detail: "Seamless work across North Goa and South Goa.",
   },
   {
@@ -24,7 +24,7 @@ export const aboutHighlights = [
 export const aboutFoundations = {
   title: "Our Genesis and Commitment to Goa",
   intro:
-    "Goan Spy Detective Agency was established in 2023 to fill a critical gap in the regional security matrix: the need for a highly clinical, technically sophisticated, and legally responsible private investigation firm operating exclusively within the state of Goa.",
+    "Goan Spy Detective Agency was established in 2013 to fill a critical gap in the regional security matrix: the need for a highly clinical, technically sophisticated, and legally responsible private investigation firm operating exclusively within the state of Goa.",
   paragraphs: [
     "In an industry where precision is paramount, we do not view your case as a mere static file or a reference number. We recognize that behind every client brief lies a personal dilemma, a family challenge, or an immediate threat to corporate assets.",
     "Operating under a credibility-first framework, Goan Spy has built a reputation for absolute transparency with clients and total invisibility in the field. Every assignment is handled with concealment, structure, and disciplined reporting so suspicions can be converted into undeniable proof.",
@@ -142,21 +142,3 @@ export const aboutGuarantees = [
   },
 ] as const;
 
-export const aboutContact = {
-  title: "Get Finality. Get Proof. Contact Goan Spy Today.",
-  description:
-    "Do not allow doubts, hidden activity, or unverified assumptions to compromise your emotional peace or financial security. Speak directly with investigative specialists operating exclusively within Goa.",
-  details: [
-    {
-      label: "Main Headquarters",
-      value:
-        "Office No. A-514, Edcon Centre, Mapusa Bus Stand, Mapusa, Goa - 403507.",
-    },
-    { label: "Official Desk", value: "+91 73047 69291" },
-    { label: "Secure Email", value: "info@goanspy.com" },
-    {
-      label: "Operational Reach",
-      value: "Exclusive coverage across North Goa and South Goa.",
-    },
-  ],
-} as const;

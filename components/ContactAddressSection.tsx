@@ -1,15 +1,15 @@
 "use client";
 
 import Link from "next/link";
-import { MapPin, ExternalLink, Navigation, Phone } from "lucide-react";
+import { MapPin, ExternalLink, Navigation, Phone, Mail } from "lucide-react";
 import SocialIcons from "@/components/SocialIcons";
 import ScrollReveal from "@/components/motion/ScrollReveal";
-import { OFFICE_ADDRESS_FULL, PHONE_PRIMARY } from "@/lib/brand";
+import { OFFICE_ADDRESS_FULL, PHONE_PRIMARY, CONTACT_EMAIL } from "@/lib/brand";
 
 const MAP_EMBED =
-  "https://maps.google.com/maps?q=Rayaansh+Arcade+Thane+Station+West+Thane+400602&t=&z=16&ie=UTF8&iwloc=&output=embed";
+  "https://maps.google.com/maps?q=A+514+Edcon+Centre+Mapusa+Bus+Stand+near+Aldona+Angod+Mapusa+Goa+403507&t=&z=16&ie=UTF8&iwloc=&output=embed";
 const MAP_LINK =
-  "https://www.google.com/maps/search/?api=1&query=Thane+Station+West+Thane+400602+Maharashtra";
+  "https://www.google.com/maps/search/?api=1&query=A+514+Edcon+Centre+Mapusa+Bus+Stand+near+Aldona+Angod+Mapusa+Goa+403507";
 
 export default function ContactAddressSection() {
   return (
@@ -98,7 +98,7 @@ export default function ContactAddressSection() {
                     marginBottom: 10,
                   }}
                 >
-                  ELEMEN INDIA Office
+                  Goan Spy Office
                 </h3>
 
                 <p
@@ -129,7 +129,7 @@ export default function ContactAddressSection() {
                     }}
                   >
                     <Navigation size={14} style={{ color: "#1e5db0" }} />
-                    Near Thane Station (West) — easy road and rail access.
+                    Near Mapusa Bus Stand for easy road access.
                   </div>
                   <div
                     style={{
@@ -147,6 +147,24 @@ export default function ContactAddressSection() {
                       style={{ color: "#1e5db0", textDecoration: "none" }}
                     >
                       (+91) {PHONE_PRIMARY}
+                    </a>
+                  </div>
+                  <div
+                    style={{
+                      display: "inline-flex",
+                      alignItems: "center",
+                      gap: 8,
+                      fontSize: 13,
+                      color: "var(--text-mid)",
+                    }}
+                  >
+                    <Mail size={14} style={{ color: "#1e5db0" }} />
+                    <strong style={{ color: "var(--navy)" }}>Email:</strong>{" "}
+                    <a
+                      href={`mailto:${CONTACT_EMAIL}`}
+                      style={{ color: "#1e5db0", textDecoration: "none" }}
+                    >
+                      {CONTACT_EMAIL}
                     </a>
                   </div>
                 </div>
@@ -183,7 +201,7 @@ export default function ContactAddressSection() {
                 }}
               >
                 <iframe
-                  title="Google Maps — Elemen India office, Thane"
+                  title="Google Maps - Goan Spy office, Mapusa"
                   src={MAP_EMBED}
                   width="100%"
                   height="100%"
@@ -222,7 +240,7 @@ export default function ContactAddressSection() {
                     margin: 0,
                   }}
                 >
-                  Follow ELEMEN INDIA
+                  Follow Goan Spy
                 </p>
                 <p
                   style={{

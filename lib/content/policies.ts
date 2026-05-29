@@ -161,25 +161,6 @@ export const governmentRegulationAccountability = {
   ],
 } as const;
 
-export const governmentRegulationFooter = {
-  title: "Secure Clear, Legally Accountable Answers Today.",
-  description:
-    "Do not risk your reputation or legal safety by engaging unverified operators who rely on illegal methods. Partner with Goan Spy to secure the truth through clinical, lawful, and fully compliant practices.",
-  details: [
-    {
-      label: "Corporate Command Headquarters",
-      value:
-        "Office No. A-514, Edcon Centre, Mapusa Bus Stand, Mapusa, Goa - 403507.",
-    },
-    { label: "Direct Compliance Line", value: "+91 73047 69291" },
-    { label: "Official Registry Mail", value: "info@goanspy.com" },
-    {
-      label: "Operational Scope",
-      value: "Serving all jurisdictions across North Goa and South Goa.",
-    },
-  ],
-} as const;
-
 export const governmentRegulationBlocks: Block[] = [
   {
     type: "p",

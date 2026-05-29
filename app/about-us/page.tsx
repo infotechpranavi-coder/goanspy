@@ -1,10 +1,8 @@
 import Link from "next/link";
 import {
-  Building2,
   CircleDollarSign,
   FileCheck2,
   Lock,
-  Mail,
   MapPinned,
   Phone,
   Radar,
@@ -17,7 +15,6 @@ import {
   SplitFeatureSection,
 } from "@/components/ShowcaseSections";
 import {
-  aboutContact,
   aboutExpertise,
   aboutFoundations,
   aboutGuarantees,
@@ -34,22 +31,21 @@ export const metadata = {
 };
 
 export default function AboutUsPage() {
-  const detailIcons = [Building2, Phone, Mail, MapPinned];
-
   return (
     <main>
       <PageHero
         title="About Goan Spy - The Vanguard of Truth, Confidentiality, and Investigative Excellence in Goa."
-        subtitle="Founded in 2023 with a singular mission: to provide individuals, families, and businesses across Goa with uncompromised clarity, elite field surveillance, and absolute non-disclosure."
+        subtitle="Founded in 2013 with a singular mission: to provide individuals, families, and businesses across Goa with uncompromised clarity, elite field surveillance, and absolute non-disclosure."
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "About Us" }]}
         imageSrc={pageImages.about}
         imageAlt="Goan Spy investigators operating across Goa"
+        overlayBackground="linear-gradient(105deg, rgba(11,99,229,0.90) 0%, rgba(30,93,176,0.72) 45%, rgba(12,36,95,0.58) 100%)"
         actions={
           <>
-            <Link href="/client-engagement-protocol" className="elemen-btn-primary">
+            <Link href="/client-engagement-protocol" className="about-btn-primary">
               Read Our Core Methodology
             </Link>
-            <Link href="/contact-us" className="elemen-btn-outline">
+            <Link href="/contact-us" className="about-btn-outline">
               Connect with a Senior Investigator
             </Link>
           </>
@@ -84,17 +80,17 @@ export default function AboutUsPage() {
           >
             <div style={{ maxWidth: 760 }}>
               <span
-                style={{
-                  display: "inline-flex",
-                  alignItems: "center",
-                  padding: "6px 10px",
-                  borderRadius: 999,
-                  background: "rgba(47,128,237,0.12)",
-                  color: "#1e5db0",
-                  fontSize: 12,
-                  fontWeight: 700,
-                  letterSpacing: "0.12em",
-                  textTransform: "uppercase",
+                  style={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    padding: "6px 10px",
+                    borderRadius: 999,
+                    background: "rgba(11,99,229,0.12)",
+                    color: "#0b63e5",
+                    fontSize: 12,
+                    fontWeight: 700,
+                    letterSpacing: "0.12em",
+                    textTransform: "uppercase",
                   marginBottom: 10,
                 }}
               >
@@ -147,7 +143,7 @@ export default function AboutUsPage() {
                     style={{
                       fontSize: 22,
                       fontWeight: 800,
-                      color: "var(--wine-berry)",
+                      color: "#0b63e5",
                       lineHeight: 1.1,
                       marginBottom: 6,
                     }}
@@ -187,6 +183,10 @@ export default function AboutUsPage() {
               imageAlt="Goan Spy investigations across Goa"
               highlightTitle="Credibility first. Evidence always."
               highlightText="From our command point near Mapusa Bus Stand, we coordinate multi-district field surveillance that turns suspicion into structured, defensible proof."
+              accentColor="#0b63e5"
+              accentColorDark="#1e88ff"
+              accentBorder="rgba(11, 99, 229, 0.72)"
+              accentShadow="rgba(11, 99, 229, 0.22)"
               footer={
                 <div
                   style={{
@@ -196,7 +196,7 @@ export default function AboutUsPage() {
                     alignItems: "center",
                   }}
                 >
-                  <Link href="/contact-us" className="elemen-btn-primary">
+                  <Link href="/contact-us" className="about-btn-primary">
                     More About Us
                   </Link>
                   <div
@@ -237,6 +237,10 @@ export default function AboutUsPage() {
               eyebrow="Why Choose Goan Spy"
               title="Your trusted investigative partner in Goa"
               subtitle="We combine local intelligence, disciplined field operations, and confidential reporting to handle personal, matrimonial, and corporate investigations with precision."
+              accentColor="#0b63e5"
+              accentColorDark="#1e88ff"
+              accentBorder="rgba(11, 99, 229, 0.72)"
+              accentShadow="rgba(11, 99, 229, 0.22)"
               items={[
                 {
                   kind: "card",
@@ -301,6 +305,10 @@ export default function AboutUsPage() {
               imageAlt="Goan Spy surveillance and operational planning"
               highlightTitle="Women operatives, field analysts, and local adaptability"
               highlightText={aboutTeam.paragraphs[1]}
+              accentColor="#0b63e5"
+              accentColorDark="#1e88ff"
+              accentBorder="rgba(11, 99, 229, 0.72)"
+              accentShadow="rgba(11, 99, 229, 0.22)"
             />
           </ScrollReveal>
 
@@ -317,7 +325,7 @@ export default function AboutUsPage() {
               <div style={{ marginBottom: 16 }}>
                 <p
                   style={{
-                    color: "#ff4b3e",
+                    color: "#0b63e5",
                     fontWeight: 700,
                     fontSize: 13,
                     letterSpacing: 0.3,
@@ -348,7 +356,7 @@ export default function AboutUsPage() {
                       key={item.title}
                       style={{
                         background: "#fff",
-                        border: "1.5px solid rgba(255, 75, 62, 0.68)",
+                        border: "1.5px solid rgba(11, 99, 229, 0.68)",
                         borderRadius: 18,
                         padding: 20,
                         boxShadow: "0 12px 30px rgba(26, 39, 68, 0.07)",
@@ -359,7 +367,7 @@ export default function AboutUsPage() {
                           width: 46,
                           height: 46,
                           borderRadius: "50%",
-                          background: "#ff4b3e",
+                          background: "#0b63e5",
                           color: "#fff",
                           display: "flex",
                           alignItems: "center",
@@ -389,153 +397,48 @@ export default function AboutUsPage() {
             </div>
           </ScrollReveal>
 
-          <ScrollReveal variant="fade-up" duration={0.76}>
-          <div
-            style={{
-              background:
-                "linear-gradient(135deg, rgba(26,39,68,1) 0%, rgba(26,39,68,0.94) 50%, rgba(91,29,54,0.98) 100%)",
-              borderRadius: 22,
-              padding: 24,
-              color: "#fff",
-              border: "1px solid rgba(255,255,255,0.18)",
-              boxShadow: "0 16px 34px rgba(26, 39, 68, 0.18)",
-            }}
-          >
-            <div
-              className="grid grid-cols-1 lg:grid-cols-[1.05fr_0.95fr]"
-              style={{ gap: 18, alignItems: "start" }}
-            >
-              <div>
-                <p
-                  style={{
-                    fontWeight: 700,
-                    fontSize: 12,
-                    letterSpacing: 0.5,
-                    textTransform: "uppercase",
-                    color: "rgba(255,255,255,0.74)",
-                    marginBottom: 8,
-                  }}
-                >
-                  Strategic Contact Point
-                </p>
-                <h2
-                  style={{
-                    fontSize: "clamp(24px, 2.7vw, 32px)",
-                    lineHeight: 1.15,
-                    marginBottom: 12,
-                  }}
-                >
-                  {aboutContact.title}
-                </h2>
-                <p
-                  style={{
-                    fontSize: 14,
-                    lineHeight: 1.75,
-                    color: "rgba(255,255,255,0.86)",
-                    marginBottom: 18,
-                    maxWidth: 620,
-                  }}
-                >
-                  {aboutContact.description}
-                </p>
-                <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
-                  <Link href="/contact-us" className="elemen-btn-primary">
-                    Connect with a Senior Investigator
-                  </Link>
-                  <Link
-                    href="/client-engagement-protocol"
-                    className="elemen-btn-outline"
-                    style={{
-                      color: "#fff",
-                      borderColor: "rgba(255,255,255,0.6)",
-                      background: "rgba(255,255,255,0.06)",
-                    }}
-                  >
-                    Read Our Core Methodology
-                  </Link>
-                </div>
-              </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2" style={{ gap: 12 }}>
-                {aboutContact.details.map((detail, idx) => {
-                  const Icon = detailIcons[idx] ?? Building2;
-                  const href =
-                    detail.label === "Official Desk"
-                      ? "tel:+917304769291"
-                      : detail.label === "Secure Email"
-                        ? "mailto:info@goanspy.com"
-                        : undefined;
-
-                  const valueContent = href ? (
-                    <Link
-                      href={href}
-                      style={{
-                        color: "#fff",
-                        textDecoration: "none",
-                        lineHeight: 1.65,
-                        fontSize: 14,
-                      }}
-                    >
-                      {detail.value}
-                    </Link>
-                  ) : (
-                    <span
-                      style={{
-                        color: "#fff",
-                        lineHeight: 1.65,
-                        fontSize: 14,
-                      }}
-                    >
-                      {detail.value}
-                    </span>
-                  );
-
-                  return (
-                    <div
-                      key={detail.label}
-                      style={{
-                        background: "rgba(255,255,255,0.08)",
-                        border: "1px solid rgba(255,255,255,0.12)",
-                        borderRadius: 16,
-                        padding: 18,
-                      }}
-                    >
-                      <div
-                        style={{
-                          width: 40,
-                          height: 40,
-                          borderRadius: 12,
-                          background: "rgba(255,255,255,0.1)",
-                          display: "flex",
-                          alignItems: "center",
-                          justifyContent: "center",
-                          marginBottom: 12,
-                        }}
-                      >
-                        <Icon size={18} />
-                      </div>
-                      <div
-                        style={{
-                          color: "rgba(255,255,255,0.7)",
-                          fontSize: 11,
-                          fontWeight: 700,
-                          letterSpacing: 0.4,
-                          textTransform: "uppercase",
-                          marginBottom: 6,
-                        }}
-                      >
-                        {detail.label}
-                      </div>
-                      {valueContent}
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-          </div>
-        </ScrollReveal>
       </div>
       <style>{`
+        .about-btn-primary {
+          display: inline-block;
+          padding: 14px 36px;
+          background: linear-gradient(135deg, #0b63e5 0%, #1e88ff 100%);
+          color: #fff;
+          text-decoration: none;
+          font-weight: 600;
+          font-size: 14px;
+          border-radius: 3px;
+          letter-spacing: 0.3px;
+          transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+          border: none;
+          cursor: pointer;
+          box-shadow: 0 12px 28px rgba(11, 99, 229, 0.22);
+        }
+
+        .about-btn-primary:hover {
+          transform: translateY(-1px);
+          box-shadow: 0 16px 34px rgba(11, 99, 229, 0.28);
+        }
+
+        .about-btn-outline {
+          display: inline-block;
+          padding: 14px 36px;
+          background: transparent;
+          color: #dcebff;
+          text-decoration: none;
+          font-weight: 600;
+          font-size: 14px;
+          border-radius: 3px;
+          border: 2px solid rgba(220, 235, 255, 0.8);
+          transition: all 0.2s ease;
+        }
+
+        .about-btn-outline:hover {
+          background: rgba(11, 99, 229, 0.16);
+          color: #fff;
+          border-color: #fff;
+        }
+
         @media (max-width: 900px) {
           .about-stat-grid {
             grid-template-columns: 1fr !important;

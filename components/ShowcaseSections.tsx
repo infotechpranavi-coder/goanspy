@@ -14,6 +14,10 @@ type SplitFeatureSectionProps = {
   imageHeight?: number;
   highlightPlacement?: "content" | "belowImage";
   titleMaxWidth?: string;
+  accentColor?: string;
+  accentColorDark?: string;
+  accentBorder?: string;
+  accentShadow?: string;
 };
 
 type MosaicCardItem = {
@@ -40,6 +44,10 @@ type MosaicFeatureSectionProps = {
   title: string;
   subtitle?: string;
   items: MosaicItem[];
+  accentColor?: string;
+  accentColorDark?: string;
+  accentBorder?: string;
+  accentShadow?: string;
 };
 
 export function SplitFeatureSection({
@@ -56,6 +64,10 @@ export function SplitFeatureSection({
   imageHeight,
   highlightPlacement = "content",
   titleMaxWidth = "12ch",
+  accentColor = "#ff4b3e",
+  accentColorDark = "#ff473c",
+  accentBorder = "rgba(255, 75, 62, 0.7)",
+  accentShadow = "rgba(255, 71, 60, 0.22)",
 }: SplitFeatureSectionProps) {
   const [leadParagraph, ...restParagraphs] = paragraphs;
 
@@ -141,7 +153,7 @@ export function SplitFeatureSection({
         }
 
         .showcase-eyebrow {
-          color: #ff4b3e;
+          color: ${accentColor};
           font-size: 13px;
           font-weight: 700;
           letter-spacing: 0.3px;
@@ -171,11 +183,12 @@ export function SplitFeatureSection({
         }
 
         .showcase-highlight-card {
-          background: #ff473c;
+          background: ${accentColorDark};
           color: #fff;
           border-radius: 18px;
           padding: 18px 20px;
-          box-shadow: 0 16px 34px rgba(255, 71, 60, 0.22);
+          box-shadow: 0 16px 34px ${accentShadow};
+          border: 1px solid ${accentBorder};
           margin: 0 0 14px;
         }
 
@@ -228,6 +241,10 @@ export function MosaicFeatureSection({
   title,
   subtitle,
   items,
+  accentColor = "#ff4b3e",
+  accentColorDark = "#ff473c",
+  accentBorder = "rgba(255, 75, 62, 0.7)",
+  accentShadow = "rgba(255, 71, 60, 0.22)",
 }: MosaicFeatureSectionProps) {
   return (
     <section className="mosaic-shell">
@@ -276,7 +293,7 @@ export function MosaicFeatureSection({
         }
 
         .mosaic-eyebrow {
-          color: #ff4b3e;
+          color: ${accentColor};
           font-size: 13px;
           font-weight: 700;
           letter-spacing: 0.3px;
@@ -304,22 +321,23 @@ export function MosaicFeatureSection({
         .mosaic-info-card {
           min-height: 100%;
           background: #fff;
-          border: 1.5px solid rgba(255, 75, 62, 0.7);
+          border: 1.5px solid ${accentBorder};
           border-radius: 18px;
           padding: 18px;
-          box-shadow: 0 12px 30px rgba(26, 39, 68, 0.07);
+          box-shadow: 0 12px 30px ${accentShadow};
         }
 
         .mosaic-icon-wrap {
           width: 44px;
           height: 44px;
           border-radius: 999px;
-          background: #ff4b3e;
+          background: ${accentColorDark};
           color: #fff;
           display: flex;
           align-items: center;
           justify-content: center;
           margin-bottom: 14px;
+          box-shadow: 0 10px 20px ${accentShadow};
         }
 
         .mosaic-card-title {

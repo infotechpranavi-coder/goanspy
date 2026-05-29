@@ -134,7 +134,7 @@ export default function OurServicesPage() {
                   >
                     At <strong>Goan Spy</strong>, we understand that behind
                     every brief lies a major personal or commercial turning
-                    point. Established in 2023 and operating out of Office No.
+                    point. Established in 2013 and operating out of Office No.
                     A-514, Edcon Centre, near the
                     <strong> Mapusa Bus Stand, Goa</strong>, we deliver
                     high-fidelity tracking and information gathering without
@@ -420,79 +420,6 @@ export default function OurServicesPage() {
             </section>
           </ScrollReveal>
 
-          <ScrollReveal variant="zoom-in" duration={0.74}>
-            <section
-              style={{
-                marginTop: 4,
-                padding: "clamp(24px, 4vw, 38px)",
-                borderRadius: 28,
-                background:
-                  "linear-gradient(135deg, rgba(196,165,116,0.14) 0%, rgba(255,255,255,1) 40%, rgba(245,244,241,0.96) 100%)",
-                border: "1px solid rgba(196,165,116,0.34)",
-              }}
-            >
-              <span style={labelStyle}>Operations Desk</span>
-              <h2 style={sectionTitleStyle}>
-                Do not allow yourself to be misled or blindsided by hidden realities.
-              </h2>
-              <p style={{ ...paragraphStyle, maxWidth: 940 }}>
-                Secure the proof you need today. Goan Spy is available for
-                confidential personal and corporate briefs across North Goa and
-                South Goa, with priority attention for urgent or high-risk
-                cases.
-              </p>
-
-              <div
-                style={{
-                  marginTop: 22,
-                  paddingTop: 22,
-                  borderTop: "1px solid var(--border)",
-                  display: "grid",
-                  gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
-                  gap: 18,
-                }}
-              >
-                <div>
-                  <div style={labelStyle}>Address</div>
-                  <p style={paragraphStyle}>
-                    Office No. A-514, Edcon Centre, Mapusa Bus Stand, Near
-                    Aldona, Angod, Mapusa, Goa - 403507.
-                  </p>
-                </div>
-                <div>
-                  <div style={labelStyle}>Direct Operations Helpline</div>
-                  <p style={paragraphStyle}>+91 73047 69291</p>
-                </div>
-                <div>
-                  <div style={labelStyle}>Official E-mail</div>
-                  <p style={paragraphStyle}>info@goanspy.com</p>
-                </div>
-                <div>
-                  <div style={labelStyle}>Operational Hours</div>
-                  <p style={paragraphStyle}>Open 24/7 for critical briefs.</p>
-                </div>
-              </div>
-
-              <div
-                style={{
-                  display: "flex",
-                  flexWrap: "wrap",
-                  gap: 14,
-                  marginTop: 24,
-                }}
-              >
-                <Link href="/contact-us" className="elemen-btn-primary">
-                  Book a Free Confidential Consultation
-                </Link>
-                <Link
-                  href="https://wa.me/917304769291"
-                  className="elemen-btn-outline"
-                >
-                  Message on WhatsApp
-                </Link>
-              </div>
-            </section>
-          </ScrollReveal>
         </div>
       </section>
     </main>

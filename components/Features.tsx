@@ -1,12 +1,12 @@
 "use client";
-import { Truck, Shield, RefreshCw, Headphones } from "lucide-react";
+import { Shield, MapPinned, FileText, Headphones } from "lucide-react";
 import { ScrollStagger, ScrollStaggerItem } from "@/components/motion/ScrollReveal";
 
 const features = [
-  { icon: Shield, title: "Certified Installations", desc: "Professional CCTV & security setup" },
-  { icon: Truck, title: "Pan-India Service", desc: "Nationwide support & deployment" },
-  { icon: RefreshCw, title: "AMC & Maintenance", desc: "Annual maintenance contracts" },
-  { icon: Headphones, title: "24/7 Support", desc: "Dedicated technical assistance" },
+  { icon: Shield, title: "Discreet Investigations", desc: "Confidential field work with strict non-disclosure" },
+  { icon: MapPinned, title: "Goa-Wide Coverage", desc: "Local operations across North Goa and South Goa" },
+  { icon: FileText, title: "Evidence-Led Reports", desc: "Timestamped photos, video, and clear case logs" },
+  { icon: Headphones, title: "Direct Support", desc: "Fast response for urgent case enquiries" },
 ];
 
 export default function Features() {

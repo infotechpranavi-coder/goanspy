@@ -1,15 +1,15 @@
 /** Goan Spy brand constants */
 export const BRAND_NAME = "GOAN SPY";
-export const BRAND_TAGLINE = "Engineering & Information Technology Solutions";
-export const LOGO_SRC = "/elemen-logo.jpeg";
-export const SUPPORT_EMAIL = "support@elemenindia.com";
-export const CONTACT_EMAIL = "contact@elemenindia.com";
-export const PHONE_PRIMARY = "9867111459";
-export const PHONE_SECONDARY = "8452912939";
+export const BRAND_TAGLINE = "Private Investigation & Surveillance in Goa";
+export const LOGO_SRC = "/image.png";
+export const SUPPORT_EMAIL = "info@goanspy.com";
+export const CONTACT_EMAIL = "info@goanspy.com";
+export const PHONE_PRIMARY = "7304769291";
+export const PHONE_SECONDARY = "7304769291";
 export const OFFICE_ADDRESS =
-  "Thane Station (West), Thane - 400602, Maharashtra";
+  "A 514, Edcon Centre, Mapusa Bus Stand, near Aldona, Angod, Mapusa, Goa 403507";
 export const OFFICE_ADDRESS_FULL =
-  "Rayaansh Arcade, Office No. 101, First Floor, Behind ST Stand, Thane Station (West), Thane - 400602, Maharashtra, INDIA";
+  "A 514, Edcon Centre, Mapusa Bus Stand, near Aldona, Angod, Mapusa, Goa 403507";
 
 export const SOCIAL_LINKS = {
   facebook: "https://www.facebook.com/search/top?q=elemenindia",

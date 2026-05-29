@@ -30,7 +30,7 @@ export default function HeroSlider() {
         style={{
           position: "relative",
           overflow: "hidden",
-          minHeight: "clamp(460px, 58vw, 680px)",
+          minHeight: "clamp(280px, 34vw, 380px)",
           backgroundImage: `url(${homeImages.hero.cctv})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
@@ -53,7 +53,7 @@ export default function HeroSlider() {
             maxWidth: "1300px",
             margin: "0 auto",
             padding: "0 20px",
-            minHeight: "clamp(460px, 58vw, 680px)",
+            minHeight: "clamp(280px, 34vw, 380px)",
             display: "flex",
             alignItems: "center",
           }}
@@ -62,12 +62,12 @@ export default function HeroSlider() {
             initial={reduceMotion ? false : { opacity: 0, y: 28 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
-            style={{ maxWidth: 760, padding: "72px 0" }}
+            style={{ maxWidth: 760, padding: "40px 0" }}
           >
             <h1
               style={{
                 color: "#fff",
-                fontSize: "clamp(36px, 5vw, 64px)",
+                fontSize: "clamp(32px, 4.2vw, 54px)",
                 lineHeight: 1.08,
                 fontWeight: 700,
                 marginBottom: 20,
@@ -80,7 +80,7 @@ export default function HeroSlider() {
             <p
               style={{
                 color: "rgba(255, 255, 255, 0.88)",
-                fontSize: "clamp(17px, 2vw, 21px)",
+                fontSize: "clamp(16px, 1.8vw, 19px)",
                 lineHeight: 1.7,
                 maxWidth: 700,
                 marginBottom: 32,
