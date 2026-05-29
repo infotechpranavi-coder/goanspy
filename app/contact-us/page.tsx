@@ -23,8 +23,10 @@ export default function ContactUsPage() {
       <PageHero
         title="Contact Us"
         subtitle="Reach our team for quotes, support, and general enquiries."
-        breadcrumbs={[{ label: "Home", href: "/" }, { label: "Contact Us" }]}
+        breadcrumbs={[{ label: "Home", href: "/" }, { label: "CONTACT US" }]}
+
         imageSrc={pageImages.contact}
+
         imageAlt="Goan Spy office in Mapusa, Goa"
       />
 

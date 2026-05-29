@@ -277,17 +277,17 @@ export default function SiteHeader() {
                   background: "rgba(255,255,255,0.2)",
                 }}
               >
-                <span
-                  style={{
-                    width: 7,
-                    height: 7,
-                    borderRadius: "50%",
-                    background: "#fff",
-                    display: "block",
-                  }}
-                />
-              </span>
-              Request a call
+              <span
+                style={{
+                  width: 7,
+                  height: 7,
+                  borderRadius: "50%",
+                  background: "#fff",
+                  display: "block",
+                }}
+              />
+              <span style={{ display: "none" }} />
+              Contact Us
             </Link>
 
             <button

@@ -34,23 +34,7 @@ export const mainNavLinks = [
     hasDropdown: true,
     matchPrefix: "/our-services",
   },
-  {
-    label: "Govt Regulation",
-    href: "/government-regulation-legal-compliance",
-  },
-  {
-    label: "Our Ethics",
-    href: "/our-ethics-operational-principles",
-  },
-  {
-    label: "Client Protocol",
-    href: "/client-engagement-protocol",
-  },
-  {
-    label: "Public Awareness",
-    href: "/public-awareness-security-guide",
-  },
-] as const;
+];
 
 export const dropdownItems: Record<string, { label: string; href: string }[]> = {
   Services: [
@@ -64,3 +48,4 @@ export const dropdownItems: Record<string, { label: string; href: string }[]> = 
     })),
   ],
 };
+
