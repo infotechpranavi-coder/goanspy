@@ -20,6 +20,18 @@ export const pageImages = {
 } as const;
 
 export const serviceImages: Record<string, string> = {
+  "personal-matrimonial-investigations": u("photo-1529139574466-a303027c1d8b"),
+  "infidelity-extramarital-affairs-investigations": u("photo-1517841905240-472988babdf9"),
+  "pre-matrimonial-background-verification": u("photo-1552664730-d307ca884978"),
+  "child-custody-teenager-lifestyle-monitoring": u("photo-1511895426328-dc8714191300"),
+  "missing-persons-investigations": u("photo-1500648767791-00dcc994a43e"),
+  "pre-employment-employee-background-checks": u("photo-1497366216548-37526070297c"),
+  "corporate-fraud-internal-misconduct-investigations": u("photo-1454165804606-c3d57bc86b40"),
+  "due-diligence-investigations": u("photo-1516321318423-f06f85e504b3"),
+  "intellectual-property-ip-anti-counterfeiting-operations": u("photo-1555949963-aa79dcee981c"),
+  "technical-surveillance-counter-measures-tscm": u("photo-1558618666-fcd25c85cd64"),
+
+  // Legacy service keys kept for other sections in the site.
   "access-control-system": u("photo-1563013544-824ae1b704d3"),
   "door-interlocking-solution": u("photo-1581091226825-a6a2a5aee158"),
   "time-attendance-management": u("photo-1486312338219-ce68d2c6f44d"),

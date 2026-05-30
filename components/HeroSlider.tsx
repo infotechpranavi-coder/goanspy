@@ -127,7 +127,8 @@ export default function HeroSlider() {
           aria-label="Scroll to top"
           style={{
             position: "fixed",
-            bottom: 24,
+            // Keep this above the floating contact buttons so the tap targets never overlap.
+            bottom: 160,
             right: 24,
             width: 44,
             height: 44,

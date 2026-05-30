@@ -245,7 +245,7 @@ export default function SiteHeader() {
               minWidth: 0,
             }}
           >
-            <Link
+                        <Link
               href="/contact-us"
               className="site-call-cta"
               style={{
@@ -277,16 +277,16 @@ export default function SiteHeader() {
                   background: "rgba(255,255,255,0.2)",
                 }}
               >
-              <span
-                style={{
-                  width: 7,
-                  height: 7,
-                  borderRadius: "50%",
-                  background: "#fff",
-                  display: "block",
-                }}
-              />
-              <span style={{ display: "none" }} />
+                <span
+                  style={{
+                    width: 7,
+                    height: 7,
+                    borderRadius: "50%",
+                    background: "#fff",
+                    display: "block",
+                  }}
+                />
+              </span>
               Contact Us
             </Link>
 

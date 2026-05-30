@@ -36897,3 +36897,996 @@ Import trace:
  GET /our-services/personal-matrimonial-investigations 200 in 515ms (next.js: 43ms, generate-params: 26ms, application-code: 471ms)
  GET /our-services/personal-matrimonial-investigations 200 in 274ms (next.js: 28ms, generate-params: 15ms, application-code: 246ms)
  GET /our-services/personal-matrimonial-investigations 200 in 275ms (next.js: 26ms, generate-params: 14ms, application-code: 249ms)
+✓ Compiled in 2.4s
+ GET /our-services/personal-matrimonial-investigations 200 in 870ms (next.js: 409ms, generate-params: 18ms, application-code: 461ms)
+ GET /client-engagement-protocol 200 in 1789ms (next.js: 445ms, application-code: 1344ms)
+ GET /our-services/personal-matrimonial-investigations 200 in 6.2s (next.js: 73ms, generate-params: 57ms, application-code: 6.1s)
+✓ Compiled in 11.7s
+⨯ ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx:291:20
+Expected '</', got 'jsx text'
+  [90m289 |[0m               <span style={{ display: [32m"none"[0m }} />
+  [90m290 |[0m               [33mContact[0m [33mUs[0m
+[31m[1m>[0m [90m291 |[0m             </[33mLink[0m>
+  [90m    |[0m                    [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[31m[1m>[0m [90m292 |[0m
+  [90m    |[0m [31m[1m^[0m
+[31m[1m>[0m [90m293 |[0m             <button
+  [90m    |[0m [31m[1m^^^^^^^^^^^^[0m
+  [90m294 |[0m               [36mtype[0m=[32m"button"[0m
+  [90m295 |[0m               className=[32m"site-mobile-toggle"[0m
+  [90m296 |[0m               onClick={() => setMobileOpen((open) => !open)}
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx
+    ./Desktop/Goanspy/goanspy/components/SiteChrome.tsx
+    ./Desktop/Goanspy/goanspy/app/layout.tsx
+
+
+ GET /our-services/personal-matrimonial-investigations 500 in 218ms (next.js: 157ms, application-code: 62ms)
+⨯ ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx:291:20
+Expected '</', got 'jsx text'
+  [90m289 |[0m               <span style={{ display: [32m"none"[0m }} />
+  [90m290 |[0m               [33mContact[0m [33mUs[0m
+[31m[1m>[0m [90m291 |[0m             </[33mLink[0m>
+  [90m    |[0m                    [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[31m[1m>[0m [90m292 |[0m
+  [90m    |[0m [31m[1m^[0m
+[31m[1m>[0m [90m293 |[0m             <button
+  [90m    |[0m [31m[1m^^^^^^^^^^^^[0m
+  [90m294 |[0m               [36mtype[0m=[32m"button"[0m
+  [90m295 |[0m               className=[32m"site-mobile-toggle"[0m
+  [90m296 |[0m               onClick={() => setMobileOpen((open) => !open)}
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx
+    ./Desktop/Goanspy/goanspy/components/SiteChrome.tsx
+    ./Desktop/Goanspy/goanspy/app/layout.tsx
+
+
+ GET /our-services/personal-matrimonial-investigations 500 in 56ms (next.js: 29ms, application-code: 27ms)
+⨯ ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx:291:20
+Expected '</', got 'jsx text'
+  [90m289 |[0m               <span style={{ display: [32m"none"[0m }} />
+  [90m290 |[0m               [33mContact[0m [33mUs[0m
+[31m[1m>[0m [90m291 |[0m             </[33mLink[0m>
+  [90m    |[0m                    [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[31m[1m>[0m [90m292 |[0m
+  [90m    |[0m [31m[1m^[0m
+[31m[1m>[0m [90m293 |[0m             <button
+  [90m    |[0m [31m[1m^^^^^^^^^^^^[0m
+  [90m294 |[0m               [36mtype[0m=[32m"button"[0m
+  [90m295 |[0m               className=[32m"site-mobile-toggle"[0m
+  [90m296 |[0m               onClick={() => setMobileOpen((open) => !open)}
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx
+    ./Desktop/Goanspy/goanspy/components/SiteChrome.tsx
+    ./Desktop/Goanspy/goanspy/app/layout.tsx
+
+
+ GET /our-services/personal-matrimonial-investigations 500 in 97ms (next.js: 62ms, application-code: 35ms)
+[browser] Uncaught Error: ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx:291:20
+Expected '</', got 'jsx text'
+  289 |               <span style={{ display: "none" }} />
+  290 |               Contact Us
+> 291 |             </Link>
+      |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 292 |
+      | ^
+> 293 |             <button
+      | ^^^^^^^^^^^^
+  294 |               type="button"
+  295 |               className="site-mobile-toggle"
+  296 |               onClick={() => setMobileOpen((open) => !open)}
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx
+    ./Desktop/Goanspy/goanspy/components/SiteChrome.tsx
+    ./Desktop/Goanspy/goanspy/app/layout.tsx
+
+
+    at <unknown> (Error: ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx:291:20)
+    at <unknown> (Error: (./Desktop/Goanspy/goanspy/components/SiteHeader.tsx:291:20)
+⨯ ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx:291:20
+Expected '</', got 'jsx text'
+  [90m289 |[0m               <span style={{ display: [32m"none"[0m }} />
+  [90m290 |[0m               [33mContact[0m [33mUs[0m
+[31m[1m>[0m [90m291 |[0m             </[33mLink[0m>
+  [90m    |[0m                    [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[31m[1m>[0m [90m292 |[0m
+  [90m    |[0m [31m[1m^[0m
+[31m[1m>[0m [90m293 |[0m             <button
+  [90m    |[0m [31m[1m^^^^^^^^^^^^[0m
+  [90m294 |[0m               [36mtype[0m=[32m"button"[0m
+  [90m295 |[0m               className=[32m"site-mobile-toggle"[0m
+  [90m296 |[0m               onClick={() => setMobileOpen((open) => !open)}
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx
+    ./Desktop/Goanspy/goanspy/components/SiteChrome.tsx
+    ./Desktop/Goanspy/goanspy/app/layout.tsx
+
+
+ GET /client-engagement-protocol 500 in 204ms (next.js: 163ms, application-code: 41ms)
+⨯ ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx:291:20
+Expected '</', got 'jsx text'
+  [90m289 |[0m               <span style={{ display: [32m"none"[0m }} />
+  [90m290 |[0m               [33mContact[0m [33mUs[0m
+[31m[1m>[0m [90m291 |[0m             </[33mLink[0m>
+  [90m    |[0m                    [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[31m[1m>[0m [90m292 |[0m
+  [90m    |[0m [31m[1m^[0m
+[31m[1m>[0m [90m293 |[0m             <button
+  [90m    |[0m [31m[1m^^^^^^^^^^^^[0m
+  [90m294 |[0m               [36mtype[0m=[32m"button"[0m
+  [90m295 |[0m               className=[32m"site-mobile-toggle"[0m
+  [90m296 |[0m               onClick={() => setMobileOpen((open) => !open)}
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx
+    ./Desktop/Goanspy/goanspy/components/SiteChrome.tsx
+    ./Desktop/Goanspy/goanspy/app/layout.tsx
+
+
+ GET /client-engagement-protocol 500 in 52ms (next.js: 24ms, application-code: 28ms)
+⨯ ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx:290:20
+Expected '</', got 'jsx text'
+  [90m288 |[0m               />
+  [90m289 |[0m               [33mContact[0m [33mUs[0m
+[31m[1m>[0m [90m290 |[0m             </[33mLink[0m>
+  [90m    |[0m                    [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[31m[1m>[0m [90m291 |[0m
+  [90m    |[0m [31m[1m^[0m
+[31m[1m>[0m [90m292 |[0m             <button
+  [90m    |[0m [31m[1m^^^^^^^^^^^^[0m
+  [90m293 |[0m               [36mtype[0m=[32m"button"[0m
+  [90m294 |[0m               className=[32m"site-mobile-toggle"[0m
+  [90m295 |[0m               onClick={() => setMobileOpen((open) => !open)}
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx
+    ./Desktop/Goanspy/goanspy/components/SiteChrome.tsx
+    ./Desktop/Goanspy/goanspy/app/layout.tsx
+
+
+ GET /client-engagement-protocol 500 in 97ms (next.js: 61ms, application-code: 36ms)
+[browser] Uncaught Error: ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx:290:20
+Expected '</', got 'jsx text'
+  288 |               />
+  289 |               Contact Us
+> 290 |             </Link>
+      |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 291 |
+      | ^
+> 292 |             <button
+      | ^^^^^^^^^^^^
+  293 |               type="button"
+  294 |               className="site-mobile-toggle"
+  295 |               onClick={() => setMobileOpen((open) => !open)}
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx
+    ./Desktop/Goanspy/goanspy/components/SiteChrome.tsx
+    ./Desktop/Goanspy/goanspy/app/layout.tsx
+
+
+    at <unknown> (Error: ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx:290:20)
+    at <unknown> (Error: (./Desktop/Goanspy/goanspy/components/SiteHeader.tsx:290:20)
+⨯ ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx:1:8
+Expected ';', '}' or <eof>
+[31m[1m>[0m [90m1 |[0m commit [32m"use client"[0m;
+  [90m  |[0m        [31m[1m^^^^^^^^^^^^[0m
+  [90m2 |[0m
+  [90m3 |[0m [36mimport[0m { useCallback, useRef, useState } [36mfrom[0m [32m"react"[0m;
+  [90m4 |[0m [36mimport[0m [33mLink[0m [36mfrom[0m [32m"next/link"[0m;
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx
+    ./Desktop/Goanspy/goanspy/components/SiteChrome.tsx
+    ./Desktop/Goanspy/goanspy/app/layout.tsx
+
+
+⨯ ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx:1:8
+Expected ';', '}' or <eof>
+[31m[1m>[0m [90m1 |[0m commit [32m"use client"[0m;
+  [90m  |[0m        [31m[1m^^^^^^^^^^^^[0m
+  [90m2 |[0m
+  [90m3 |[0m [36mimport[0m { useCallback, useRef, useState } [36mfrom[0m [32m"react"[0m;
+  [90m4 |[0m [36mimport[0m [33mLink[0m [36mfrom[0m [32m"next/link"[0m;
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx
+    ./Desktop/Goanspy/goanspy/components/SiteChrome.tsx
+    ./Desktop/Goanspy/goanspy/app/layout.tsx
+
+
+ GET /client-engagement-protocol 500 in 1384ms (next.js: 1261ms, application-code: 124ms)
+ GET /our-services/personal-matrimonial-investigations 500 in 1159ms (next.js: 1102ms, application-code: 57ms)
+[browser] Uncaught Error: ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx:1:8
+Expected ';', '}' or <eof>
+> 1 | commit "use client";
+    |        ^^^^^^^^^^^^
+  2 |
+  3 | import { useCallback, useRef, useState } from "react";
+  4 | import Link from "next/link";
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx
+    ./Desktop/Goanspy/goanspy/components/SiteChrome.tsx
+    ./Desktop/Goanspy/goanspy/app/layout.tsx
+
+
+    at <unknown> (Error: ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx:1:8)
+    at <unknown> (Error: (./Desktop/Goanspy/goanspy/components/SiteHeader.tsx:1:8)
+[browser] Uncaught Error: ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx:1:8
+Expected ';', '}' or <eof>
+> 1 | commit "use client";
+    |        ^^^^^^^^^^^^
+  2 |
+  3 | import { useCallback, useRef, useState } from "react";
+  4 | import Link from "next/link";
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx
+    ./Desktop/Goanspy/goanspy/components/SiteChrome.tsx
+    ./Desktop/Goanspy/goanspy/app/layout.tsx
+
+
+    at <unknown> (Error: ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx:1:8)
+    at <unknown> (Error: (./Desktop/Goanspy/goanspy/components/SiteHeader.tsx:1:8)
+[browser] ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx:1:8
+Expected ';', '}' or <eof>
+> 1 | commit "use client";
+    |        ^^^^^^^^^^^^
+  2 |
+  3 | import { useCallback, useRef, useState } from "react";
+  4 | import Link from "next/link";
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx
+    ./Desktop/Goanspy/goanspy/components/SiteChrome.tsx
+    ./Desktop/Goanspy/goanspy/app/layout.tsx 
+[browser] ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx:1:8
+Expected ';', '}' or <eof>
+> 1 | commit "use client";
+    |        ^^^^^^^^^^^^
+  2 |
+  3 | import { useCallback, useRef, useState } from "react";
+  4 | import Link from "next/link";
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx
+    ./Desktop/Goanspy/goanspy/components/SiteChrome.tsx
+    ./Desktop/Goanspy/goanspy/app/layout.tsx 
+[browser] ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx:1:8
+Expected ';', '}' or <eof>
+> 1 | commit "use client";
+    |        ^^^^^^^^^^^^
+  2 |
+  3 | import { useCallback, useRef, useState } from "react";
+  4 | import Link from "next/link";
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx
+    ./Desktop/Goanspy/goanspy/components/SiteChrome.tsx
+    ./Desktop/Goanspy/goanspy/app/layout.tsx 
+[browser] ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx:1:8
+Expected ';', '}' or <eof>
+> 1 | commit "use client";
+    |        ^^^^^^^^^^^^
+  2 |
+  3 | import { useCallback, useRef, useState } from "react";
+  4 | import Link from "next/link";
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx
+    ./Desktop/Goanspy/goanspy/components/SiteChrome.tsx
+    ./Desktop/Goanspy/goanspy/app/layout.tsx 
+[browser] ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx:1:8
+Expected ';', '}' or <eof>
+> 1 | commit "use client";
+    |        ^^^^^^^^^^^^
+  2 |
+  3 | import { useCallback, useRef, useState } from "react";
+  4 | import Link from "next/link";
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx
+    ./Desktop/Goanspy/goanspy/components/SiteChrome.tsx
+    ./Desktop/Goanspy/goanspy/app/layout.tsx 
+[browser] ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx:1:8
+Expected ';', '}' or <eof>
+> 1 | commit "use client";
+    |        ^^^^^^^^^^^^
+  2 |
+  3 | import { useCallback, useRef, useState } from "react";
+  4 | import Link from "next/link";
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx
+    ./Desktop/Goanspy/goanspy/components/SiteChrome.tsx
+    ./Desktop/Goanspy/goanspy/app/layout.tsx 
+[browser] ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx:1:8
+Expected ';', '}' or <eof>
+> 1 | commit "use client";
+    |        ^^^^^^^^^^^^
+  2 |
+  3 | import { useCallback, useRef, useState } from "react";
+  4 | import Link from "next/link";
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx
+    ./Desktop/Goanspy/goanspy/components/SiteChrome.tsx
+    ./Desktop/Goanspy/goanspy/app/layout.tsx 
+[browser] ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx:1:8
+Expected ';', '}' or <eof>
+> 1 | commit "use client";
+    |        ^^^^^^^^^^^^
+  2 |
+  3 | import { useCallback, useRef, useState } from "react";
+  4 | import Link from "next/link";
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx
+    ./Desktop/Goanspy/goanspy/components/SiteChrome.tsx
+    ./Desktop/Goanspy/goanspy/app/layout.tsx 
+[browser] ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx:1:8
+Expected ';', '}' or <eof>
+> 1 | commit "use client";
+    |        ^^^^^^^^^^^^
+  2 |
+  3 | import { useCallback, useRef, useState } from "react";
+  4 | import Link from "next/link";
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx
+    ./Desktop/Goanspy/goanspy/components/SiteChrome.tsx
+    ./Desktop/Goanspy/goanspy/app/layout.tsx 
+[browser] ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx:1:8
+Expected ';', '}' or <eof>
+> 1 | commit "use client";
+    |        ^^^^^^^^^^^^
+  2 |
+  3 | import { useCallback, useRef, useState } from "react";
+  4 | import Link from "next/link";
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx
+    ./Desktop/Goanspy/goanspy/components/SiteChrome.tsx
+    ./Desktop/Goanspy/goanspy/app/layout.tsx 
+[browser] ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx:1:8
+Expected ';', '}' or <eof>
+> 1 | commit "use client";
+    |        ^^^^^^^^^^^^
+  2 |
+  3 | import { useCallback, useRef, useState } from "react";
+  4 | import Link from "next/link";
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx
+    ./Desktop/Goanspy/goanspy/components/SiteChrome.tsx
+    ./Desktop/Goanspy/goanspy/app/layout.tsx 
+[browser] ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx:1:8
+Expected ';', '}' or <eof>
+> 1 | commit "use client";
+    |        ^^^^^^^^^^^^
+  2 |
+  3 | import { useCallback, useRef, useState } from "react";
+  4 | import Link from "next/link";
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx
+    ./Desktop/Goanspy/goanspy/components/SiteChrome.tsx
+    ./Desktop/Goanspy/goanspy/app/layout.tsx 
+[browser] ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx:1:8
+Expected ';', '}' or <eof>
+> 1 | commit "use client";
+    |        ^^^^^^^^^^^^
+  2 |
+  3 | import { useCallback, useRef, useState } from "react";
+  4 | import Link from "next/link";
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx
+    ./Desktop/Goanspy/goanspy/components/SiteChrome.tsx
+    ./Desktop/Goanspy/goanspy/app/layout.tsx 
+[browser] ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx:1:8
+Expected ';', '}' or <eof>
+> 1 | commit "use client";
+    |        ^^^^^^^^^^^^
+  2 |
+  3 | import { useCallback, useRef, useState } from "react";
+  4 | import Link from "next/link";
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx
+    ./Desktop/Goanspy/goanspy/components/SiteChrome.tsx
+    ./Desktop/Goanspy/goanspy/app/layout.tsx 
+[browser] ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx:1:8
+Expected ';', '}' or <eof>
+> 1 | commit "use client";
+    |        ^^^^^^^^^^^^
+  2 |
+  3 | import { useCallback, useRef, useState } from "react";
+  4 | import Link from "next/link";
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx
+    ./Desktop/Goanspy/goanspy/components/SiteChrome.tsx
+    ./Desktop/Goanspy/goanspy/app/layout.tsx 
+[browser] ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx:1:8
+Expected ';', '}' or <eof>
+> 1 | commit "use client";
+    |        ^^^^^^^^^^^^
+  2 |
+  3 | import { useCallback, useRef, useState } from "react";
+  4 | import Link from "next/link";
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx
+    ./Desktop/Goanspy/goanspy/components/SiteChrome.tsx
+    ./Desktop/Goanspy/goanspy/app/layout.tsx 
+[browser] ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx:1:8
+Expected ';', '}' or <eof>
+> 1 | commit "use client";
+    |        ^^^^^^^^^^^^
+  2 |
+  3 | import { useCallback, useRef, useState } from "react";
+  4 | import Link from "next/link";
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx
+    ./Desktop/Goanspy/goanspy/components/SiteChrome.tsx
+    ./Desktop/Goanspy/goanspy/app/layout.tsx 
+[browser] ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx:1:6
+Expected ';', '}' or <eof>
+> 1 | icon commit "use client";
+    |      ^^^^^^
+  2 |
+  3 | import { useCallback, useRef, useState } from "react";
+  4 | import Link from "next/link";
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx
+    ./Desktop/Goanspy/goanspy/components/SiteChrome.tsx
+    ./Desktop/Goanspy/goanspy/app/layout.tsx 
+[browser] ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx:1:6
+Expected ';', '}' or <eof>
+> 1 | icon commit "use client";
+    |      ^^^^^^
+  2 |
+  3 | import { useCallback, useRef, useState } from "react";
+  4 | import Link from "next/link";
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx
+    ./Desktop/Goanspy/goanspy/components/SiteChrome.tsx
+    ./Desktop/Goanspy/goanspy/app/layout.tsx 
+[browser] ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx:1:6
+Expected ';', '}' or <eof>
+> 1 | icon commit "use client";
+    |      ^^^^^^
+  2 |
+  3 | import { useCallback, useRef, useState } from "react";
+  4 | import Link from "next/link";
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx
+    ./Desktop/Goanspy/goanspy/components/SiteChrome.tsx
+    ./Desktop/Goanspy/goanspy/app/layout.tsx 
+[browser] ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx:1:6
+Expected ';', '}' or <eof>
+> 1 | icon commit "use client";
+    |      ^^^^^^
+  2 |
+  3 | import { useCallback, useRef, useState } from "react";
+  4 | import Link from "next/link";
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx
+    ./Desktop/Goanspy/goanspy/components/SiteChrome.tsx
+    ./Desktop/Goanspy/goanspy/app/layout.tsx 
+[browser] ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx:1:6
+Expected ';', '}' or <eof>
+> 1 | icon commit "use client";
+    |      ^^^^^^
+  2 |
+  3 | import { useCallback, useRef, useState } from "react";
+  4 | import Link from "next/link";
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx
+    ./Desktop/Goanspy/goanspy/components/SiteChrome.tsx
+    ./Desktop/Goanspy/goanspy/app/layout.tsx 
+[browser] ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx:1:6
+Expected ';', '}' or <eof>
+> 1 | icon commit "use client";
+    |      ^^^^^^
+  2 |
+  3 | import { useCallback, useRef, useState } from "react";
+  4 | import Link from "next/link";
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx
+    ./Desktop/Goanspy/goanspy/components/SiteChrome.tsx
+    ./Desktop/Goanspy/goanspy/app/layout.tsx 
+[browser] ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx:1:6
+Expected ';', '}' or <eof>
+> 1 | icon commit "use client";
+    |      ^^^^^^
+  2 |
+  3 | import { useCallback, useRef, useState } from "react";
+  4 | import Link from "next/link";
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx
+    ./Desktop/Goanspy/goanspy/components/SiteChrome.tsx
+    ./Desktop/Goanspy/goanspy/app/layout.tsx 
+[browser] ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx:1:6
+Expected ';', '}' or <eof>
+> 1 | icon co
+    |      ^^
+  2 |
+  3 | mmit "use client";
+  4 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx
+    ./Desktop/Goanspy/goanspy/components/SiteChrome.tsx
+    ./Desktop/Goanspy/goanspy/app/layout.tsx 
+[browser] ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx:1:8
+Expected ';', '}' or <eof>
+> 1 | commit "use client";
+    |        ^^^^^^^^^^^^
+  2 |
+  3 | import { useCallback, useRef, useState } from "react";
+  4 | import Link from "next/link";
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx
+    ./Desktop/Goanspy/goanspy/components/SiteChrome.tsx
+    ./Desktop/Goanspy/goanspy/app/layout.tsx 
+[browser] ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx:1:8
+Expected ';', '}' or <eof>
+> 1 | commit "use client";
+    |        ^^^^^^^^^^^^
+  2 |
+  3 | import { useCallback, useRef, useState } from "react";
+  4 | import Link from "next/link";
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx
+    ./Desktop/Goanspy/goanspy/components/SiteChrome.tsx
+    ./Desktop/Goanspy/goanspy/app/layout.tsx 
+[browser] ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx:1:8
+Expected ';', '}' or <eof>
+> 1 | commit "use client";
+    |        ^^^^^^^^^^^^
+  2 |
+  3 | import { useCallback, useRef, useState } from "react";
+  4 | import Link from "next/link";
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx
+    ./Desktop/Goanspy/goanspy/components/SiteChrome.tsx
+    ./Desktop/Goanspy/goanspy/app/layout.tsx 
+[browser] ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx:1:8
+Expected ';', '}' or <eof>
+> 1 | commit "use client";
+    |        ^^^^^^^^^^^^
+  2 |
+  3 | import { useCallback, useRef, useState } from "react";
+  4 | import Link from "next/link";
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx
+    ./Desktop/Goanspy/goanspy/components/SiteChrome.tsx
+    ./Desktop/Goanspy/goanspy/app/layout.tsx 
+[browser] ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx:1:8
+Expected ';', '}' or <eof>
+> 1 | commit "use client";
+    |        ^^^^^^^^^^^^
+  2 |
+  3 | import { useCallback, useRef, useState } from "react";
+  4 | import Link from "next/link";
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx
+    ./Desktop/Goanspy/goanspy/components/SiteChrome.tsx
+    ./Desktop/Goanspy/goanspy/app/layout.tsx 
+[browser] ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx:1:8
+Expected ';', '}' or <eof>
+> 1 | commit "use client";
+    |        ^^^^^^^^^^^^
+  2 |
+  3 | import { useCallback, useRef, useState } from "react";
+  4 | import Link from "next/link";
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx
+    ./Desktop/Goanspy/goanspy/components/SiteChrome.tsx
+    ./Desktop/Goanspy/goanspy/app/layout.tsx 
+[browser] ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx:1:8
+Expected ';', '}' or <eof>
+> 1 | commit "use client";
+    |        ^^^^^^^^^^^^
+  2 |
+  3 | import { useCallback, useRef, useState } from "react";
+  4 | import Link from "next/link";
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx
+    ./Desktop/Goanspy/goanspy/components/SiteChrome.tsx
+    ./Desktop/Goanspy/goanspy/app/layout.tsx 
+[browser] ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx:1:8
+Expected ';', '}' or <eof>
+> 1 | commit "use client";
+    |        ^^^^^^^^^^^^
+  2 |
+  3 | import { useCallback, useRef, useState } from "react";
+  4 | import Link from "next/link";
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx
+    ./Desktop/Goanspy/goanspy/components/SiteChrome.tsx
+    ./Desktop/Goanspy/goanspy/app/layout.tsx 
+[browser] ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx:1:8
+Expected ';', '}' or <eof>
+> 1 | commit "use client";
+    |        ^^^^^^^^^^^^
+  2 |
+  3 | import { useCallback, useRef, useState } from "react";
+  4 | import Link from "next/link";
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx
+    ./Desktop/Goanspy/goanspy/components/SiteChrome.tsx
+    ./Desktop/Goanspy/goanspy/app/layout.tsx 
+[browser] ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx:1:8
+Expected ';', '}' or <eof>
+> 1 | commit "use client";
+    |        ^^^^^^^^^^^^
+  2 |
+  3 | import { useCallback, useRef, useState } from "react";
+  4 | import Link from "next/link";
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx
+    ./Desktop/Goanspy/goanspy/components/SiteChrome.tsx
+    ./Desktop/Goanspy/goanspy/app/layout.tsx 
+[browser] ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx:1:8
+Expected ';', '}' or <eof>
+> 1 | commit "use client";
+    |        ^^^^^^^^^^^^
+  2 |
+  3 | import { useCallback, useRef, useState } from "react";
+  4 | import Link from "next/link";
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx
+    ./Desktop/Goanspy/goanspy/components/SiteChrome.tsx
+    ./Desktop/Goanspy/goanspy/app/layout.tsx 
+[browser] ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx:1:8
+Expected ';', '}' or <eof>
+> 1 | commit "use client";
+    |        ^^^^^^^^^^^^
+  2 |
+  3 | import { useCallback, useRef, useState } from "react";
+  4 | import Link from "next/link";
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx
+    ./Desktop/Goanspy/goanspy/components/SiteChrome.tsx
+    ./Desktop/Goanspy/goanspy/app/layout.tsx 
+[browser] ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx:1:8
+Expected ';', '}' or <eof>
+> 1 | commit "use client";
+    |        ^^^^^^^^^^^^
+  2 |
+  3 | import { useCallback, useRef, useState } from "react";
+  4 | import Link from "next/link";
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx
+    ./Desktop/Goanspy/goanspy/components/SiteChrome.tsx
+    ./Desktop/Goanspy/goanspy/app/layout.tsx 
+[browser] ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx:1:8
+Expected ';', '}' or <eof>
+> 1 | commit "use client";
+    |        ^^^^^^^^^^^^
+  2 |
+  3 | import { useCallback, useRef, useState } from "react";
+  4 | import Link from "next/link";
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx
+    ./Desktop/Goanspy/goanspy/components/SiteChrome.tsx
+    ./Desktop/Goanspy/goanspy/app/layout.tsx 
+[browser] ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx:1:8
+Expected ';', '}' or <eof>
+> 1 | commit "use client";
+    |        ^^^^^^^^^^^^
+  2 |
+  3 | import { useCallback, useRef, useState } from "react";
+  4 | import Link from "next/link";
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx
+    ./Desktop/Goanspy/goanspy/components/SiteChrome.tsx
+    ./Desktop/Goanspy/goanspy/app/layout.tsx 
+[browser] ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx:1:6
+Expected ';', '}' or <eof>
+> 1 | icon commit "use client";
+    |      ^^^^^^
+  2 |
+  3 | import { useCallback, useRef, useState } from "react";
+  4 | import Link from "next/link";
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx
+    ./Desktop/Goanspy/goanspy/components/SiteChrome.tsx
+    ./Desktop/Goanspy/goanspy/app/layout.tsx 
+[browser] ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx:1:6
+Expected ';', '}' or <eof>
+> 1 | icon commit "use client";
+    |      ^^^^^^
+  2 |
+  3 | import { useCallback, useRef, useState } from "react";
+  4 | import Link from "next/link";
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx
+    ./Desktop/Goanspy/goanspy/components/SiteChrome.tsx
+    ./Desktop/Goanspy/goanspy/app/layout.tsx 
+[browser] ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx:1:6
+Expected ';', '}' or <eof>
+> 1 | icon commit "use client";
+    |      ^^^^^^
+  2 |
+  3 | import { useCallback, useRef, useState } from "react";
+  4 | import Link from "next/link";
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx
+    ./Desktop/Goanspy/goanspy/components/SiteChrome.tsx
+    ./Desktop/Goanspy/goanspy/app/layout.tsx 
+[browser] ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx:1:6
+Expected ';', '}' or <eof>
+> 1 | icon commit "use client";
+    |      ^^^^^^
+  2 |
+  3 | import { useCallback, useRef, useState } from "react";
+  4 | import Link from "next/link";
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx
+    ./Desktop/Goanspy/goanspy/components/SiteChrome.tsx
+    ./Desktop/Goanspy/goanspy/app/layout.tsx 
+[browser] ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx:1:6
+Expected ';', '}' or <eof>
+> 1 | icon commit "use client";
+    |      ^^^^^^
+  2 |
+  3 | import { useCallback, useRef, useState } from "react";
+  4 | import Link from "next/link";
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx
+    ./Desktop/Goanspy/goanspy/components/SiteChrome.tsx
+    ./Desktop/Goanspy/goanspy/app/layout.tsx 
+[browser] ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx:1:6
+Expected ';', '}' or <eof>
+> 1 | icon commit "use client";
+    |      ^^^^^^
+  2 |
+  3 | import { useCallback, useRef, useState } from "react";
+  4 | import Link from "next/link";
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx
+    ./Desktop/Goanspy/goanspy/components/SiteChrome.tsx
+    ./Desktop/Goanspy/goanspy/app/layout.tsx 
+[browser] ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx:1:6
+Expected ';', '}' or <eof>
+> 1 | icon commit "use client";
+    |      ^^^^^^
+  2 |
+  3 | import { useCallback, useRef, useState } from "react";
+  4 | import Link from "next/link";
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx
+    ./Desktop/Goanspy/goanspy/components/SiteChrome.tsx
+    ./Desktop/Goanspy/goanspy/app/layout.tsx 
+[browser] ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx:1:6
+Expected ';', '}' or <eof>
+> 1 | icon co
+    |      ^^
+  2 |
+  3 | mmit "use client";
+  4 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./Desktop/Goanspy/goanspy/components/SiteHeader.tsx
+    ./Desktop/Goanspy/goanspy/components/SiteChrome.tsx
+    ./Desktop/Goanspy/goanspy/app/layout.tsx 
