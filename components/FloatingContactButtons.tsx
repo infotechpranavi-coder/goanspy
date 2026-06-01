@@ -3,7 +3,7 @@
 import React, { useMemo } from "react";
 import { PHONE_PRIMARY } from "@/lib/brand";
 
-function WhatsAppIcon({ size = 28 }: { size?: number }) {
+function WhatsAppIcon({ size = 26 }: { size?: number }) {
   return (
     <svg
       width={size}
@@ -21,7 +21,7 @@ function WhatsAppIcon({ size = 28 }: { size?: number }) {
       <path
         d="M16 3C9.27 3 3.8 8.3 3.8 14.82c0 2.07.55 4.04 1.5 5.78L4.02 29l7.05-1.82c1.65.9 3.54 1.4 4.93 1.4 6.73 0 12.2-5.3 12.2-11.78C28.2 8.3 22.73 3 16 3Z"
         stroke="white"
-        strokeWidth="1.4"
+        strokeWidth="1.6"
         strokeLinejoin="round"
         opacity="0.95"
       />
@@ -29,7 +29,7 @@ function WhatsAppIcon({ size = 28 }: { size?: number }) {
   );
 }
 
-function CallIcon({ size = 30 }: { size?: number }) {
+function CallIcon({ size = 26 }: { size?: number }) {
   return (
     <svg
       width={size}
@@ -39,86 +39,166 @@ function CallIcon({ size = 30 }: { size?: number }) {
       xmlns="http://www.w3.org/2000/svg"
       aria-hidden="true"
       focusable="false"
-      style={{ transform: "rotate(18deg)" }}
     >
       <path
-        d="M6.7 4.7c.4-.4 1-.5 1.5-.2l2.1 1.2c.5.3.8.9.7 1.5l-.4 2.1c-.1.5 0 1 .3 1.4.8 1.2 1.8 2.3 3 3 .4.2.9.3 1.3.2l2.1-.4c.6-.1 1.2.2 1.5.7l1.2 2.1c.3.5.2 1.1-.2 1.5l-1.1 1.1c-.7.7-1.7 1-2.6.8-2.9-.7-5.7-2.4-8.1-4.7-2.3-2.3-4-5.2-4.7-8.1-.2-.9.1-1.9.8-2.6L6.7 4.7Z"
-        fill="white"
-      />
-      <path
-        d="M8.8 6.8c.8-.8 2.1-.8 2.9 0l1.7 1.7c.8.8.8 2.1 0 2.9l-.7.7c.5.9 1.1 1.7 1.8 2.4.7.7 1.5 1.3 2.4 1.8l.7-.7c.8-.8 2.1-.8 2.9 0l1.7 1.7c.8.8.8 2.1 0 2.9l-.7.7c-.8.8-2.1 1.1-3.2.8-3.2-1-6.2-3.1-8.7-5.6-2.5-2.5-4.6-5.5-5.6-8.7-.3-1.1 0-2.4.8-3.2l.7-.7Z"
-        fill="#ffffff"
-        opacity="0.96"
+        d="M6.62 10.79c1.44 2.84 3.96 5.35 6.8 6.8l2.2-2.2c.23-.23.57-.3.86-.19 1 .4 2 .6 3.05 .6.55 0 1 .45 1 .99v3.5c0 .55-.45 1-1 1-9.45 0-17.13-7.68-17.13-17.13 0-.55.45-1 1-1h3.5c.55 0 .99.45 .99 1 0 1.05 .2 2.05 .6 3.05 .11 .29 .04 .63-.19 .86l-2.2 2.2z"
+        fill="currentColor"
+        stroke="none"
       />
     </svg>
   );
 }
 
-const buttonBase: React.CSSProperties = {
-  width: 64,
-  height: 64,
-  borderRadius: "50%",
-  display: "inline-flex",
-  alignItems: "center",
-  justifyContent: "center",
-  textDecoration: "none",
-  boxShadow: "0 12px 24px rgba(0,0,0,0.22)",
-  border: "none",
-  flexShrink: 0,
-};
 
 function FloatingContactButtons() {
   const phone = PHONE_PRIMARY;
 
   const { whatsappHref, callHref } = useMemo(() => {
     const whatsappHref = `https://wa.me/${phone}?text=${encodeURIComponent(
-      "Hello, I'd like to know more about your services."
+      "Hello Goan Spy, I would like to inquire about your private investigation services."
     )}`;
     const callHref = `tel:+91${phone}`;
     return { whatsappHref, callHref };
   }, [phone]);
 
   return (
-    <div
-      aria-label="Quick contact"
-      style={{
-        position: "fixed",
-        right: 18,
-        bottom: 18,
-        zIndex: 50,
-        display: "flex",
-        flexDirection: "column",
-        gap: 10,
-      }}
-    >
-      <a
-        href={whatsappHref}
-        target="_blank"
-        rel="noreferrer"
-        aria-label="Chat on WhatsApp"
-        title="WhatsApp"
-        style={{
-          ...buttonBase,
-          background:
-            "radial-gradient(circle at 30% 28%, rgba(255,255,255,0.18) 0%, rgba(255,255,255,0.06) 24%, transparent 44%), linear-gradient(180deg, #2bd66e 0%, #1fb44f 100%)",
-        }}
-      >
-        <WhatsAppIcon />
-      </a>
+    <>
+      <style dangerouslySetInnerHTML={{ __html: `
+        @keyframes fab-pulse-green {
+          0%   { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.55), 0 8px 24px rgba(37,211,102,0.30); }
+          70%  { box-shadow: 0 0 0 14px rgba(37, 211, 102, 0), 0 8px 24px rgba(37,211,102,0.30); }
+          100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0), 0 8px 24px rgba(37,211,102,0.30); }
+        }
+        @keyframes fab-pulse-orange {
+          0%   { box-shadow: 0 0 0 0 rgba(249,115,22, 0.55), 0 8px 24px rgba(249,115,22,0.30); }
+          70%  { box-shadow: 0 0 0 14px rgba(249,115,22, 0), 0 8px 24px rgba(249,115,22,0.30); }
+          100% { box-shadow: 0 0 0 0 rgba(249,115,22, 0), 0 8px 24px rgba(249,115,22,0.30); }
+        }
 
-      <a
-        href={callHref}
-        aria-label="Call"
-        title="Call"
+        .fab-wa {
+          animation: fab-pulse-green 2.4s ease-in-out infinite;
+          transition: transform 0.25s cubic-bezier(0.175,0.885,0.32,1.275),
+                      box-shadow 0.25s ease,
+                      filter 0.25s ease;
+        }
+        .fab-wa:hover {
+          transform: scale(1.12) translateY(-3px) !important;
+          filter: brightness(1.08);
+          box-shadow: 0 0 0 0 rgba(37,211,102,0), 0 14px 30px rgba(37,211,102,0.50) !important;
+          animation: none;
+        }
+        .fab-wa:active { transform: scale(0.94) !important; }
+
+        .fab-call {
+          animation: fab-pulse-orange 2.4s ease-in-out infinite;
+          animation-delay: 1.2s;
+          transition: transform 0.25s cubic-bezier(0.175,0.885,0.32,1.275),
+                      box-shadow 0.25s ease,
+                      filter 0.25s ease;
+        }
+        .fab-call:hover {
+          transform: scale(1.12) translateY(-3px) !important;
+          filter: brightness(1.08);
+          box-shadow: 0 0 0 0 rgba(249,115,22,0), 0 14px 30px rgba(249,115,22,0.50) !important;
+          animation: none;
+        }
+        .fab-call:active { transform: scale(0.94) !important; }
+
+        .fab-label {
+          position: absolute;
+          right: 70px;
+          top: 50%;
+          transform: translateY(-50%) translateX(6px);
+          opacity: 0;
+          pointer-events: none;
+          white-space: nowrap;
+          padding: 5px 11px;
+          border-radius: 20px;
+          font-size: 12.5px;
+          font-weight: 600;
+          letter-spacing: 0.01em;
+          color: #f8fafc;
+          background: rgba(10, 14, 26, 0.88);
+          backdrop-filter: blur(10px);
+          -webkit-backdrop-filter: blur(10px);
+          border: 1px solid rgba(255,255,255,0.10);
+          box-shadow: 0 4px 14px rgba(0,0,0,0.18);
+          transition: opacity 0.2s ease, transform 0.2s ease;
+          font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        .fab-wa:hover .fab-label,
+        .fab-call:hover .fab-label {
+          opacity: 1;
+          transform: translateY(-50%) translateX(0);
+        }
+      ` }} />
+
+      <div
+        aria-label="Quick contact"
         style={{
-          ...buttonBase,
-          background:
-            "radial-gradient(circle at 28% 24%, rgba(255,255,255,0.22) 0%, rgba(255,255,255,0.08) 26%, transparent 46%), linear-gradient(180deg, #ff7a1a 0%, #f36a10 100%)",
+          position: "fixed",
+          right: 20,
+          bottom: 20,
+          zIndex: 9999,
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          gap: 14,
         }}
       >
-        <CallIcon />
-      </a>
-    </div>
+        {/* WhatsApp Button */}
+        <a
+          href={whatsappHref}
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Chat on WhatsApp"
+          title="WhatsApp"
+          className="fab-wa"
+          style={{
+            position: "relative",
+            width: 58,
+            height: 58,
+            borderRadius: "50%",
+            background: "linear-gradient(145deg, #2ddb6f 0%, #1aa84a 100%)",
+            border: "1.5px solid rgba(255,255,255,0.22)",
+            display: "inline-flex",
+            alignItems: "center",
+            justifyContent: "center",
+            textDecoration: "none",
+            flexShrink: 0,
+            cursor: "pointer",
+          }}
+        >
+          <span className="fab-label">Chat on WhatsApp</span>
+          <WhatsAppIcon />
+        </a>
+
+        {/* Call Button */}
+        <a
+          href={callHref}
+          aria-label="Call now"
+          title="Call"
+          className="fab-call"
+          style={{
+            position: "relative",
+            width: 58,
+            height: 58,
+            borderRadius: "50%",
+            background: "linear-gradient(145deg, #fb923c 0%, #ea6b0a 100%)",
+            border: "1.5px solid rgba(255,255,255,0.22)",
+            display: "inline-flex",
+            alignItems: "center",
+            justifyContent: "center",
+            textDecoration: "none",
+            flexShrink: 0,
+            cursor: "pointer",
+          }}
+        >
+          <span className="fab-label">Call Investigator</span>
+          <CallIcon />
+        </a>
+      </div>
+    </>
   );
 }
 

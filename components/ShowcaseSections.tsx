@@ -75,16 +75,20 @@ export function SplitFeatureSection({
     <section id={sectionId} className="showcase-shell">
       <div className="showcase-split-grid">
         <div className="showcase-image-column">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={imageSrc}
-            alt={imageAlt}
-            className="showcase-main-image"
+          <div
+            className="showcase-image-frame"
             style={{
               minHeight: imageMinHeight,
               height: imageHeight ?? imageMinHeight,
             }}
-          />
+          >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={imageSrc}
+              alt={imageAlt}
+              className="showcase-main-image"
+            />
+          </div>
           {highlightPlacement === "belowImage" && (
             <div className="showcase-highlight-card showcase-highlight-card-below-image">
               <h3 className="showcase-highlight-title">{highlightTitle}</h3>
@@ -126,30 +130,45 @@ export function SplitFeatureSection({
           background: rgba(255, 255, 255, 0.6);
           border: 1px solid rgba(26, 39, 68, 0.12);
           border-radius: 26px;
-          padding: 22px;
+          padding: clamp(22px, 3vw, 30px);
         }
 
         .showcase-split-grid {
           display: grid;
-          gap: 20px;
-          align-items: stretch;
+          gap: clamp(24px, 4vw, 42px);
+          align-items: center;
+        }
+
+        .showcase-image-frame {
+          width: 100%;
+          overflow: hidden;
+          border-radius: 24px;
+          box-shadow: 0 14px 34px rgba(26, 39, 68, 0.12);
+          background: rgba(255, 255, 255, 0.82);
         }
 
         .showcase-main-image {
           width: 100%;
+          height: 100%;
           object-fit: cover;
           display: block;
-          border-radius: 24px;
-          box-shadow: 0 14px 34px rgba(26, 39, 68, 0.12);
         }
 
         .showcase-image-column {
-          align-self: start;
+          display: flex;
+          flex-direction: column;
+          gap: 14px;
+          align-self: stretch;
         }
 
         .showcase-content-column {
           position: relative;
-          padding: 6px 4px 6px 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap: 12px;
+          padding: 0;
+          max-width: 680px;
         }
 
         .showcase-eyebrow {
@@ -157,19 +176,19 @@ export function SplitFeatureSection({
           font-size: 13px;
           font-weight: 700;
           letter-spacing: 0.3px;
-          margin-bottom: 10px;
+          margin-bottom: 0;
         }
 
         .showcase-title {
           font-size: clamp(28px, 4vw, 56px);
           line-height: 1.02;
           color: var(--navy);
-          margin-bottom: 18px;
+          margin-bottom: 0;
         }
 
         .showcase-paragraph-stack {
           display: grid;
-          gap: 14px;
+          gap: 12px;
         }
 
         .showcase-paragraph {
@@ -179,7 +198,7 @@ export function SplitFeatureSection({
         }
 
         .showcase-paragraph-lead {
-          margin-bottom: 18px;
+          margin-bottom: 0;
         }
 
         .showcase-highlight-card {
@@ -189,7 +208,8 @@ export function SplitFeatureSection({
           padding: 18px 20px;
           box-shadow: 0 16px 34px ${accentShadow};
           border: 1px solid ${accentBorder};
-          margin: 0 0 14px;
+          margin: 6px 0 0;
+          width: 100%;
         }
 
         .showcase-highlight-title {
@@ -209,20 +229,17 @@ export function SplitFeatureSection({
         .showcase-highlight-card-below-image {
           margin-top: 14px;
           margin-bottom: 0;
+          margin-left: 0;
+          max-width: none;
         }
 
         .showcase-footer-row {
-          margin-top: 18px;
+          margin-top: 6px;
         }
 
         @media (min-width: 1024px) {
           .showcase-split-grid {
-            grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
-          }
-
-          .showcase-highlight-card {
-            margin-left: -96px;
-            max-width: 430px;
+            grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
           }
 
           .showcase-highlight-card-below-image {

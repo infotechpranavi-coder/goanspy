@@ -70,8 +70,8 @@ export default function GovernmentRegulationPage() {
               titleMaxWidth="16ch"
               imageSrc={pageImages.industry}
               imageAlt="Legal compliance and regulatory accountability"
-              imageMinHeight={525}
-              imageHeight={210}
+              imageMinHeight={280}
+              imageHeight={280}
               highlightPlacement="belowImage"
               highlightTitle="Registered, scoped, and contract-backed from day one"
               highlightText="We operate from our Mapusa office under a compliance-first structure that rejects gray-market tactics, unauthorized operations, and undefined client scopes."
