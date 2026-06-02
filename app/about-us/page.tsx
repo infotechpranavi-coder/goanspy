@@ -223,7 +223,7 @@ export default function AboutUsPage() {
                     <div>
                       <div style={{ fontSize: 13, fontWeight: 700 }}>Call us anytime</div>
                       <div style={{ fontSize: 14, color: "var(--text-mid)" }}>
-                        (+91) 73047 69291
+                        73047 69291
                       </div>
                     </div>
                   </div>

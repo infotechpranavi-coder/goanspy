@@ -83,7 +83,7 @@ export default function ElementsPage() {
             stagger={0.12}
           >
             {[
-              { label: "Phone", value: `(+91) ${PHONE_PRIMARY}`, variant: "fade-up" as const },
+              { label: "Phone", value: `${PHONE_PRIMARY}`, variant: "fade-up" as const },
               { label: "Email", value: CONTACT_EMAIL, variant: "fade-left" as const },
               { label: "Address", value: OFFICE_ADDRESS_FULL, variant: "fade-right" as const },
             ].map((item) => (

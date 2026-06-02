@@ -146,7 +146,7 @@ export default function ContactAddressSection() {
                       href={`tel:+91${PHONE_PRIMARY}`}
                       style={{ color: "#1e5db0", textDecoration: "none" }}
                     >
-                      (+91) {PHONE_PRIMARY}
+                      {PHONE_PRIMARY}
                     </a>
                   </div>
                   <div

@@ -108,52 +108,6 @@ export default function Footer() {
               background verification, and evidence-led reporting with strict
               confidentiality.
             </p>
-
-            <div style={{ display: "grid", gap: 10 }}>
-              <a
-                href={`tel:+91${PHONE_PRIMARY}`}
-                style={{
-                  display: "inline-flex",
-                  alignItems: "center",
-                  gap: 10,
-                  color: "#dbe1e6",
-                  textDecoration: "none",
-                  fontSize: 13,
-                  lineHeight: 1.6,
-                }}
-              >
-                <Phone size={16} style={{ color: "var(--gold)", flexShrink: 0 }} />
-                <span>(+91) {PHONE_PRIMARY} / {PHONE_SECONDARY}</span>
-              </a>
-              <a
-                href={`mailto:${SUPPORT_EMAIL}`}
-                style={{
-                  display: "inline-flex",
-                  alignItems: "center",
-                  gap: 10,
-                  color: "#dbe1e6",
-                  textDecoration: "none",
-                  fontSize: 13,
-                  lineHeight: 1.6,
-                }}
-              >
-                <Mail size={16} style={{ color: "var(--gold)", flexShrink: 0 }} />
-                <span>{SUPPORT_EMAIL}</span>
-              </a>
-              <div
-                style={{
-                  display: "inline-flex",
-                  alignItems: "flex-start",
-                  gap: 10,
-                  fontSize: 13,
-                  lineHeight: 1.7,
-                  color: "#dbe1e6",
-                }}
-              >
-                <MapPin size={16} style={{ color: "var(--gold)", flexShrink: 0, marginTop: 2 }} />
-                <span>{OFFICE_ADDRESS}</span>
-              </div>
-            </div>
           </div>
 
           {footerSections.map((section) => (
@@ -205,10 +159,57 @@ export default function Footer() {
                 fontWeight: 700,
                 color: "var(--gold)",
                 textDecoration: "none",
+                marginBottom: 24,
               }}
             >
               Get in touch →
             </Link>
+
+            <div style={{ display: "grid", gap: 10 }}>
+              <a
+                href={`tel:+91${PHONE_PRIMARY}`}
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: 10,
+                  color: "#dbe1e6",
+                  textDecoration: "none",
+                  fontSize: 13,
+                  lineHeight: 1.6,
+                }}
+              >
+                <Phone size={16} style={{ color: "var(--gold)", flexShrink: 0 }} />
+                <span>{PHONE_PRIMARY} / {PHONE_SECONDARY}</span>
+              </a>
+              <a
+                href={`mailto:${SUPPORT_EMAIL}`}
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: 10,
+                  color: "#dbe1e6",
+                  textDecoration: "none",
+                  fontSize: 13,
+                  lineHeight: 1.6,
+                }}
+              >
+                <Mail size={16} style={{ color: "var(--gold)", flexShrink: 0 }} />
+                <span>{SUPPORT_EMAIL}</span>
+              </a>
+              <div
+                style={{
+                  display: "inline-flex",
+                  alignItems: "flex-start",
+                  gap: 10,
+                  fontSize: 13,
+                  lineHeight: 1.7,
+                  color: "#dbe1e6",
+                }}
+              >
+                <MapPin size={16} style={{ color: "var(--gold)", flexShrink: 0, marginTop: 2 }} />
+                <span>{OFFICE_ADDRESS}</span>
+              </div>
+            </div>
           </div>
         </div>
 

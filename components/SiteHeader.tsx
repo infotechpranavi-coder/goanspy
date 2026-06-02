@@ -73,7 +73,7 @@ export default function SiteHeader() {
         style={{
           maxWidth: 1600,
           margin: "0 auto",
-          padding: "10px 14px 8px",
+          padding: "4px 14px 4px",
         }}
       >
         <div
@@ -82,7 +82,7 @@ export default function SiteHeader() {
             alignItems: "center",
             justifyContent: "space-between",
             gap: 12,
-            minHeight: 48,
+            minHeight: 36,
           }}
         >
           <Link
@@ -116,7 +116,7 @@ export default function SiteHeader() {
                 style={{
                   display: "block",
                   width: "auto",
-                  height: 64,
+                  height: 40,
                   objectFit: "contain",
                 }}
               />
@@ -132,7 +132,7 @@ export default function SiteHeader() {
             >
               <span
                 style={{
-                  fontSize: 16,
+                  fontSize: 14,
                   fontWeight: 800,
                   letterSpacing: "0.1em",
                   textTransform: "uppercase",
@@ -143,7 +143,7 @@ export default function SiteHeader() {
               </span>
               <span
                 style={{
-                  fontSize: 10,
+                  fontSize: 9,
                   color: "rgba(17,24,39,0.62)",
                   letterSpacing: "0.16em",
                   textTransform: "uppercase",
@@ -204,7 +204,7 @@ export default function SiteHeader() {
                         display: "inline-flex",
                         alignItems: "center",
                         gap: 4,
-                        padding: "8px 10px 10px",
+                        padding: "6px 8px 6px",
                         fontSize: 11.5,
                         fontWeight: active ? 800 : 600,
                         letterSpacing: 0.28,
@@ -322,9 +322,9 @@ export default function SiteHeader() {
             left: "50%",
             top: "100%",
             transform: "translateX(-50%)",
-            width: "min(90vw, 940px)",
+            width: "min(90vw, 480px)",
             zIndex: 1100,
-            marginTop: 8,
+            marginTop: 6,
           }}
         >
           <div
@@ -332,8 +332,8 @@ export default function SiteHeader() {
               background: "#ffffff",
               boxShadow: "0 18px 42px rgba(26,39,68,0.12)",
               border: "1px solid rgba(26,39,68,0.08)",
-              borderRadius: 20,
-              padding: 12,
+              borderRadius: 12,
+              padding: 6,
               backdropFilter: "blur(16px)",
             }}
           >
@@ -343,9 +343,9 @@ export default function SiteHeader() {
                 alignItems: "center",
                 justifyContent: "space-between",
                 gap: 12,
-                padding: "2px 4px 10px",
+                padding: "2px 4px 4px",
                 color: "#4a4a4a",
-                fontSize: 11,
+                fontSize: 9,
                 fontWeight: 700,
                 letterSpacing: "0.12em",
                 textTransform: "uppercase",
@@ -362,71 +362,91 @@ export default function SiteHeader() {
                   letterSpacing: "0.08em",
                 }}
               >
-                {servicesItems.length} links
+                {servicesItems.reduce((acc, curr) => acc + (curr.items?.length || 0), 0)} services
               </span>
             </div>
 
             <div
               style={{
                 display: "grid",
-                gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
-                gap: 8,
+                gridTemplateColumns: "repeat(2, minmax(0, 1fr))",
+                gap: 6,
+                paddingTop: 2,
               }}
             >
-              {servicesItems.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  role="menuitem"
-                  onClick={() => setActiveDropdown(null)}
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    gap: 8,
-                    minHeight: 46,
-                    padding: "10px 12px",
-                    fontSize: 12,
-                    color: pathname === item.href ? WINE_BERRY : "#454545",
-                    fontWeight: pathname === item.href ? 700 : 500,
-                    textDecoration: "none",
-                    border: "1px solid rgba(26,39,68,0.08)",
-                    borderRadius: 14,
-                    background:
-                      pathname === item.href
-                        ? "rgba(47,128,237,0.12)"
-                        : "#ffffff",
-                    transition:
-                      "background 0.15s, color 0.15s, transform 0.15s, border-color 0.15s",
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.color = WINE_BERRY;
-                    e.currentTarget.style.background = "rgba(47,128,237,0.12)";
-                    e.currentTarget.style.transform = "translateY(-1px)";
-                    e.currentTarget.style.borderColor = "rgba(47,128,237,0.28)";
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.color =
-                      pathname === item.href ? WINE_BERRY : "#444";
-                    e.currentTarget.style.background =
-                      pathname === item.href
-                        ? "rgba(47,128,237,0.12)"
-                        : "#ffffff";
-                    e.currentTarget.style.transform = "translateY(0)";
-                    e.currentTarget.style.borderColor = "rgba(26,39,68,0.08)";
-                  }}
-                >
-                  <span
+              {servicesItems.map((group) => (
+                <div key={group.label}>
+                  <h4
                     style={{
-                      width: 6,
-                      height: 6,
-                      borderRadius: "50%",
-                      background: "var(--wine-berry)",
-                      opacity: pathname === item.href ? 1 : 0.45,
-                      flexShrink: 0,
+                      fontSize: 10,
+                      fontWeight: 800,
+                      color: "var(--navy)",
+                      marginBottom: 6,
+                      paddingLeft: 4,
+                      letterSpacing: "0.05em",
+                      textTransform: "uppercase",
                     }}
-                  />
-                  {item.label}
-                </Link>
+                  >
+                    {group.label}
+                  </h4>
+                  <div style={{ display: "grid", gap: 8 }}>
+                    {group.items?.map((item) => (
+                      <Link
+                        key={item.href}
+                        href={item.href}
+                        role="menuitem"
+                        onClick={() => setActiveDropdown(null)}
+                        style={{
+                          display: "flex",
+                          alignItems: "center",
+                          gap: 4,
+                          minHeight: 24,
+                          padding: "2px 4px",
+                          fontSize: 9.5,
+                          color: pathname === item.href ? WINE_BERRY : "#454545",
+                          fontWeight: pathname === item.href ? 700 : 500,
+                          textDecoration: "none",
+                          border: "1px solid rgba(26,39,68,0.08)",
+                          borderRadius: 14,
+                          background:
+                            pathname === item.href
+                              ? "rgba(47,128,237,0.12)"
+                              : "#ffffff",
+                          transition:
+                            "background 0.15s, color 0.15s, transform 0.15s, border-color 0.15s",
+                        }}
+                        onMouseEnter={(e) => {
+                          e.currentTarget.style.color = WINE_BERRY;
+                          e.currentTarget.style.background = "rgba(47,128,237,0.12)";
+                          e.currentTarget.style.transform = "translateY(-1px)";
+                          e.currentTarget.style.borderColor = "rgba(47,128,237,0.28)";
+                        }}
+                        onMouseLeave={(e) => {
+                          e.currentTarget.style.color =
+                            pathname === item.href ? WINE_BERRY : "#444";
+                          e.currentTarget.style.background =
+                            pathname === item.href
+                              ? "rgba(47,128,237,0.12)"
+                              : "#ffffff";
+                          e.currentTarget.style.transform = "translateY(0)";
+                          e.currentTarget.style.borderColor = "rgba(26,39,68,0.08)";
+                        }}
+                      >
+                        <span
+                          style={{
+                            width: 6,
+                            height: 6,
+                            borderRadius: "50%",
+                            background: "var(--wine-berry)",
+                            opacity: pathname === item.href ? 1 : 0.45,
+                            flexShrink: 0,
+                          }}
+                        />
+                        {item.label}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
               ))}
             </div>
           </div>
@@ -495,30 +515,37 @@ export default function SiteHeader() {
                         <div
                           style={{
                             display: "grid",
-                            gap: 8,
+                            gap: 16,
                             padding: "12px 0 4px 12px",
                           }}
                         >
-                          {dropdownItems[link.label]?.map((item) => (
-                            <Link
-                              key={item.href}
-                              href={item.href}
-                              onClick={() => {
-                                setMobileOpen(false);
-                                setMobileServicesOpen(false);
-                              }}
-                              style={{
-                                color:
-                                  pathname === item.href
-                                    ? "#1e5db0"
-                                    : "rgba(17,24,39,0.84)",
-                                textDecoration: "none",
-                                fontSize: 13,
-                                padding: "8px 0",
-                              }}
-                            >
-                              {item.label}
-                            </Link>
+                          {dropdownItems[link.label]?.map((group) => (
+                            <div key={group.label}>
+                              <h4 style={{ fontSize: 12, fontWeight: 700, color: "#111827", marginBottom: 8, textTransform: "uppercase" }}>{group.label}</h4>
+                              <div style={{ display: "grid", gap: 8, paddingLeft: 8 }}>
+                                {group.items?.map((item) => (
+                                  <Link
+                                    key={item.href}
+                                    href={item.href}
+                                    onClick={() => {
+                                      setMobileOpen(false);
+                                      setMobileServicesOpen(false);
+                                    }}
+                                    style={{
+                                      color:
+                                        pathname === item.href
+                                          ? "#1e5db0"
+                                          : "rgba(17,24,39,0.84)",
+                                      textDecoration: "none",
+                                      fontSize: 13,
+                                      padding: "8px 0",
+                                    }}
+                                  >
+                                    {item.label}
+                                  </Link>
+                                ))}
+                              </div>
+                            </div>
                           ))}
                         </div>
                       )}

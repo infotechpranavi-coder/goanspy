@@ -67,7 +67,7 @@ export default function WhyChooseGoanSpy() {
       <section
         className="elemen-section-white"
         style={{
-          padding: "80px 0",
+          padding: "40px 0",
           background:
             "linear-gradient(180deg, var(--white) 0%, var(--bg-cream) 52%, var(--white) 100%)",
         }}
@@ -96,9 +96,9 @@ export default function WhyChooseGoanSpy() {
             </span>
             <h2
               style={{
-                fontSize: "clamp(28px, 4vw, 42px)",
+                fontSize: "clamp(24px, 3vw, 32px)",
                 color: "var(--navy)",
-                margin: "12px 0 16px",
+                margin: "8px 0 12px",
                 fontWeight: 700,
                 maxWidth: 520,
               }}
@@ -128,10 +128,10 @@ export default function WhyChooseGoanSpy() {
           <div
             style={{
               position: "relative",
-              borderRadius: 28,
+              borderRadius: 24,
               overflow: "hidden",
-              minHeight: 320,
-              boxShadow: "0 22px 60px rgba(26, 39, 68, 0.14)",
+              minHeight: 240,
+              boxShadow: "0 18px 40px rgba(26, 39, 68, 0.14)",
             }}
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -209,10 +209,10 @@ export default function WhyChooseGoanSpy() {
                 background:
                   "linear-gradient(180deg, rgba(255,255,255,0.98) 0%, rgba(248,250,252,0.98) 100%)",
                 border: "1px solid rgba(44,58,66,0.09)",
-                borderRadius: 24,
-                padding: 24,
-                boxShadow: "0 14px 38px rgba(44,58,66,0.08)",
-                minHeight: 220,
+                borderRadius: 20,
+                padding: 18,
+                boxShadow: "0 10px 28px rgba(44,58,66,0.08)",
+                minHeight: 160,
                 transition:
                   "transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease, background 220ms ease",
               }}
@@ -239,29 +239,29 @@ export default function WhyChooseGoanSpy() {
               />
               <div
                 style={{
-                  width: 54,
-                  height: 54,
-                  borderRadius: 18,
+                  width: 44,
+                  height: 44,
+                  borderRadius: 14,
                   background:
                     "linear-gradient(135deg, rgba(46,108,230,1) 0%, rgba(24,81,194,1) 100%)",
                   color: "#fff",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  marginBottom: 18,
-                  boxShadow: "0 10px 22px rgba(46,108,230,0.24)",
+                  marginBottom: 14,
+                  boxShadow: "0 8px 18px rgba(46,108,230,0.24)",
                   position: "relative",
                   zIndex: 1,
                 }}
               >
-                <reason.icon size={24} />
+                <reason.icon size={20} />
               </div>
               <h3
                 style={{
-                  fontSize: 19,
+                  fontSize: 16,
                   color: "var(--navy)",
                   fontWeight: 700,
-                  marginBottom: 10,
+                  marginBottom: 8,
                   position: "relative",
                   zIndex: 1,
                 }}
@@ -270,8 +270,8 @@ export default function WhyChooseGoanSpy() {
               </h3>
               <p
                 style={{
-                  fontSize: 14.5,
-                  lineHeight: 1.8,
+                  fontSize: 13,
+                  lineHeight: 1.6,
                   color: "var(--text-mid)",
                   position: "relative",
                   zIndex: 1,
@@ -298,12 +298,12 @@ export default function WhyChooseGoanSpy() {
               style={{
                 position: "relative",
                 overflow: "hidden",
-                borderRadius: 22,
-                padding: "22px 24px",
+                borderRadius: 18,
+                padding: "16px 18px",
                 background:
                   "linear-gradient(135deg, rgba(26,39,68,1) 0%, rgba(18,28,50,1) 100%)",
                 color: "#fff",
-                boxShadow: "0 18px 38px rgba(26,39,68,0.16)",
+                boxShadow: "0 14px 30px rgba(26,39,68,0.16)",
                 border: "1px solid rgba(255,255,255,0.06)",
                 transition: "transform 220ms ease, box-shadow 220ms ease",
               }}
@@ -319,9 +319,9 @@ export default function WhyChooseGoanSpy() {
               />
               <div
                 style={{
-                  fontSize: "clamp(28px, 3vw, 36px)",
+                  fontSize: "clamp(20px, 2.5vw, 28px)",
                   fontWeight: 800,
-                  marginBottom: 6,
+                  marginBottom: 4,
                   position: "relative",
                   zIndex: 1,
                 }}
@@ -330,8 +330,8 @@ export default function WhyChooseGoanSpy() {
               </div>
               <div
                 style={{
-                  fontSize: 13.5,
-                  lineHeight: 1.6,
+                  fontSize: 12,
+                  lineHeight: 1.5,
                   color: "rgba(255,255,255,0.82)",
                   position: "relative",
                   zIndex: 1,
@@ -341,10 +341,10 @@ export default function WhyChooseGoanSpy() {
               </div>
               <div
                 style={{
-                  fontSize: 12.5,
-                  lineHeight: 1.7,
+                  fontSize: 11.5,
+                  lineHeight: 1.6,
                   color: "rgba(255,255,255,0.72)",
-                  marginTop: 8,
+                  marginTop: 6,
                   position: "relative",
                   zIndex: 1,
                 }}

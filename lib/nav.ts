@@ -22,12 +22,6 @@ export const mainNavLinks = [
   { label: "Home", href: "/" },
   { label: "About Us", href: "/about-us" },
   { label: "Blog", href: "/blog" },
-  { label: "Case Studies", href: "/case-studies" },
-  {
-    label: "Locations",
-    href: "/locations",
-    matchPrefix: "/locations",
-  },
   {
     label: "Services",
     href: "/our-services",
@@ -36,16 +30,43 @@ export const mainNavLinks = [
   },
 ];
 
-export const dropdownItems: Record<string, { label: string; href: string }[]> = {
+export type DropdownItem = {
+  label: string;
+  href?: string;
+  items?: { label: string; href: string }[];
+};
+
+export const dropdownItems: Record<string, DropdownItem[]> = {
   Services: [
     {
-      label: "All Services",
-      href: "/our-services",
+      label: "Personal Investigation",
+      items: ourServices
+        .filter(
+          (s) =>
+            ![
+              "technical-surveillance-counter-measures-tscm",
+              "due-diligence-investigations",
+              "corporate-fraud-internal-misconduct-investigations",
+              "intellectual-property-ip-anti-counterfeiting-operations",
+              "pre-employment-employee-background-checks",
+            ].includes(s.slug)
+        )
+        .map((s) => ({ label: s.label, href: `/our-services/${s.slug}` })),
     },
-    ...ourServices.map((service) => ({
-      label: service.label,
-      href: `/our-services/${service.slug}`,
-    })),
+    {
+      label: "Corporate Investigation",
+      items: ourServices
+        .filter((s) =>
+          [
+            "technical-surveillance-counter-measures-tscm",
+            "due-diligence-investigations",
+            "corporate-fraud-internal-misconduct-investigations",
+            "intellectual-property-ip-anti-counterfeiting-operations",
+            "pre-employment-employee-background-checks",
+          ].includes(s.slug)
+        )
+        .map((s) => ({ label: s.label, href: `/our-services/${s.slug}` })),
+    },
   ],
 };
 

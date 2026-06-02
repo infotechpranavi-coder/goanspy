@@ -20,7 +20,7 @@ const cards: InfoCard[] = [
   {
     icon: Phone,
     title: "Phone",
-    lines: [`(+91) ${PHONE_PRIMARY}`, `(+91) ${PHONE_SECONDARY}`],
+    lines: [`${PHONE_PRIMARY}`, `${PHONE_SECONDARY}`],
     href: `tel:+91${PHONE_PRIMARY}`,
   },
   {
@@ -38,7 +38,7 @@ const cards: InfoCard[] = [
   {
     icon: Clock,
     title: "Business hours",
-    lines: ["Mon – Sat: 9:00 AM – 6:00 PM", "Sunday: Closed"],
+    lines: ["24/7 on call"],
   },
 ];
 
