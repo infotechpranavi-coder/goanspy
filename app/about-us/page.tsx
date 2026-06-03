@@ -39,7 +39,8 @@ export default function AboutUsPage() {
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "About Us" }]}
         imageSrc={pageImages.about}
         imageAlt="Goan Spy investigators operating across Goa"
-        overlayBackground="linear-gradient(105deg, rgba(11,99,229,0.90) 0%, rgba(30,93,176,0.72) 45%, rgba(12,36,95,0.58) 100%)"
+        videoSrc="/8371851-uhd_4096_2160_25fps%20(1).mp4"
+        overlayBackground="linear-gradient(105deg, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.62) 45%, rgba(0,0,0,0.45) 100%)"
         actions={
           <>
             <Link href="/client-engagement-protocol" className="about-btn-primary">

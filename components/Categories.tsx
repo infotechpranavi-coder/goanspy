@@ -1,21 +1,8 @@
 "use client";
 import Link from "next/link";
 import { useState } from "react";
-import { homeImages } from "@/lib/content/home-images";
+import { serviceImages } from "@/lib/content/images";
 import { ourServices } from "@/lib/site-pages";
-
-const serviceVisuals = [
-  homeImages.categories.cctv,
-  homeImages.categories.accessControl,
-  homeImages.categories.fireSafety,
-  homeImages.categories.network,
-  homeImages.categories.visitor,
-  homeImages.categories.attendance,
-  homeImages.categories.network,
-  homeImages.categories.accessControl,
-  homeImages.categories.cctv,
-  homeImages.categories.visitor,
-];
 
 const serviceHighlights = [
   "Discreet field verification",
@@ -33,7 +20,7 @@ const serviceHighlights = [
 const serviceCards = ourServices.map((service, index) => ({
   name: service.label,
   href: `/our-services/${service.slug}`,
-  img: serviceVisuals[index % serviceVisuals.length],
+  img: serviceImages[service.slug as keyof typeof serviceImages],
   highlight: serviceHighlights[index % serviceHighlights.length],
   badge: index < 5 ? "Personal" : "Corporate",
 }));

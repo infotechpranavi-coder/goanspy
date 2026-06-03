@@ -9,7 +9,7 @@ const blogCards = [
     sub: "Infidelity, travel patterns, and holiday surveillance insights",
     cta: "Read Blog",
     href: "/blog",
-    img: homeImages.banners.corporate,
+    img: homeImages.banners.infidelity,
     eyebrow: "Blogs",
   },
   {
@@ -17,7 +17,7 @@ const blogCards = [
     sub: "Marriage verification, family risk checks, and background truth mapping",
     cta: "Read Blog",
     href: "/blog",
-    img: homeImages.banners.hospital,
+    img: homeImages.banners.preMatrimonial,
     eyebrow: "Blogs",
   },
   {
@@ -25,7 +25,7 @@ const blogCards = [
     sub: "Privacy sweeps, hidden camera detection, and TSCM awareness",
     cta: "Read Blog",
     href: "/blog",
-    img: homeImages.banners.banking,
+    img: homeImages.banners.hiddenCameras,
     eyebrow: "Blogs",
   },
 ];

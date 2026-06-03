@@ -21,7 +21,7 @@ export const homeImages = {
   solutions: {
     cctvKit: u("photo-1563986768609-322da13575f3", 500),
     biometric: u("photo-1563013544-824ae1b704d3", 500),
-    nvr: u("photo-1516321497487-e288fb19713f", 500),
+    nvr: serviceImages["missing-persons-investigations"],
     firewall: u("photo-1555949963-aa79dcee981c", 500),
     attendance: u("photo-1486312338219-ce68d2c6f44d", 500),
     visitor: u("photo-1497366811353-6870744d04b2", 500),
@@ -29,11 +29,11 @@ export const homeImages = {
     wifi: u("photo-1519389950473-47ba0277781c", 500),
   },
   promo: u("photo-1516321497487-e288fb19713f", 700),
-  newSolutionsBanner: u("photo-1581091226825-a6a2a5aee158", 700),
+  newSolutionsBanner: serviceImages["pre-employment-employee-background-checks"],
   banners: {
-    corporate: industryImages["corporate-office"] ?? u("photo-1497366216548-37526070297c", 700),
-    hospital: industryImages["hospital-healthcare"] ?? u("photo-1579684385127-1ef15d508118", 700),
-    banking: industryImages["banking-finance-sector"] ?? u("photo-1600880292203-757bb62b4baf", 700),
+    infidelity: serviceImages["infidelity-extramarital-affairs-investigations"],
+    preMatrimonial: serviceImages["pre-matrimonial-background-verification"],
+    hiddenCameras: serviceImages["technical-surveillance-counter-measures-tscm"],
   },
   blog: {
     cctvGuide: u("photo-1563986768609-322da13575f3", 600),

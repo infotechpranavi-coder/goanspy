@@ -17,6 +17,7 @@ type PageHeroProps = {
   breadcrumbs?: Breadcrumb[];
   imageSrc: string;
   imageAlt: string;
+  videoSrc?: string;
   actions?: React.ReactNode;
   overlayBackground?: string;
 };
@@ -27,6 +28,7 @@ export default function PageHero({
   breadcrumbs = [{ label: "Home", href: "/" }],
   imageSrc,
   imageAlt,
+  videoSrc,
   actions,
   overlayBackground = "linear-gradient(105deg, rgba(26,39,68,0.88) 0%, rgba(91,29,54,0.72) 45%, rgba(26,39,68,0.55) 100%)",
 }: PageHeroProps) {
@@ -52,22 +54,42 @@ export default function PageHero({
       }}
       aria-label={`${title} - ${imageAlt}`}
     >
-      <motion.img
-        src={imageSrc}
-        alt=""
-        aria-hidden
-        style={{
-          position: "absolute",
-          inset: 0,
-          width: "100%",
-          height: "100%",
-          objectFit: "cover",
-          objectPosition: "center",
-          y: reduce ? 0 : imageY,
-          scale: reduce ? 1.08 : imageScale,
-          willChange: "transform",
-        }}
-      />
+      {videoSrc ? (
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          aria-hidden
+          style={{
+            position: "absolute",
+            inset: 0,
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            objectPosition: "center",
+          }}
+        >
+          <source src={videoSrc} type="video/mp4" />
+        </video>
+      ) : (
+        <motion.img
+          src={imageSrc}
+          alt=""
+          aria-hidden
+          style={{
+            position: "absolute",
+            inset: 0,
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            objectPosition: "center",
+            y: reduce ? 0 : imageY,
+            scale: reduce ? 1.08 : imageScale,
+            willChange: "transform",
+          }}
+        />
+      )}
       <motion.div
         aria-hidden
         style={{

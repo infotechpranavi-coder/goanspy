@@ -1,6 +1,6 @@
 import Link from "next/link";
 import ContentPage from "@/components/ContentPage";
-import { pageImages } from "@/lib/content/images";
+import { pageImages, serviceImages } from "@/lib/content/images";
 
 export const metadata = {
   title: "Investigation Insights & Blog | Goan Spy Detective Agency Goa",
@@ -15,6 +15,7 @@ type BlogCard = {
   summary: string;
   focus: string[];
   href: string;
+  image: string;
 };
 
 const personalBlogs: BlogCard[] = [
@@ -26,6 +27,7 @@ const personalBlogs: BlogCard[] = [
       "A Goa trip can hide behavior for a while, but suspicious timing, money patterns, and defensiveness usually leave clues.",
     focus: ["Digital blackout", "Schedule changes", "Professional surveillance"],
     href: "/contact-us",
+    image: serviceImages["infidelity-extramarital-affairs-investigations"],
   },
   {
     id: "02",
@@ -36,6 +38,7 @@ const personalBlogs: BlogCard[] = [
       "A polished profile can hide debts, legal issues, prior relationships, or unstable lifestyle patterns.",
     focus: ["Financial status", "Relationship history", "Family peace of mind"],
     href: "/contact-us",
+    image: serviceImages["pre-matrimonial-background-verification"],
   },
   {
     id: "03",
@@ -45,6 +48,7 @@ const personalBlogs: BlogCard[] = [
       "Tiny hidden cameras can be placed inside fixtures, power blocks, or bathrooms without visible signs.",
     focus: ["Holiday rentals", "RF analysis", "Secure privacy"],
     href: "/contact-us",
+    image: serviceImages["technical-surveillance-counter-measures-tscm"],
   },
   {
     id: "04",
@@ -54,6 +58,7 @@ const personalBlogs: BlogCard[] = [
       "Courts value factual, chronological evidence that clearly shows how a child is being cared for.",
     focus: ["Timestamped proof", "Sensitive handling", "Legal support"],
     href: "/contact-us",
+    image: serviceImages["child-custody-teenager-lifestyle-monitoring"],
   },
   {
     id: "05",
@@ -63,6 +68,7 @@ const personalBlogs: BlogCard[] = [
       "When communication stops, every hour matters because digital traces and witness memories fade quickly.",
     focus: ["Golden window", "Ground sweeps", "Fast intervention"],
     href: "/contact-us",
+    image: serviceImages["missing-persons-investigations"],
   },
 ];
 
@@ -75,6 +81,7 @@ const corporateBlogs: BlogCard[] = [
       "Internal leaks, stolen client lists, and competitor-aligned sabotage can destroy years of commercial progress.",
     focus: ["Insider leaks", "Technical sweeps", "Litigation-ready proof"],
     href: "/contact-us",
+    image: serviceImages["intellectual-property-ip-anti-counterfeiting-operations"],
   },
   {
     id: "07",
@@ -84,6 +91,7 @@ const corporateBlogs: BlogCard[] = [
       "Recurring shrinkage usually comes from a structured internal system that exploits blind spots in transport and storage.",
     focus: ["Weighbridge checks", "Route verification", "Leak isolation"],
     href: "/contact-us",
+    image: serviceImages["corporate-fraud-internal-misconduct-investigations"],
   },
   {
     id: "08",
@@ -93,6 +101,7 @@ const corporateBlogs: BlogCard[] = [
       "Resume-only hiring in a port city can create theft, compliance, and leakage risks.",
     focus: ["Address checks", "Record review", "Sector-specific vetting"],
     href: "/contact-us",
+    image: serviceImages["pre-employment-employee-background-checks"],
   },
   {
     id: "09",
@@ -102,6 +111,7 @@ const corporateBlogs: BlogCard[] = [
       "Prime deals can hide co-owner problems, forged documents, and inheritance disputes that basic paperwork misses.",
     focus: ["Title checks", "Seller mapping", "Capital protection"],
     href: "/contact-us",
+    image: serviceImages["due-diligence-investigations"],
   },
   {
     id: "10",
@@ -112,6 +122,7 @@ const corporateBlogs: BlogCard[] = [
       "Clear market intelligence helps you avoid weak partners, bad vendors, and costly strategic surprises.",
     focus: ["Financial health", "Vendor reliability", "Evidence-led decisions"],
     href: "/contact-us",
+    image: serviceImages["corporate-fraud-internal-misconduct-investigations"],
   },
 ];
 
@@ -189,7 +200,6 @@ function BlogGrid({
               position: "relative",
               overflow: "hidden",
               borderRadius: 24,
-              padding: 20,
               background:
                 "linear-gradient(180deg, rgba(255,255,255,0.98) 0%, rgba(248,251,255,1) 100%)",
               border: "1px solid rgba(26,39,68,0.08)",
@@ -206,10 +216,22 @@ function BlogGrid({
                 width: "100%",
                 height: 5,
                 background: "linear-gradient(90deg, #1e5db0 0%, #2f80ed 52%, #c4a574 100%)",
+                zIndex: 1,
+              }}
+            />
+            <div
+              style={{
+                width: "100%",
+                height: 180,
+                backgroundImage: `url(${post.image})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                borderBottom: "1px solid rgba(26,39,68,0.08)",
               }}
             />
 
-            <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 14 }}>
+            <div style={{ padding: 20, display: "flex", flexDirection: "column", flex: 1 }}>
+              <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 14 }}>
               <span
                 style={{
                   width: 44,
@@ -284,6 +306,7 @@ function BlogGrid({
                 Talk to Goan Spy
               </Link>
             </div>
+            </div>
           </article>
         ))}
       </div>
@@ -304,6 +327,8 @@ export default function BlogPage() {
         src: pageImages.brands,
         alt: "Goan Spy blog and investigation insight hub",
       }}
+      videoSrc="/8369877-uhd_4096_2160_25fps.mp4"
+      overlayBackground="rgba(0, 0, 0, 0.6)"
       wrapContent={false}
       contentMaxWidth={1160}
     >

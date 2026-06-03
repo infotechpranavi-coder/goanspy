@@ -31,11 +31,26 @@ export default function HeroSlider() {
           position: "relative",
           overflow: "hidden",
           minHeight: "clamp(280px, 34vw, 380px)",
-          backgroundImage: `url(${homeImages.hero.cctv})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
         }}
       >
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          style={{
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            zIndex: 0,
+          }}
+        >
+          <source src="/8369275-uhd_4096_2160_25fps.mp4" type="video/mp4" />
+        </video>
         <div
           style={{
             position: "absolute",

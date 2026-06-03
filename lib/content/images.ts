@@ -20,12 +20,12 @@ export const pageImages = {
 } as const;
 
 export const serviceImages: Record<string, string> = {
-  "personal-matrimonial-investigations": u("photo-1529139574466-a303027c1d8b"),
-  "infidelity-extramarital-affairs-investigations": u("photo-1517841905240-472988babdf9"),
-  "pre-matrimonial-background-verification": u("photo-1552664730-d307ca884978"),
-  "child-custody-teenager-lifestyle-monitoring": u("photo-1511895426328-dc8714191300"),
-  "missing-persons-investigations": u("photo-1500648767791-00dcc994a43e"),
-  "pre-employment-employee-background-checks": u("photo-1497366216548-37526070297c"),
+  "personal-matrimonial-investigations": "/services/personal_matrimonial.png",
+  "infidelity-extramarital-affairs-investigations": "/services/infidelity_investigation.png",
+  "pre-matrimonial-background-verification": "/services/pre_matrimonial.png",
+  "child-custody-teenager-lifestyle-monitoring": "/services/child_custody.png",
+  "missing-persons-investigations": "/services/missing_persons.png",
+  "pre-employment-employee-background-checks": "/services/pre_employment.png",
   "corporate-fraud-internal-misconduct-investigations": u("photo-1454165804606-c3d57bc86b40"),
   "due-diligence-investigations": u("photo-1516321318423-f06f85e504b3"),
   "intellectual-property-ip-anti-counterfeiting-operations": u("photo-1555949963-aa79dcee981c"),

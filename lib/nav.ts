@@ -22,6 +22,7 @@ export const mainNavLinks = [
   { label: "Home", href: "/" },
   { label: "About Us", href: "/about-us" },
   { label: "Blog", href: "/blog" },
+  { label: "Publications", href: "/publications" },
   {
     label: "Services",
     href: "/our-services",

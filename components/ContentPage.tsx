@@ -9,6 +9,8 @@ type ContentPageProps = {
   subtitle?: string;
   breadcrumbs: Breadcrumb[];
   heroImage: { src: string; alt: string };
+  videoSrc?: string;
+  overlayBackground?: string;
   /** Optional second image in page body (off by default — hero shows main image) */
   showInlineImage?: boolean;
   image?: { src: string; alt: string; caption?: string };
@@ -24,6 +26,8 @@ export default function ContentPage({
   subtitle,
   breadcrumbs,
   heroImage,
+  videoSrc,
+  overlayBackground,
   showInlineImage = false,
   image,
   children,
@@ -42,6 +46,8 @@ export default function ContentPage({
         breadcrumbs={breadcrumbs}
         imageSrc={heroImage.src}
         imageAlt={heroImage.alt}
+        videoSrc={videoSrc}
+        overlayBackground={overlayBackground}
       />
       <section
         style={{
