@@ -218,74 +218,97 @@ export default function MainNav() {
                     letterSpacing: "0.08em",
                   }}
                 >
-                  {servicesItems.length} links
+                  {servicesItems.reduce(
+                    (acc, group) => acc + (group.items?.length ?? 0),
+                    0
+                  )}{" "}
+                  services
                 </span>
               </div>
 
               <div
                 style={{
                   display: "grid",
-                  gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
-                  gap: 10,
+                  gridTemplateColumns: "repeat(2, minmax(0, 1fr))",
+                  gap: 16,
                 }}
               >
-                {servicesItems.map((item) => (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    role="menuitem"
-                    onClick={() => setActiveDropdown(null)}
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      gap: 10,
-                      minHeight: 54,
-                      padding: "12px 14px",
-                      fontSize: 13,
-                      color: pathname === item.href ? WINE_BERRY : "#454545",
-                      fontWeight: pathname === item.href ? 700 : 500,
-                      textDecoration: "none",
-                      border: "1px solid rgba(26,39,68,0.08)",
-                      borderRadius: 16,
-                      background:
-                        pathname === item.href
-                          ? "rgba(47,128,237,0.12)"
-                          : "#ffffff",
-                      transition:
-                        "background 0.15s, color 0.15s, transform 0.15s, border-color 0.15s",
-                    }}
-                    onMouseEnter={(e) => {
-                      e.currentTarget.style.color = WINE_BERRY;
-                      e.currentTarget.style.background =
-                        "rgba(47,128,237,0.12)";
-                      e.currentTarget.style.transform = "translateY(-1px)";
-                      e.currentTarget.style.borderColor =
-                        "rgba(47,128,237,0.28)";
-                    }}
-                    onMouseLeave={(e) => {
-                      e.currentTarget.style.color =
-                        pathname === item.href ? WINE_BERRY : "#444";
-                      e.currentTarget.style.background =
-                        pathname === item.href
-                          ? "rgba(47,128,237,0.12)"
-                          : "#ffffff";
-                      e.currentTarget.style.transform = "translateY(0)";
-                      e.currentTarget.style.borderColor =
-                        "rgba(26,39,68,0.08)";
-                    }}
-                  >
-                    <span
+                {servicesItems.map((group) => (
+                  <div key={group.label}>
+                    <h4
                       style={{
-                        width: 7,
-                        height: 7,
-                        borderRadius: "50%",
-                        background: "var(--wine-berry)",
-                        opacity: pathname === item.href ? 1 : 0.45,
-                        flexShrink: 0,
+                        fontSize: 11,
+                        fontWeight: 800,
+                        color: "var(--navy)",
+                        marginBottom: 10,
+                        paddingLeft: 4,
+                        letterSpacing: "0.08em",
+                        textTransform: "uppercase",
                       }}
-                    />
-                    {item.label}
-                  </Link>
+                    >
+                      {group.label}
+                    </h4>
+                    <div style={{ display: "grid", gap: 10 }}>
+                      {group.items?.map((item) => (
+                        <Link
+                          key={item.href}
+                          href={item.href}
+                          role="menuitem"
+                          onClick={() => setActiveDropdown(null)}
+                          style={{
+                            display: "flex",
+                            alignItems: "center",
+                            gap: 10,
+                            minHeight: 54,
+                            padding: "12px 14px",
+                            fontSize: 13,
+                            color: pathname === item.href ? WINE_BERRY : "#454545",
+                            fontWeight: pathname === item.href ? 700 : 500,
+                            textDecoration: "none",
+                            border: "1px solid rgba(26,39,68,0.08)",
+                            borderRadius: 16,
+                            background:
+                              pathname === item.href
+                                ? "rgba(47,128,237,0.12)"
+                                : "#ffffff",
+                            transition:
+                              "background 0.15s, color 0.15s, transform 0.15s, border-color 0.15s",
+                          }}
+                          onMouseEnter={(e) => {
+                            e.currentTarget.style.color = WINE_BERRY;
+                            e.currentTarget.style.background =
+                              "rgba(47,128,237,0.12)";
+                            e.currentTarget.style.transform = "translateY(-1px)";
+                            e.currentTarget.style.borderColor =
+                              "rgba(47,128,237,0.28)";
+                          }}
+                          onMouseLeave={(e) => {
+                            e.currentTarget.style.color =
+                              pathname === item.href ? WINE_BERRY : "#444";
+                            e.currentTarget.style.background =
+                              pathname === item.href
+                                ? "rgba(47,128,237,0.12)"
+                                : "#ffffff";
+                            e.currentTarget.style.transform = "translateY(0)";
+                            e.currentTarget.style.borderColor =
+                              "rgba(26,39,68,0.08)";
+                          }}
+                        >
+                          <span
+                            style={{
+                              width: 7,
+                              height: 7,
+                              borderRadius: "50%",
+                              background: "var(--wine-berry)",
+                              opacity: pathname === item.href ? 1 : 0.45,
+                              flexShrink: 0,
+                            }}
+                          />
+                          {item.label}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
                 ))}
               </div>
             </div>

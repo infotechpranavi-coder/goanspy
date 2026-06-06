@@ -75,7 +75,7 @@ function ServiceColumn({
   activeSlug,
 }: {
   title: string;
-  services: typeof ourServices;
+  services: ReadonlyArray<(typeof ourServices)[number]>;
   activeSlug?: string;
 }) {
   return (
