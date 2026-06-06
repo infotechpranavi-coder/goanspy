@@ -396,7 +396,7 @@ export default function BlogPage() {
                 Request a Confidential Review
               </Link>
               <Link
-                href="/our-services"
+                href="/services"
                 className="elemen-btn-outline"
                 style={{
                   color: "var(--white)",

@@ -8,6 +8,7 @@ import {
   useScroll,
   useTransform,
 } from "framer-motion";
+import { useMounted } from "@/lib/use-mounted";
 
 export type Breadcrumb = { label: string; href?: string };
 
@@ -20,6 +21,7 @@ type PageHeroProps = {
   videoSrc?: string;
   actions?: React.ReactNode;
   overlayBackground?: string;
+  breadcrumbLowercase?: boolean;
 };
 
 export default function PageHero({
@@ -31,7 +33,9 @@ export default function PageHero({
   videoSrc,
   actions,
   overlayBackground = "linear-gradient(105deg, rgba(26,39,68,0.88) 0%, rgba(91,29,54,0.72) 45%, rgba(26,39,68,0.55) 100%)",
+  breadcrumbLowercase = false,
 }: PageHeroProps) {
+  const mounted = useMounted();
   const reduce = useReducedMotion();
   const heroRef = useRef<HTMLElement | null>(null);
   const { scrollYProgress } = useScroll({
@@ -41,6 +45,7 @@ export default function PageHero({
   const imageY = useTransform(scrollYProgress, [0, 1], [0, reduce ? 0 : 28]);
   const imageScale = useTransform(scrollYProgress, [0, 1], [1.08, 1.15]);
   const overlayOpacity = useTransform(scrollYProgress, [0, 1], [0.86, 0.74]);
+  const animateHero = mounted && !reduce;
 
   return (
     <section
@@ -84,9 +89,9 @@ export default function PageHero({
             height: "100%",
             objectFit: "cover",
             objectPosition: "center",
-            y: reduce ? 0 : imageY,
-            scale: reduce ? 1.08 : imageScale,
-            willChange: "transform",
+            y: animateHero ? imageY : 0,
+            scale: animateHero ? imageScale : 1.08,
+            willChange: animateHero ? "transform" : undefined,
           }}
         />
       )}
@@ -96,7 +101,7 @@ export default function PageHero({
           position: "absolute",
           inset: 0,
           background: overlayBackground,
-          opacity: reduce ? 1 : overlayOpacity,
+          opacity: animateHero ? overlayOpacity : 1,
         }}
       />
       <div
@@ -110,8 +115,8 @@ export default function PageHero({
         }}
       >
         <motion.nav
-          initial={reduce ? false : { opacity: 0, y: -10 }}
-          animate={reduce ? undefined : { opacity: 1, y: 0 }}
+          initial={animateHero ? { opacity: 0, y: -10 } : false}
+          animate={animateHero ? { opacity: 1, y: 0 } : false}
           transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
           style={{
             fontSize: 13,
@@ -120,6 +125,7 @@ export default function PageHero({
             flexWrap: "wrap",
             gap: 6,
             alignItems: "center",
+            textTransform: breadcrumbLowercase ? "lowercase" : "none",
           }}
           aria-label="Breadcrumb"
         >
@@ -135,16 +141,18 @@ export default function PageHero({
                 <Link
                   href={crumb.href}
                   style={{
-                    color: "var(--gold)",
+                    color: breadcrumbLowercase
+                      ? "rgba(255,255,255,0.78)"
+                      : "var(--gold)",
                     textDecoration: "none",
                     fontWeight: 500,
                   }}
                 >
-                  {crumb.label}
+                  {breadcrumbLowercase ? crumb.label.toLowerCase() : crumb.label}
                 </Link>
               ) : (
                 <span style={{ color: "rgba(255,255,255,0.85)" }}>
-                  {crumb.label}
+                  {breadcrumbLowercase ? crumb.label.toLowerCase() : crumb.label}
                 </span>
               )}
             </span>
@@ -152,8 +160,8 @@ export default function PageHero({
         </motion.nav>
 
         <motion.h1
-          initial={reduce ? false : { opacity: 0, y: 20 }}
-          animate={reduce ? undefined : { opacity: 1, y: 0 }}
+          initial={animateHero ? { opacity: 0, y: 20 } : false}
+          animate={animateHero ? { opacity: 1, y: 0 } : false}
           transition={{ duration: 0.55, delay: 0.06, ease: [0.22, 1, 0.36, 1] }}
           style={{
             fontFamily: "Montserrat, sans-serif",
@@ -170,8 +178,8 @@ export default function PageHero({
 
         {subtitle && (
           <motion.p
-            initial={reduce ? false : { opacity: 0, y: 14 }}
-            animate={reduce ? undefined : { opacity: 1, y: 0 }}
+            initial={animateHero ? { opacity: 0, y: 14 } : false}
+            animate={animateHero ? { opacity: 1, y: 0 } : false}
             transition={{ duration: 0.55, delay: 0.14, ease: [0.22, 1, 0.36, 1] }}
             style={{
               fontSize: "clamp(15px, 2vw, 18px)",
@@ -186,8 +194,8 @@ export default function PageHero({
 
         {actions && (
           <motion.div
-            initial={reduce ? false : { opacity: 0, y: 14 }}
-            animate={reduce ? undefined : { opacity: 1, y: 0 }}
+            initial={animateHero ? { opacity: 0, y: 14 } : false}
+            animate={animateHero ? { opacity: 1, y: 0 } : false}
             transition={{ duration: 0.55, delay: 0.22, ease: [0.22, 1, 0.36, 1] }}
             style={{
               display: "flex",

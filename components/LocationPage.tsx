@@ -444,7 +444,7 @@ export default function LocationPage({ location }: { location: LocationPageData 
                 <Link href="/contact-us" className="elemen-btn-primary">
                   Book a Free Confidential Consultation
                 </Link>
-                <Link href="/our-services" className="elemen-btn-outline">
+                <Link href="/services" className="elemen-btn-outline">
                   Explore All Investigation Services
                 </Link>
               </div>

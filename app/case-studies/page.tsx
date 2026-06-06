@@ -418,7 +418,7 @@ export default function CaseStudiesPage() {
                   Request a Confidential Consultation
                 </Link>
                 <Link
-                  href="/our-services"
+                  href="/services"
                   className="elemen-btn-outline"
                   style={{
                     color: "var(--white)",

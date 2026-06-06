@@ -1,4 +1,5 @@
 import { ourServices } from "@/lib/site-pages";
+import { SERVICES_HUB_PATH, servicePagePath } from "@/lib/service-routes";
 
 export const NAVY = "#334155";
 export const NAVY_DARK = "#1e293b";
@@ -25,9 +26,9 @@ export const mainNavLinks = [
   { label: "Publications", href: "/publications" },
   {
     label: "Services",
-    href: "/our-services",
+    href: SERVICES_HUB_PATH,
     hasDropdown: true,
-    matchPrefix: "/our-services",
+    matchPrefix: SERVICES_HUB_PATH,
   },
 ];
 
@@ -52,7 +53,7 @@ export const dropdownItems: Record<string, DropdownItem[]> = {
               "pre-employment-employee-background-checks",
             ].includes(s.slug)
         )
-        .map((s) => ({ label: s.label, href: `/our-services/${s.slug}` })),
+        .map((s) => ({ label: s.label, href: servicePagePath(s.slug) })),
     },
     {
       label: "Corporate Investigation",
@@ -66,7 +67,7 @@ export const dropdownItems: Record<string, DropdownItem[]> = {
             "pre-employment-employee-background-checks",
           ].includes(s.slug)
         )
-        .map((s) => ({ label: s.label, href: `/our-services/${s.slug}` })),
+        .map((s) => ({ label: s.label, href: servicePagePath(s.slug) })),
     },
   ],
 };

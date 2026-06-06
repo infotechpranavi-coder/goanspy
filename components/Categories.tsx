@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { serviceImages } from "@/lib/content/images";
 import { ourServices } from "@/lib/site-pages";
+import { servicePagePath } from "@/lib/service-routes";
 
 const serviceHighlights = [
   "Discreet field verification",
@@ -19,7 +20,7 @@ const serviceHighlights = [
 
 const serviceCards = ourServices.map((service, index) => ({
   name: service.label,
-  href: `/our-services/${service.slug}`,
+  href: servicePagePath(service.slug),
   img: serviceImages[service.slug as keyof typeof serviceImages],
   highlight: serviceHighlights[index % serviceHighlights.length],
   badge: index < 5 ? "Personal" : "Corporate",

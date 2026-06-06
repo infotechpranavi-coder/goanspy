@@ -1,8 +1,10 @@
 "use client";
 
 import { motion, useReducedMotion, useScroll, useSpring } from "framer-motion";
+import { useMounted } from "@/lib/use-mounted";
 
 export default function ScrollProgress() {
+  const mounted = useMounted();
   const reduce = useReducedMotion();
   const { scrollYProgress } = useScroll();
   const progress = useSpring(scrollYProgress, {
@@ -11,7 +13,7 @@ export default function ScrollProgress() {
     mass: 0.2,
   });
 
-  if (reduce) {
+  if (!mounted || reduce) {
     return null;
   }
 

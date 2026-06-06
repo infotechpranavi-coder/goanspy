@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import { Phone, Mail, MapPin, ArrowRight } from "lucide-react";
@@ -11,11 +11,12 @@ import {
   PHONE_SECONDARY,
   OFFICE_ADDRESS,
 } from "@/lib/brand";
+import { SERVICES_HUB_PATH } from "@/lib/service-routes";
 
 const quickLinks = [
   { label: "Home", href: "/" },
   { label: "About Us", href: "/about-us" },
-  { label: "Services", href: "/our-services" },
+  { label: "Services", href: SERVICES_HUB_PATH },
   { label: "Locations", href: "/locations" },
   { label: "Case Studies", href: "/case-studies" },
   { label: "Contact Us", href: "/contact-us" },

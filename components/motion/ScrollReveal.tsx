@@ -3,6 +3,7 @@
 import { motion, useReducedMotion } from "framer-motion";
 import type { CSSProperties, ReactNode } from "react";
 import { revealVariants, type RevealVariant } from "@/lib/motion-presets";
+import { useMounted } from "@/lib/use-mounted";
 
 export type { RevealVariant };
 
@@ -48,13 +49,14 @@ export default function ScrollReveal({
   style,
   amount = 0.18,
 }: ScrollRevealProps) {
+  const mounted = useMounted();
   const reduce = useReducedMotion();
   const resolved = variant ?? (direction ? directionToVariant[direction] : "fade-up");
   const preset = revealVariants[resolved];
   const needsPerspective =
     resolved === "flip-up" || resolved === "rotate-in" || resolved === "skew-up";
 
-  if (reduce) {
+  if (!mounted || reduce) {
     return (
       <div className={className} style={style}>
         {children}
@@ -96,9 +98,10 @@ export function ScrollStagger({
   stagger = 0.08,
   delayChildren = 0,
 }: ScrollStaggerProps) {
+  const mounted = useMounted();
   const reduce = useReducedMotion();
 
-  if (reduce) {
+  if (!mounted || reduce) {
     return (
       <div className={className} style={style}>
         {children}
@@ -141,11 +144,12 @@ export function ScrollStaggerItem({
   variant,
   direction,
 }: ScrollStaggerItemProps) {
+  const mounted = useMounted();
   const reduce = useReducedMotion();
   const resolved = variant ?? (direction ? directionToVariant[direction] : "fade-up");
   const preset = revealVariants[resolved];
 
-  if (reduce) {
+  if (!mounted || reduce) {
     return (
       <div className={className} style={style}>
         {children}

@@ -10,8 +10,10 @@ import {
   WINE_BERRY,
 } from "@/lib/nav";
 import { BRAND_NAME, LOGO_SRC } from "@/lib/brand";
+import { useMounted } from "@/lib/use-mounted";
 
 export default function SiteHeader() {
+  const mounted = useMounted();
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
@@ -20,6 +22,8 @@ export default function SiteHeader() {
 
   const linkIsActive = useCallback(
     (link: (typeof mainNavLinks)[number]) => {
+      if (!mounted) return false;
+
       if (link.href === "/") return pathname === "/";
 
       const matchPrefix =
@@ -32,7 +36,12 @@ export default function SiteHeader() {
         pathname.startsWith(`${matchPrefix}/`)
       );
     },
-    [pathname]
+    [mounted, pathname]
+  );
+
+  const pathMatches = useCallback(
+    (href: string) => mounted && pathname === href,
+    [mounted, pathname]
   );
 
   const openDropdown = useCallback((label: string) => {
@@ -200,20 +209,10 @@ export default function SiteHeader() {
                           openDropdown(link.label);
                         }
                       }}
-                      style={{
-                        display: "inline-flex",
-                        alignItems: "center",
-                        gap: 4,
-                        padding: "6px 8px 6px",
-                        fontSize: 11.5,
-                        fontWeight: active ? 800 : 600,
-                        letterSpacing: 0.28,
-                        color: active || isOpen ? "#0b63e5" : "#111827",
-                        textDecoration: "none",
-                        borderBottom: active || isOpen ? "2px solid #2f80ed" : "2px solid transparent",
-                        transition: "color 0.2s ease, border-color 0.2s ease, transform 0.2s ease",
-                        transform: active || isOpen ? "translateY(-1px)" : "none",
-                      }}
+                      className="site-nav-link"
+                      data-active={
+                        mounted && (active || isOpen) ? "true" : undefined
+                      }
                       aria-expanded={hasDropdown ? isOpen : undefined}
                       aria-haspopup={hasDropdown ? "true" : undefined}
                     >
@@ -396,25 +395,10 @@ export default function SiteHeader() {
                         href={item.href}
                         role="menuitem"
                         onClick={() => setActiveDropdown(null)}
-                        style={{
-                          display: "flex",
-                          alignItems: "center",
-                          gap: 4,
-                          minHeight: 24,
-                          padding: "2px 4px",
-                          fontSize: 9.5,
-                          color: pathname === item.href ? WINE_BERRY : "#454545",
-                          fontWeight: pathname === item.href ? 700 : 500,
-                          textDecoration: "none",
-                          border: "1px solid rgba(26,39,68,0.08)",
-                          borderRadius: 14,
-                          background:
-                            pathname === item.href
-                              ? "rgba(47,128,237,0.12)"
-                              : "#ffffff",
-                          transition:
-                            "background 0.15s, color 0.15s, transform 0.15s, border-color 0.15s",
-                        }}
+                        className="site-dropdown-link"
+                        data-active={
+                          mounted && pathMatches(item.href) ? "true" : undefined
+                        }
                         onMouseEnter={(e) => {
                           e.currentTarget.style.color = WINE_BERRY;
                           e.currentTarget.style.background = "rgba(47,128,237,0.12)";
@@ -422,26 +406,13 @@ export default function SiteHeader() {
                           e.currentTarget.style.borderColor = "rgba(47,128,237,0.28)";
                         }}
                         onMouseLeave={(e) => {
-                          e.currentTarget.style.color =
-                            pathname === item.href ? WINE_BERRY : "#444";
-                          e.currentTarget.style.background =
-                            pathname === item.href
-                              ? "rgba(47,128,237,0.12)"
-                              : "#ffffff";
-                          e.currentTarget.style.transform = "translateY(0)";
-                          e.currentTarget.style.borderColor = "rgba(26,39,68,0.08)";
+                          e.currentTarget.style.color = "";
+                          e.currentTarget.style.background = "";
+                          e.currentTarget.style.transform = "";
+                          e.currentTarget.style.borderColor = "";
                         }}
                       >
-                        <span
-                          style={{
-                            width: 6,
-                            height: 6,
-                            borderRadius: "50%",
-                            background: "var(--wine-berry)",
-                            opacity: pathname === item.href ? 1 : 0.45,
-                            flexShrink: 0,
-                          }}
-                        />
+                        <span className="site-dropdown-dot" aria-hidden />
                         {item.label}
                       </Link>
                     ))}
@@ -468,10 +439,11 @@ export default function SiteHeader() {
             <div style={{ display: "grid", gap: 10 }}>
               {mainNavLinks.map((link) => {
                 const active =
-                  pathname === link.href ||
-                  ("matchPrefix" in link &&
-                    link.matchPrefix &&
-                    pathname.startsWith(link.matchPrefix));
+                  mounted &&
+                  (pathname === link.href ||
+                    ("matchPrefix" in link &&
+                      link.matchPrefix &&
+                      pathname.startsWith(link.matchPrefix)));
                 const hasDropdown = "hasDropdown" in link && link.hasDropdown;
 
                 if (hasDropdown) {
@@ -532,13 +504,12 @@ export default function SiteHeader() {
                                       setMobileServicesOpen(false);
                                     }}
                                     style={{
-                                      color:
-                                        pathname === item.href
-                                          ? "#1e5db0"
-                                          : "rgba(17,24,39,0.84)",
+                                      color: "rgba(17,24,39,0.84)",
                                       textDecoration: "none",
                                       fontSize: 13,
                                       padding: "8px 0",
+                                      fontWeight:
+                                        mounted && pathMatches(item.href) ? 700 : 500,
                                     }}
                                   >
                                     {item.label}
@@ -558,17 +529,8 @@ export default function SiteHeader() {
                     key={link.label}
                     href={link.href}
                     onClick={() => setMobileOpen(false)}
-                    style={{
-                      color: active ? "#1e5db0" : "#111827",
-                      textDecoration: "none",
-                      fontSize: 14,
-                      fontWeight: active ? 700 : 600,
-                      padding: "14px 16px",
-                      borderRadius: 16,
-                      background: active ? "rgba(47,128,237,0.10)" : "#ffffff",
-                      border: "1px solid rgba(26,39,68,0.08)",
-                      boxShadow: "0 10px 22px rgba(26,39,68,0.08)",
-                    }}
+                    className="site-mobile-link"
+                    data-active={mounted && active ? "true" : undefined}
                   >
                     {link.label}
                   </Link>
