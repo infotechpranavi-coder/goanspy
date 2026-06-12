@@ -180,7 +180,7 @@ export default function Footer() {
                 }}
               >
                 <Phone size={16} style={{ color: "var(--gold)", flexShrink: 0 }} />
-                <span>{PHONE_PRIMARY} / {PHONE_SECONDARY}</span>
+                <span>{PHONE_SECONDARY ? `${PHONE_PRIMARY} / ${PHONE_SECONDARY}` : PHONE_PRIMARY}</span>
               </a>
               <a
                 href={`mailto:${SUPPORT_EMAIL}`}

@@ -4,12 +4,7 @@ import Link from "next/link";
 import { MapPin, ExternalLink, Navigation, Phone, Mail } from "lucide-react";
 import SocialIcons from "@/components/SocialIcons";
 import ScrollReveal from "@/components/motion/ScrollReveal";
-import { OFFICE_ADDRESS_FULL, PHONE_PRIMARY, CONTACT_EMAIL } from "@/lib/brand";
-
-const MAP_EMBED =
-  "https://maps.google.com/maps?q=A+514+Edcon+Centre+Mapusa+Bus+Stand+near+Aldona+Angod+Mapusa+Goa+403507&t=&z=16&ie=UTF8&iwloc=&output=embed";
-const MAP_LINK =
-  "https://www.google.com/maps/search/?api=1&query=A+514+Edcon+Centre+Mapusa+Bus+Stand+near+Aldona+Angod+Mapusa+Goa+403507";
+import { OFFICE_ADDRESS_FULL, PHONE_PRIMARY, CONTACT_EMAIL, OFFICE_MAPS_URL, OFFICE_MAPS_EMBED } from "@/lib/brand";
 
 export default function ContactAddressSection() {
   return (
@@ -170,7 +165,7 @@ export default function ContactAddressSection() {
                 </div>
 
                 <Link
-                  href={MAP_LINK}
+                  href={OFFICE_MAPS_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{
@@ -202,7 +197,7 @@ export default function ContactAddressSection() {
               >
                 <iframe
                   title="Google Maps - Goan Spy office, Mapusa"
-                  src={MAP_EMBED}
+                  src={OFFICE_MAPS_EMBED}
                   width="100%"
                   height="100%"
                   style={{

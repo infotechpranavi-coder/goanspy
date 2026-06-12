@@ -12,6 +12,11 @@ export const OFFICE_ADDRESS =
 export const OFFICE_ADDRESS_FULL =
   "A 514, Edcon Centre, Mapusa Bus Stand, near Aldona, Angod, Mapusa, Goa 403507";
 
+export const OFFICE_MAPS_URL =
+  "https://maps.app.goo.gl/d1sJP1AjKzgCATJv6?g_st=iwb";
+export const OFFICE_MAPS_EMBED =
+  "https://www.google.com/maps?q=Goan+Spy,+Edcon+Centre,+A+514,+Angod,+Mapusa,+Goa+403507&output=embed";
+
 export const SOCIAL_LINKS = {
   facebook: "https://www.facebook.com/search/top?q=elemenindia",
   instagram: "https://www.instagram.com/elemenindia/",

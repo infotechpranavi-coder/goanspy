@@ -1,11 +1,16 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import SiteChrome from "@/components/SiteChrome";
+import { BRAND_NAME, BRAND_TAGLINE } from "@/lib/brand";
 
 export const metadata: Metadata = {
-  title: "ELEMEN INDIA - Security, CCTV & IT Solutions",
-  description:
-    "Elemen India — Mumbai based specialists in CCTV, access control, visitor management, and IT infrastructure across India.",
+  title: `${BRAND_NAME} | Private Investigation & Surveillance in Goa`,
+  description: BRAND_TAGLINE,
+  icons: {
+    icon: [{ url: "/image.png", type: "image/png" }],
+    shortcut: "/image.png",
+    apple: "/image.png",
+  },
 };
 
 export default function RootLayout({
