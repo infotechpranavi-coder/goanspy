@@ -2,6 +2,8 @@ import Link from "next/link";
 import ContentPage from "@/components/ContentPage";
 import ScrollReveal from "@/components/motion/ScrollReveal";
 import { pageImages } from "@/lib/content/images";
+import JsonLd from "@/components/JsonLd";
+import { clientProtocolPageSchema } from "@/lib/schema/pages";
 
 export const metadata = {
   title: "Client Operational Protocol | Goan Spy Detective Agency Goa",
@@ -104,7 +106,9 @@ const packages = [
 
 export default function ClientEngagementProtocolPage() {
   return (
-    <ContentPage
+    <>
+      <JsonLd data={clientProtocolPageSchema()} />
+      <ContentPage
       title="Client Operational Protocol"
       subtitle="A structured, seamless, and highly confidential four-tier engagement process designed to protect your identity while delivering unassailable evidence across Goa."
       breadcrumbs={[
@@ -553,5 +557,6 @@ export default function ClientEngagementProtocolPage() {
 
       </article>
     </ContentPage>
+    </>
   );
 }

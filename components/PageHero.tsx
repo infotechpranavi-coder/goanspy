@@ -24,6 +24,107 @@ type PageHeroProps = {
   breadcrumbLowercase?: boolean;
 };
 
+const heroEase = [0.22, 1, 0.36, 1] as const;
+
+const imageStyle = {
+  position: "absolute" as const,
+  inset: 0,
+  width: "100%",
+  height: "100%",
+  objectFit: "cover" as const,
+  objectPosition: "center" as const,
+};
+
+const overlayStyle = (background: string) => ({
+  position: "absolute" as const,
+  inset: 0,
+  background,
+});
+
+const contentWrapStyle = {
+  position: "relative" as const,
+  zIndex: 1,
+  width: "100%",
+  maxWidth: 1300,
+  margin: "0 auto",
+  padding: "48px 20px 56px",
+};
+
+const breadcrumbNavStyle = (breadcrumbLowercase: boolean) => ({
+  fontSize: 13,
+  marginBottom: 14,
+  display: "flex",
+  flexWrap: "wrap" as const,
+  gap: 6,
+  alignItems: "center" as const,
+  textTransform: breadcrumbLowercase ? ("lowercase" as const) : ("none" as const),
+});
+
+const titleStyle = (hasSubtitle: boolean) => ({
+  fontFamily: "Montserrat, sans-serif",
+  fontSize: "clamp(30px, 5vw, 48px)",
+  fontWeight: 700,
+  color: "#fff",
+  lineHeight: 1.15,
+  marginBottom: hasSubtitle ? 12 : 0,
+  maxWidth: 800,
+});
+
+const subtitleStyle = {
+  fontSize: "clamp(15px, 2vw, 18px)",
+  color: "rgba(255,255,255,0.88)",
+  maxWidth: 620,
+  lineHeight: 1.6,
+};
+
+const actionsStyle = {
+  display: "flex",
+  flexWrap: "wrap" as const,
+  gap: 14,
+  marginTop: 24,
+};
+
+function BreadcrumbTrail({
+  breadcrumbs,
+  breadcrumbLowercase,
+}: {
+  breadcrumbs: Breadcrumb[];
+  breadcrumbLowercase: boolean;
+}) {
+  return (
+    <>
+      {breadcrumbs.map((crumb, i) => (
+        <span
+          key={`${crumb.label}-${i}`}
+          style={{ display: "flex", alignItems: "center", gap: 6 }}
+        >
+          {i > 0 && (
+            <span style={{ color: "rgba(255,255,255,0.45)" }}>/</span>
+          )}
+          {crumb.href ? (
+            <Link
+              href={crumb.href}
+              style={{
+                color: breadcrumbLowercase
+                  ? "rgba(255,255,255,0.78)"
+                  : "var(--gold)",
+                textDecoration: "none",
+                fontWeight: 500,
+              }}
+            >
+              {breadcrumbLowercase ? crumb.label.toLowerCase() : crumb.label}
+            </Link>
+          ) : (
+            <span style={{ color: "rgba(255,255,255,0.85)" }}>
+              {breadcrumbLowercase ? crumb.label.toLowerCase() : crumb.label}
+            </span>
+          )}
+        </span>
+      ))}
+    </>
+  );
+}
+
 export default function PageHero({
   title,
   subtitle,
@@ -45,7 +146,7 @@ export default function PageHero({
   const imageY = useTransform(scrollYProgress, [0, 1], [0, reduce ? 0 : 28]);
   const imageScale = useTransform(scrollYProgress, [0, 1], [1.08, 1.15]);
   const overlayOpacity = useTransform(scrollYProgress, [0, 1], [0.86, 0.74]);
-  const animateHero = mounted && !reduce;
+  const canAnimate = mounted && !reduce;
 
   return (
     <section
@@ -66,147 +167,113 @@ export default function PageHero({
           muted
           playsInline
           aria-hidden
-          style={{
-            position: "absolute",
-            inset: 0,
-            width: "100%",
-            height: "100%",
-            objectFit: "cover",
-            objectPosition: "center",
-          }}
+          style={imageStyle}
         >
           <source src={videoSrc} type="video/mp4" />
         </video>
-      ) : (
+      ) : canAnimate ? (
         <motion.img
           src={imageSrc}
           alt=""
           aria-hidden
           style={{
-            position: "absolute",
-            inset: 0,
-            width: "100%",
-            height: "100%",
-            objectFit: "cover",
-            objectPosition: "center",
-            y: animateHero ? imageY : 0,
-            scale: animateHero ? imageScale : 1.08,
-            willChange: animateHero ? "transform" : undefined,
+            ...imageStyle,
+            y: imageY,
+            scale: imageScale,
+            willChange: "transform",
+          }}
+        />
+      ) : (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img
+          src={imageSrc}
+          alt=""
+          aria-hidden
+          style={{
+            ...imageStyle,
+            transform: "scale(1.08)",
           }}
         />
       )}
-      <motion.div
-        aria-hidden
-        style={{
-          position: "absolute",
-          inset: 0,
-          background: overlayBackground,
-          opacity: animateHero ? overlayOpacity : 1,
-        }}
-      />
-      <div
-        style={{
-          position: "relative",
-          zIndex: 1,
-          width: "100%",
-          maxWidth: 1300,
-          margin: "0 auto",
-          padding: "48px 20px 56px",
-        }}
-      >
-        <motion.nav
-          initial={animateHero ? { opacity: 0, y: -10 } : false}
-          animate={animateHero ? { opacity: 1, y: 0 } : false}
-          transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
+
+      {canAnimate ? (
+        <motion.div
+          aria-hidden
           style={{
-            fontSize: 13,
-            marginBottom: 14,
-            display: "flex",
-            flexWrap: "wrap",
-            gap: 6,
-            alignItems: "center",
-            textTransform: breadcrumbLowercase ? "lowercase" : "none",
+            ...overlayStyle(overlayBackground),
+            opacity: overlayOpacity,
           }}
-          aria-label="Breadcrumb"
-        >
-          {breadcrumbs.map((crumb, i) => (
-            <span
-              key={`${crumb.label}-${i}`}
-              style={{ display: "flex", alignItems: "center", gap: 6 }}
+        />
+      ) : (
+        <div aria-hidden style={overlayStyle(overlayBackground)} />
+      )}
+
+      <div style={contentWrapStyle}>
+        {canAnimate ? (
+          <motion.nav
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.45, ease: heroEase }}
+            style={breadcrumbNavStyle(breadcrumbLowercase)}
+            aria-label="Breadcrumb"
+          >
+            <BreadcrumbTrail
+              breadcrumbs={breadcrumbs}
+              breadcrumbLowercase={breadcrumbLowercase}
+            />
+          </motion.nav>
+        ) : (
+          <nav
+            style={breadcrumbNavStyle(breadcrumbLowercase)}
+            aria-label="Breadcrumb"
+          >
+            <BreadcrumbTrail
+              breadcrumbs={breadcrumbs}
+              breadcrumbLowercase={breadcrumbLowercase}
+            />
+          </nav>
+        )}
+
+        {canAnimate ? (
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.55, delay: 0.06, ease: heroEase }}
+            style={titleStyle(Boolean(subtitle))}
+          >
+            {title}
+          </motion.h1>
+        ) : (
+          <h1 style={titleStyle(Boolean(subtitle))}>{title}</h1>
+        )}
+
+        {subtitle &&
+          (canAnimate ? (
+            <motion.p
+              initial={{ opacity: 0, y: 14 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.55, delay: 0.14, ease: heroEase }}
+              style={subtitleStyle}
             >
-              {i > 0 && (
-                <span style={{ color: "rgba(255,255,255,0.45)" }}>/</span>
-              )}
-              {crumb.href ? (
-                <Link
-                  href={crumb.href}
-                  style={{
-                    color: breadcrumbLowercase
-                      ? "rgba(255,255,255,0.78)"
-                      : "var(--gold)",
-                    textDecoration: "none",
-                    fontWeight: 500,
-                  }}
-                >
-                  {breadcrumbLowercase ? crumb.label.toLowerCase() : crumb.label}
-                </Link>
-              ) : (
-                <span style={{ color: "rgba(255,255,255,0.85)" }}>
-                  {breadcrumbLowercase ? crumb.label.toLowerCase() : crumb.label}
-                </span>
-              )}
-            </span>
+              {subtitle}
+            </motion.p>
+          ) : (
+            <p style={subtitleStyle}>{subtitle}</p>
           ))}
-        </motion.nav>
 
-        <motion.h1
-          initial={animateHero ? { opacity: 0, y: 20 } : false}
-          animate={animateHero ? { opacity: 1, y: 0 } : false}
-          transition={{ duration: 0.55, delay: 0.06, ease: [0.22, 1, 0.36, 1] }}
-          style={{
-            fontFamily: "Montserrat, sans-serif",
-            fontSize: "clamp(30px, 5vw, 48px)",
-            fontWeight: 700,
-            color: "#fff",
-            lineHeight: 1.15,
-            marginBottom: subtitle ? 12 : 0,
-            maxWidth: 800,
-          }}
-        >
-          {title}
-        </motion.h1>
-
-        {subtitle && (
-          <motion.p
-            initial={animateHero ? { opacity: 0, y: 14 } : false}
-            animate={animateHero ? { opacity: 1, y: 0 } : false}
-            transition={{ duration: 0.55, delay: 0.14, ease: [0.22, 1, 0.36, 1] }}
-            style={{
-              fontSize: "clamp(15px, 2vw, 18px)",
-              color: "rgba(255,255,255,0.88)",
-              maxWidth: 620,
-              lineHeight: 1.6,
-            }}
-          >
-            {subtitle}
-          </motion.p>
-        )}
-
-        {actions && (
-          <motion.div
-            initial={animateHero ? { opacity: 0, y: 14 } : false}
-            animate={animateHero ? { opacity: 1, y: 0 } : false}
-            transition={{ duration: 0.55, delay: 0.22, ease: [0.22, 1, 0.36, 1] }}
-            style={{
-              display: "flex",
-              flexWrap: "wrap",
-              gap: 14,
-              marginTop: 24,
-            }}
-          >
-            {actions}
-          </motion.div>
-        )}
+        {actions &&
+          (canAnimate ? (
+            <motion.div
+              initial={{ opacity: 0, y: 14 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.55, delay: 0.22, ease: heroEase }}
+              style={actionsStyle}
+            >
+              {actions}
+            </motion.div>
+          ) : (
+            <div style={actionsStyle}>{actions}</div>
+          ))}
       </div>
     </section>
   );

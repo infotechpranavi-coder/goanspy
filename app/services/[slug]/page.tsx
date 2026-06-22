@@ -1,9 +1,11 @@
 import { notFound } from "next/navigation";
 import ServicePageLayout from "@/components/ServicePageLayout";
+import JsonLd from "@/components/JsonLd";
 import { serviceContent, serviceMeta } from "@/lib/content/services";
 import { getServiceImage } from "@/lib/content/images";
 import { getServiceBySlug, ourServices } from "@/lib/site-pages";
 import { SERVICES_HUB_PATH } from "@/lib/service-routes";
+import { getServiceSchema } from "@/lib/schema/services";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -33,9 +35,12 @@ export default async function ServiceDetailPage({ params }: Props) {
   if (!blocks) notFound();
 
   const meta = serviceMeta[slug];
+  const schema = getServiceSchema(slug);
 
   return (
-    <ServicePageLayout
+    <>
+      {schema && <JsonLd data={schema} />}
+      <ServicePageLayout
       title={service.label}
       subtitle={meta?.subtitle}
       slug={slug}
@@ -50,5 +55,6 @@ export default async function ServiceDetailPage({ params }: Props) {
       }}
       blocks={blocks}
     />
+    </>
   );
 }

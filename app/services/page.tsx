@@ -8,6 +8,8 @@ import {
   OFFICE_ADDRESS_FULL,
   PHONE_PRIMARY,
 } from "@/lib/brand";
+import JsonLd from "@/components/JsonLd";
+import { servicesHubSchema } from "@/lib/schema/pages";
 
 export const metadata = {
   title: "Professional Investigation Services in Goa | Goan Spy",
@@ -41,6 +43,7 @@ const labelStyle = {
 export default function ServicesHubPage() {
   return (
     <main>
+      <JsonLd data={servicesHubSchema()} />
       <PageHero
         title="Professional Investigation Services in Goa – Uncover the Truth with Precision"
         subtitle="Providing elite, legally accountable personal surveillance and corporate risk intelligence exclusively within the State of Goa. Backed by state-of-the-art technology and hyper-local ground expertise."

@@ -1,6 +1,8 @@
 import Link from "next/link";
 import ContentPage from "@/components/ContentPage";
 import { pageImages, serviceImages } from "@/lib/content/images";
+import JsonLd from "@/components/JsonLd";
+import { blogPageSchema } from "@/lib/schema/pages";
 
 export const metadata = {
   title: "Investigation Insights & Blog | Goan Spy Detective Agency Goa",
@@ -316,7 +318,9 @@ function BlogGrid({
 
 export default function BlogPage() {
   return (
-    <ContentPage
+    <>
+      <JsonLd data={blogPageSchema()} />
+      <ContentPage
       title="Investigation Blog"
       subtitle="Articles and guides about real situations, practical concerns, and the work Goan Spy handles across Goa."
       breadcrumbs={[
@@ -450,5 +454,6 @@ export default function BlogPage() {
         />
       </article>
     </ContentPage>
+    </>
   );
 }

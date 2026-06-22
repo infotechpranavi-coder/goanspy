@@ -5,10 +5,13 @@ import NewArrivals from "@/components/NewArrivals";
 import BannerGrid from "@/components/BannerGrid";
 import WhyChooseGoanSpy from "@/components/WhyChooseGoanSpy";
 import ScrollReveal from "@/components/motion/ScrollReveal";
+import JsonLd from "@/components/JsonLd";
+import { homePageSchema } from "@/lib/schema/pages";
 
 export default function Home() {
   return (
     <main>
+      <JsonLd data={homePageSchema()} />
       <HeroSlider />
       <ScrollReveal variant="fade-up" duration={0.72} amount={0.2}>
         <Features />

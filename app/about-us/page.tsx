@@ -23,6 +23,8 @@ import {
   aboutTerrain,
 } from "@/lib/content/about";
 import { pageImages } from "@/lib/content/images";
+import JsonLd from "@/components/JsonLd";
+import { aboutPageSchema } from "@/lib/schema/pages";
 
 export const metadata = {
   title: "About Us | Goan Spy",
@@ -33,6 +35,7 @@ export const metadata = {
 export default function AboutUsPage() {
   return (
     <main>
+      <JsonLd data={aboutPageSchema()} />
       <PageHero
         title="About Goan Spy - The Vanguard of Truth, Confidentiality, and Investigative Excellence in Goa."
         subtitle="Founded in 2013 with a singular mission: to provide individuals, families, and businesses across Goa with uncompromised clarity, elite field surveillance, and absolute non-disclosure."

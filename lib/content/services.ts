@@ -15,9 +15,9 @@ export const serviceMeta: Record<
       "Professional infidelity and extramarital affairs investigations across Goa with covert surveillance, resort monitoring, and legally viable proof.",
   },
   "pre-matrimonial-background-verification": {
-    subtitle: "Trusted Pre-Matrimonial & Background Verification in Goa",
+    subtitle: "Build Trust Before Marriage with Professional Background Verification",
     description:
-      "Comprehensive pre-matrimonial investigations and background verification across Goa for employment, lifestyle, marital status, and NRI alliance checks.",
+      "Discreet, confidential pre-matrimonial and background verification across Goa to help families verify prospective bride or groom information before finalizing a marriage alliance.",
   },
   "child-custody-teenager-lifestyle-monitoring": {
     subtitle: "Professional Child Custody & Teenager Lifestyle Monitoring in Goa",
@@ -35,9 +35,9 @@ export const serviceMeta: Record<
       "Pre-employment and employee background checks across Goa covering academic history, identity verification, and criminal record screening.",
   },
   "corporate-fraud-internal-misconduct-investigations": {
-    subtitle: "Strategic Corporate Fraud & Internal Misconduct Investigations in Goa",
+    subtitle: "Corporate Fraud & Internal Misconduct Investigation Services",
     description:
-      "Corporate fraud and internal misconduct investigations across Goa covering embezzlement, data leaks, and executive breach-of-trust cases.",
+      "Protect your business in Goa from financial losses and reputational damage with confidential, evidence-based corporate fraud and internal misconduct investigations.",
   },
   "due-diligence-investigations": {
     subtitle: "Professional Due Diligence Investigations in Goa",
@@ -50,9 +50,9 @@ export const serviceMeta: Record<
       "Intellectual property protection and anti-counterfeiting operations across Goa with source identification, supply chain mapping, and raid evidence.",
   },
   "technical-surveillance-counter-measures-tscm": {
-    subtitle: "Advanced Technical Surveillance Counter-Measures (TSCM) in Goa",
+    subtitle: "Professional Technical Surveillance Counter-Measures (TSCM) & Bug Sweeping Services",
     description:
-      "Technical Surveillance Counter-Measures and bug sweeping services across Goa with RF analysis, NLJD detection, and thermal imaging sweeps.",
+      "Professional TSCM and bug sweeping services in Goa to detect hidden cameras, listening devices, GPS trackers, and other covert surveillance threats.",
   },
 };
 
@@ -168,11 +168,11 @@ export const serviceContent: Record<string, Block[]> = {
   "pre-matrimonial-background-verification": [
     {
       type: "p",
-      text: "Marriage is a lifetime commitment that binds two families, reputations, and financial futures together. In an era of online matrimonial platforms and increasingly transient social circles, verifying a prospective partner's background has become an essential step in protecting your family's future. Goan Spy Detective Agency provides comprehensive pre-matrimonial investigations and background verification services across Goa to ensure your marriage alliance is built on complete transparency and truth.",
+      text: "Marriage is one of the most important decisions in life. Our Pre-Matrimonial & Background Verification Services help individuals and families verify the authenticity of information provided by a prospective bride or groom before finalizing a marriage alliance.",
     },
     {
       type: "p",
-      text: "Our pre-matrimonial screening looks well beyond basic social media profiles to uncover factual details regarding an individual's lifestyle, employment status, financial liabilities, and past relationships. Our deep roots across Goa allow us to gather accurate, verified intelligence, helping families make life-changing decisions with complete peace of mind.",
+      text: "We conduct discreet, confidential, and comprehensive investigations to ensure transparency and help families make informed decisions. Our professional verification process helps uncover hidden facts and minimizes the risk of fraud, misrepresentation, or deception.",
     },
     {
       type: "h2",
@@ -384,6 +384,14 @@ export const serviceContent: Record<string, Block[]> = {
   "corporate-fraud-internal-misconduct-investigations": [
     {
       type: "p",
+      text: "Protect your business from financial losses, reputational damage, and operational risks with our professional Corporate Fraud & Internal Misconduct Investigation Services in Goa. We help organizations identify, investigate, and mitigate fraudulent activities, employee misconduct, policy violations, and unethical business practices through confidential and evidence-based investigations.",
+    },
+    {
+      type: "p",
+      text: "Our experienced investigators work discreetly to uncover facts, gather evidence, and provide actionable insights that help businesses maintain integrity, compliance, and security.",
+    },
+    {
+      type: "p",
       text: "Internal fraud, embezzlement, intellectual property theft, and executive misconduct can severely damage a company's financial health and market standing. When internal audit controls point to anomalies, businesses need an independent, professional investigative partner to uncover the truth. Goan Spy Detective Agency specializes in corporate fraud and internal misconduct investigations across Goa, providing corporate leaders with the clear, legally viable proof needed to handle internal threats.",
     },
     {
@@ -544,6 +552,14 @@ export const serviceContent: Record<string, Block[]> = {
     },
   ],
   "technical-surveillance-counter-measures-tscm": [
+    {
+      type: "p",
+      text: "Protect your confidential conversations, sensitive business information, and personal privacy with our professional Technical Surveillance Counter-Measures (TSCM) Services in Goa. We specialize in detecting and neutralizing hidden surveillance devices, unauthorized monitoring equipment, and electronic eavesdropping threats.",
+    },
+    {
+      type: "p",
+      text: "Our expert TSCM specialists use advanced detection equipment and industry-leading methodologies to identify hidden cameras, listening devices, GPS trackers, wireless transmitters, and other covert surveillance technologies.",
+    },
     {
       type: "p",
       text: "In an era of compact, low-cost spy technology, corporate espionage and illegal privacy violations are growing threats to modern enterprises and high-net-worth individuals. Covert listening bugs, hidden cameras, and wireless tracking devices can easily be installed in executive offices, boardroom suites, or luxury properties to steal trade secrets and compromise personal privacy. Goan Spy Detective Agency provides professional Technical Surveillance Counter-Measures (TSCM) and bug sweeping services across Goa to identify and neutralize hidden security threats.",

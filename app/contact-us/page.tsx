@@ -4,6 +4,8 @@ import ContactInfoCards from "@/components/ContactInfoCards";
 import ContactAddressSection from "@/components/ContactAddressSection";
 import ScrollReveal from "@/components/motion/ScrollReveal";
 import { pageImages } from "@/lib/content/images";
+import JsonLd from "@/components/JsonLd";
+import { contactPageSchema } from "@/lib/schema/pages";
 
 export const metadata = {
   title: "Contact Us | Goan Spy",
@@ -20,6 +22,7 @@ const quickStats = [
 export default function ContactUsPage() {
   return (
     <main>
+      <JsonLd data={contactPageSchema()} />
       <PageHero
         title="Contact Us"
         subtitle="Reach our team for quotes, support, and general enquiries."
