@@ -20,6 +20,22 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" data-scroll-behavior="smooth">
+      <head>
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-37N3G1L7XK"
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-37N3G1L7XK');
+            `,
+          }}
+        />
+      </head>
       <body>
         <SiteChrome>{children}</SiteChrome>
       </body>
